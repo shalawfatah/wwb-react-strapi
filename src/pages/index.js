@@ -1,18 +1,25 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
 
-const IndexPage = () => (
+const IndexPage = ({data}) => (
   <Layout>
-    <SEO title="Home" />
     <h1>Shalaw</h1>
     <p>I will build this as my first project.</p>
-    <p>Now go build something great.</p>
+    {
+      data.allStrapiHome.edges.map(titles => {
+        return (
+          <div> <h1>
+          {titles.node.first_title}
+        </h1>
+        <h2>{titles.node.second_title}</h2>
+        <h2>{titles.node.third_title}</h2>
+        </div>
+      )
+      })
+    }
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
     </div>
     <Link to="/page-2/">Go to page 2</Link> <br />
     <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
@@ -20,3 +27,17 @@ const IndexPage = () => (
 )
 
 export default IndexPage
+export const query = graphql`
+  {
+    allStrapiHome {
+      edges {
+        node {
+          first_title
+          second_title
+          third_title
+          id
+        }
+      }
+    }
+  }
+`
