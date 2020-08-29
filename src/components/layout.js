@@ -1,17 +1,13 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
+
 
 import React, { Component } from 'react'
+import "./layout.css";
 
 export class layout extends Component {
   render() {
     return (
       <div>
-        layout
+        <p className="bg-blue-500 text-xl">Layout</p>
       </div>
     )
   }
