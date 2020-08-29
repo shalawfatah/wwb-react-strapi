@@ -2,12 +2,13 @@
 
 import React, { Component } from 'react'
 import "./layout.css";
+import Header from './header'
 
 export class layout extends Component {
   render() {
     return (
       <div>
-        <p className="bg-blue-500 text-xl">Layout</p>
+        <Header />
       </div>
     )
   }
