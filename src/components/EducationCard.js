@@ -1,5 +1,5 @@
 import React from 'react'
-import mapImage from '../images/map-gray.png'
+import mapImage from '../images/bee-pic.jpg'
 
  
 const EducationCard = () => {

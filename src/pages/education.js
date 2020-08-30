@@ -11,6 +11,10 @@ const Education = () => {
             <EducationCard />
             <EducationCard />
             <EducationCard />
+            <EducationCard />
+            <EducationCard />
+            <EducationCard />
+
             </div>
         </Layout>
     )

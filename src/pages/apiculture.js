@@ -5,11 +5,15 @@ import ApiCard from '../components/ApiCard'
 const Apiculture = () => {
     return (
         <Layout>
-            <div className="flex flex-wrap">
+            <div className="flex flex-wrap mx-auto">
              <ApiCard><p>Hello</p></ApiCard> 
              <ApiCard><p>Hello</p></ApiCard> 
              <ApiCard><p>Hello</p></ApiCard> 
              <ApiCard><p>Hello</p></ApiCard> 
+             <ApiCard><p>Hello</p></ApiCard> 
+             <ApiCard><p>Hello</p></ApiCard> 
+             <ApiCard><p>Hello</p></ApiCard> 
+
              </div>
         </Layout>
     )

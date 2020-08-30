@@ -1,7 +1,7 @@
 .api-card {
     clip-path: polygon(50% 0%, 100% 35%, 100% 70%, 50% 100%, 0% 70%, 0% 35%);
-    width: 18rem;
-    height: 20rem;
+    width: 23rem;
+    height: 25rem;
     border: 2px solid crimson;
     background-image: url('../images/bee-pic.jpg');
     background-size: cover;
