@@ -28,5 +28,6 @@ export default [
     id: 6,
     text: "Subscribe",
     url: "/subscribe/",
+    additional: "special-menu",
   },
 ]

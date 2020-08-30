@@ -6,7 +6,7 @@ import Image from '../images/logo.png'
 export class Header extends Component {
     render() {
         return (
-            <div class="flex justify-between items-center px-10 border-b-2">
+            <div class="flex justify-between items-center px-10 border-b-2 flex-wrap">
                 <div>
                 <Link to="/">
                 <img src={Image} alt="Image" class="w-24 h-24" />
@@ -16,10 +16,11 @@ export class Header extends Component {
                 {links.map((link)=> {
                 return (
                     <li key={link.id} className="list-none font-semibold float-left m-1 hero">
-                        <Link fade to={link.url} className="flex text-grey-700 bg-white py-2 px-8 focus:outline-none hover:border-gray-700 rounded-full text-sm border-solid border-2 border-gray-400 cursor-pointer main-menu">{link.text}</Link>
+                        <Link fade to={link.url} className={`${link.additional} flex text-grey-700 bg-white py-2 px-4 focus:outline-none text-sm cursor-pointer main-menu`}>{link.text}</Link>
                     </li>
                 )
             })}</div>
+            
             </div>
         )
     }

@@ -23,5 +23,6 @@ export default [
       id: 5,
       text: "Terms of Service",
       url: "/terms-of-service/",
+      somelink: 'terms-link',
     },
   ]

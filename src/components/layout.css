@@ -5,16 +5,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
 
 :root {
+  /* Colors  */
   --primary-color: #FFB871;
   --light-grey: #F9F9FA;
+
+  /* Fonts  */
   --menu-font: 'Raleway';
 }
 .second-nav {
-  border-right: 4px solid gray;
+  border-right: 2px solid gray;
   transition: all .3s ease;
 }
 .second-nav:hover {
   color: var(--primary-color);
+}
+.terms-link {
+  border: none;
 }
 .social-icons {
   color: var(--primary-color);
@@ -29,7 +35,7 @@
   font-family: var(--menu-font);
 }
 .main-menu:hover {
-  border-color: var(--primary-color);
+  color: var(--primary-color);
 }
 .address {
   color: var(--primary-color);
@@ -39,4 +45,13 @@
   height: 30rem;
   background-image: url('../images/map-gray.png');
   background-size: cover;
+}
+.special-menu {
+  border: 2px solid var(--primary-color);
+  border-radius: 2rem;
+  color: var(--primary-color);
+}
+.special-menu:hover {
+  background-color: var(--primary-color);
+  color: var(--light-grey);
 }
