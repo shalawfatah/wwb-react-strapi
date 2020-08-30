@@ -7,9 +7,13 @@ import Footer from './Footer'
 const Layout = ({children}) => {
   return (
       <div>
-        <Header />
-        {children}
-        <Footer />
+          <Header />
+            <section class="text-gray-700 body-font relative">
+              <div class="container px-5 py-24 mx-auto">
+                {children}
+              </div>
+            </section>
+          <Footer />
       </div>
   )
 }

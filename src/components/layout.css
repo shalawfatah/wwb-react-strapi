@@ -2,6 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-.menu-border {
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+
+:root {
+  --primary-color: #FFB871;
+  --light-grey: #F9F9FA;
+  --menu-font: 'Raleway';
+}
+.second-nav {
   border-right: 4px solid gray;
+  transition: all .3s ease;
+}
+.second-nav:hover {
+  color: var(--primary-color);
+}
+.social-icons {
+  color: var(--primary-color);
+  transition: all .3s ease;
+}
+
+.footer {
+  background-color: var(--light-grey);
+}
+.main-menu {
+  transition: all .3s ease;
+  font-family: var(--menu-font);
+}
+.main-menu:hover {
+  border-color: var(--primary-color);
+}
+.address {
+  color: var(--primary-color);
+}
+.home-content {
+  width: 60rem;
+  height: 30rem;
+  background-image: url('../images/map-gray.png');
+  background-size: cover;
 }
