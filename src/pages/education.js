@@ -9,13 +9,9 @@ const Education = () => {
             <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Beekeeping Programs</h1>
             <div className="flex flex-wrap">
             <Category  headline="Categories" subheadOne="Bee Programs" subheadTwo="Another title" subheadThree="Another Program" subheadFour="Final Title" subheadFive="Another Program" />
-            <EducationCard/>
-            <EducationCard />
-            <EducationCard />
-            <EducationCard />
-            <EducationCard />
-            <EducationCard />
-            <EducationCard />
+            <EducationCard headline="Api Card"></EducationCard>
+            <EducationCard headline="Api Card"></EducationCard>
+            <EducationCard headline="Api Card"></EducationCard>
             </div>
         </Layout>
     )
