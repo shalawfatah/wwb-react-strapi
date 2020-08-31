@@ -6,7 +6,7 @@
     position: absolute;
     left: 53%;
     top: 35%;
-    -webkit-box-shadow: 19px 18px 34px -14px rgba(0,0,0,0.6);
-    -moz-box-shadow: 19px 18px 34px -14px rgba(0,0,0,0.6);
-    box-shadow: 19px 18px 34px -14px rgba(0,0,0,0.6);   
+    -webkit-box-shadow: 5px 10px 8px #888888;
+    -moz-box-shadow: 5px 10px 8px #888888;
+    box-shadow: 5px 10px 8px #888888;   
   }
