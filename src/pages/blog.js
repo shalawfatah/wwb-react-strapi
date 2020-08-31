@@ -1,13 +1,13 @@
 import React from 'react'
 import Layout from '../components/layout'
 import BlogNewsCard from '../components/blog/BlogNewsCard'
+import Category from '../components/utilities/Category'
 
 const Blog = () => {
     return (
         <Layout>
-            <div className="flex flex-wrap">
+            <Category  headline="Categories" subheadOne="Bee Programs" subheadTwo="Another title" subheadThree="Another Program" subheadFour="Final Title" subheadFive="Another Program" />
             <BlogNewsCard />
-            </div>
         </Layout>
     )
 }
