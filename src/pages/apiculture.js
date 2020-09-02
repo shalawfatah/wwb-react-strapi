@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout'
-import ApiCard from '../components/ApiCard'
+import ApiCard from '../components/apiComponent/ApiCard'
 
 const Apiculture = () => {
     return (

@@ -1,5 +1,5 @@
 import React from 'react'
-import mapImage from '../images/bee-pic.jpg'
+import mapImage from '../../images/bee-pic.jpg'
 import './EducationCard.css';
 
  

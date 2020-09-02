@@ -4,8 +4,8 @@ import BlogNewsCard from '../components/blog/BlogNewsCard'
 import Category from '../components/utilities/Category'
 import Sideline from '../components/utilities/Sideline'
 import SideWithoutSearch from '../components/utilities/SideWithoutSearch'
-import EducationCard from '../components/EducationCard'
-import Button from '../components/Button'
+import EducationCard from '../components/EducationComponent/EducationCard'
+import Button from '../components/utilities/Button'
 
 
 const Blog = () => {

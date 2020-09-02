@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from '../Button'
+import Button from '../utilities/Button'
 import {Link} from 'gatsby'
 import ButtonMiddle from '../utilities/ButtonMiddle'
 import './OtherNews.css'

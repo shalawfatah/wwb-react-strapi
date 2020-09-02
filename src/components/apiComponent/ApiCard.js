@@ -1,6 +1,6 @@
 import React from 'react'
 import './ApiCard.css';
-import Header from './utilities/Header'
+import Header from '../utilities/Header'
 
  const ApiCard = () => {
     return (

@@ -55,3 +55,9 @@
   background-color: var(--primary-color);
   color: var(--light-grey);
 }
+.poly-news {
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+.industry-card {
+  box-shadow: 1px 1px 12px 1px #888888
+}

@@ -1,7 +1,7 @@
 import React from 'react'
-import Button from '../Button'
+import Button from './Button'
 import beePic from '../../images/bee-pic.jpg'
-import ButtonRight from '../utilities/ButtonRight'
+import ButtonRight from './ButtonRight'
 
 
 const BeeCard = () => {

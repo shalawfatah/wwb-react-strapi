@@ -1,6 +1,6 @@
 import React from 'react'
 import beePic from '../../images/bee-pic.jpg'
-import Button from '../Button'
+import Button from '../utilities/Button'
 
 const BlogNewsCard = () => {
     return (
