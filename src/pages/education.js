@@ -12,6 +12,10 @@ const Education = () => {
             <EducationCard headline="Api Card"></EducationCard>
             <EducationCard headline="Api Card"></EducationCard>
             <EducationCard headline="Api Card"></EducationCard>
+            <EducationCard headline="Api Card"></EducationCard>
+            <EducationCard headline="Api Card"></EducationCard>
+            <EducationCard headline="Api Card"></EducationCard>
+
             </div>
         </Layout>
     )
