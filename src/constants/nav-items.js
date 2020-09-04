@@ -24,10 +24,4 @@ export default [
     text: "Events",
     url: "/events/",
   },
-  {
-    id: 6,
-    text: "Subscribe",
-    url: "/subscribe/",
-    additional: "special-menu",
-  },
 ]

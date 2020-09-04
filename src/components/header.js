@@ -22,6 +22,7 @@ const Header = () => {
                     </li>
                 )
             })}
+                <Link fade to='/subscribe/' activeStyle={{backgroundColor: '#F08C00', color: '#FFF'}} className="flex text-grey-700 bg-white py-2 px-4 focus:outline-none text-sm cursor-pointer main-menu special-menu">Subscribe</Link>
             </div>
             <FaIcons.FaBars className="text-3xl text-orange-500 cursor-pointer hamburger" onClick={showSidebar} />
             <div className={sidebar ? 'slider-menu' : 'slider'}>
