@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import links from '../constants/nav-items'
-import {Link} from 'gatsby'
+import Link from "gatsby-link"
 import Image from '../images/logo.png'
 
 export class Header extends Component {
@@ -16,7 +16,7 @@ export class Header extends Component {
                 {links.map((link)=> {
                 return (
                     <li key={link.id} className="list-none font-semibold float-left m-1 hero">
-                        <Link fade to={link.url} className={`${link.additional} flex text-grey-700 bg-white py-2 px-4 focus:outline-none text-sm cursor-pointer main-menu`}>{link.text}</Link>
+                        <Link fade to={link.url} activeStyle={{ color: '#F08C00'}}  className={`${link.additional} flex text-grey-700 bg-white py-2 px-4 focus:outline-none text-sm cursor-pointer main-menu`}>{link.text}</Link>
                     </li>
                 )
             })}</div>

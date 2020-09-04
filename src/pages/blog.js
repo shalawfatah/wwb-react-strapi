@@ -11,7 +11,7 @@ import Button from '../components/utilities/Button'
 const Blog = () => {
     return (
         <Layout>
-            <div className="flex flex-wrap">
+            <div className="flex flex-wrap sm:flex-nowrap">
             <div className="w-1/3">
             <Sideline  headline="Categories" subheadOne="Bee Programs" subheadTwo="Another title" subheadThree="Another Program" subheadFour="Final Title" subheadFive="Another Program" />
             <SideWithoutSearch headline="Top Posts" subheadOne="Blog Title 1" subheadTwo="Blog title" subheadThree="Another Program" subheadFour="Final Title" subheadFive="Another Program" />

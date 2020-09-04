@@ -4,7 +4,7 @@ import Layout from '../components/layout'
 const TermsOfService = () => {
     return (
         <Layout>
-            Terms of Service Page   
+            Terms of Service Page 
         </Layout>
     )
 }

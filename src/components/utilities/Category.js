@@ -4,9 +4,9 @@ import Search from './Search'
  
 const Category = ({headline, subheadOne, subheadTwo, subheadThree, subheadFour, subheadFive}) => {
     return (
-        <div>
-            <div className="max-w-sm rounded overflow-hidden shadow-lg mx-2 my-4 ">
-                <div className="px-6 py-4">
+        <div className="lg:w-1/3 sm:w-full">
+            <div className="max-w-sm rounded overflow-hidden shadow-lg mx-2 my-4">
+                <div className="px-6 py-6">
                     <Search />
                     <div className="font-bold text-xl mb-2 py-5">{headline}</div>
                     <p className="text-gray-700 text-base py-2 border-b-2">

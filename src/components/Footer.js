@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import SecondNav from '../constants/second-nav'
-import {Link} from 'gatsby'
+import Link from "gatsby-link"
 import SocialLinks from '../constants/icons'
 import Image from '../images/logo.png'
 
@@ -24,7 +24,7 @@ class Footer extends Component {
                     {SecondNav.map((link)=> {
                     return (
                     <li key={link.id} className="list-none font-semibold float-left m-1 my-5">
-                        <Link fade to={link.url} className={`${link.somelink} flex text-grey-700 hover:text-gray-400 bg-none px-4 focus:outline-none text-xs cursor-pointer second-nav flex-wrap`}>{link.text}</Link>
+                        <Link fade to={link.url} activeStyle={{ color: '#F08C00'}} className={`${link.somelink} flex text-grey-700 hover:text-gray-400 bg-none px-4 focus:outline-none text-xs cursor-pointer second-nav flex-wrap`}>{link.text}</Link>
                     </li>
                     )
                     })}</div>

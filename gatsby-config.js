@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Worldwide Bee`,
+    description: `The Worldwide Bee Organization was founded to connect proactive individuals dedicated to sharing, designing, and constructing valuable solutions that can truly make a difference in the bee and honey industry.`,
+    author: `@shalawfatah`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
