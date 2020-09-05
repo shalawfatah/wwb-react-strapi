@@ -32,7 +32,7 @@ class Footer extends Component {
                     {SocialLinks.map((link)=> {
                     return (
                     <li key={link.id} className="list-none font-semibold m-1 my-5 float-left">
-                        <Link fade to={link.url} activeStyle={{ color: '#F08C00'}} className="flex text-indigo-500 hover:text-orange-500 bg-none focus:outline-none text-2xl cursor-pointer">{link.icon}</Link>
+                        <Link fade to={link.url} activeStyle={{ color: '#F08C00'}} className="flex text-indigo-400 hover:text-orange-500 bg-none focus:outline-none text-2xl cursor-pointer">{link.icon}</Link>
                     </li>
                     )
                     })}

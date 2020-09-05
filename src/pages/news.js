@@ -11,11 +11,11 @@ const News = () => {
         <Layout>
             <FirstNews />
             <div className="flex flex-wrap">
-            <div className="w-1/3">
+            <div className="lg:w-1/3 md:w-1/3 sm:w-full mx-auto">
             <Sideline  headline="Categories" subheadOne="Bee Programs" subheadTwo="Another title" subheadThree="Another Program" subheadFour="Final Title" subheadFive="Another Program" />
             <SideWithoutSearch headline="Trending" subheadOne="News 1" subheadTwo="News title" subheadThree="Another Program" subheadFour="Final Title" subheadFive="Another Program" />
             </div>
-            <div className="w-2/3">
+            <div className="lg:w-2/3 md:w-2/3 sm:w-2/3">
             <Header text="Latest News" />
             <OtherNews />
             </div>

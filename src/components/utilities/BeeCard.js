@@ -6,11 +6,10 @@ import ButtonRight from './ButtonRight'
 
 const BeeCard = () => {
     return (
-            <div>
                 <section class="text-gray-700 body-font">
-                  <div class="container px-5 py-10 mx-auto">
+                  <div class="container px-1 py-1 mx-auto sm:px-0">
                     <div class="flex flex-wrap -m-4">
-                      <div class="p-4 md:w-1/3">
+                      <div class="p-4 md:w-1/3 mx-auto">
                         <div class="h-full border-2 border-gray-200 rounded-lg overflow-hidden relative bg-gray-100">
                           <img class="lg:h-48 md:h-36 w-full object-cover object-center" src={beePic} alt="blog" />
                           <div class="p-6">
@@ -26,7 +25,6 @@ const BeeCard = () => {
                     </div>
                   </div>
                 </section>
-            </div>
     )
 }
 
