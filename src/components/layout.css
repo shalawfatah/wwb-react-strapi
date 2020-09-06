@@ -28,7 +28,7 @@
   transition: all .3s ease;
 }
 .logo {
-  z-index: 999;
+  z-index: 500;
 }
 .footer {
   background-color: var(--light-grey);
