@@ -14,7 +14,7 @@ const BlogNewsCard = () => {
                 <h1 class="title-font text-lg font-medium text-gray-900 mb-3">The Catalyzer</h1>
                 <p class="leading-relaxed mb-3">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
                 <div class="flex items-center flex-wrap ">
-                  <Button text="Read More" />
+                  <Button text="Read More" link='/bee-article/' />
                 </div>
               </div>
             </div>

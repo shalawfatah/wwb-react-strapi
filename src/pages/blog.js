@@ -16,13 +16,13 @@ const Blog = () => {
             <Sideline  headline="Categories" subheadOne="Bee Programs" subheadTwo="Another title" subheadThree="Another Program" subheadFour="Final Title" subheadFive="Another Program" />
             <SideWithoutSearch headline="Top Posts" subheadOne="Blog Title 1" subheadTwo="Blog title" subheadThree="Another Program" subheadFour="Final Title" subheadFive="Another Program" />
             </div>
-            <EducationCard headline="Bee title" content="lorem ipusm someone hi badsdsd lorem ipusm someone hi badsdsdlorem ipusm someone hi badsdsd lorem ipusm someone hi badsdsd" button={<Button text="Read More" />}></EducationCard>
-            <EducationCard headline="Bee title" content="lorem ipusm someone hi badsdsd lorem ipusm someone hi badsdsdlorem ipusm someone hi badsdsd lorem ipusm someone hi badsdsd" button={<Button text="Read More" />}></EducationCard>
-            <EducationCard headline="Bee title" content="lorem ipusm someone hi badsdsd lorem ipusm someone hi badsdsdlorem ipusm someone hi badsdsd lorem ipusm someone hi badsdsd" button={<Button text="Read More" />}></EducationCard>
-            <EducationCard headline="Bee title" content="lorem ipusm someone hi badsdsd lorem ipusm someone hi badsdsdlorem ipusm someone hi badsdsd lorem ipusm someone hi badsdsd" button={<Button text="Read More" />}></EducationCard>
-            <EducationCard headline="Bee title" content="lorem ipusm someone hi badsdsd lorem ipusm someone hi badsdsdlorem ipusm someone hi badsdsd lorem ipusm someone hi badsdsd" button={<Button text="Read More" />}></EducationCard>
-            <EducationCard headline="Bee title" content="lorem ipusm someone hi badsdsd lorem ipusm someone hi badsdsdlorem ipusm someone hi badsdsd lorem ipusm someone hi badsdsd" button={<Button text="Read More" />}></EducationCard>
-            <EducationCard headline="Bee title" content="lorem ipusm someone hi badsdsd lorem ipusm someone hi badsdsdlorem ipusm someone hi badsdsd lorem ipusm someone hi badsdsd" button={<Button text="Read More" />}></EducationCard>
+            <EducationCard headline="Bee title" content="lorem ipusm someone hi badsdsd lorem ipusm someone hi badsdsdlorem ipusm someone hi badsdsd lorem ipusm someone hi badsdsd" button={<Button text="Read More" link='/bee-article/' />}></EducationCard>
+            <EducationCard headline="Bee title" content="lorem ipusm someone hi badsdsd lorem ipusm someone hi badsdsdlorem ipusm someone hi badsdsd lorem ipusm someone hi badsdsd" button={<Button text="Read More" link='/bee-article/' />}></EducationCard>
+            <EducationCard headline="Bee title" content="lorem ipusm someone hi badsdsd lorem ipusm someone hi badsdsdlorem ipusm someone hi badsdsd lorem ipusm someone hi badsdsd" button={<Button text="Read More" link='/bee-article/' />}></EducationCard>
+            <EducationCard headline="Bee title" content="lorem ipusm someone hi badsdsd lorem ipusm someone hi badsdsdlorem ipusm someone hi badsdsd lorem ipusm someone hi badsdsd" button={<Button text="Read More" link='/bee-article/' />}></EducationCard>
+            <EducationCard headline="Bee title" content="lorem ipusm someone hi badsdsd lorem ipusm someone hi badsdsdlorem ipusm someone hi badsdsd lorem ipusm someone hi badsdsd" button={<Button text="Read More" link='/bee-article/' />}></EducationCard>
+            <EducationCard headline="Bee title" content="lorem ipusm someone hi badsdsd lorem ipusm someone hi badsdsdlorem ipusm someone hi badsdsd lorem ipusm someone hi badsdsd" button={<Button text="Read More" link='/bee-article/' />}></EducationCard>
+            <EducationCard headline="Bee title" content="lorem ipusm someone hi badsdsd lorem ipusm someone hi badsdsdlorem ipusm someone hi badsdsd lorem ipusm someone hi badsdsd" button={<Button text="Read More" link='/bee-article/' />}></EducationCard>
 
 
             </div>

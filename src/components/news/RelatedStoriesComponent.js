@@ -9,7 +9,6 @@ const RelatedStories = () => {
                     <h2 class="text-gray-900 text-lg title-font font-medium mb-2">#Second Story: Lorem ipusm groten borem widi</h2>
                     <h2 class="text-gray-900 text-lg title-font font-medium mb-2">#Third Story: Lorem ipusm groten borem widi</h2>
                     <h2 class="text-gray-900 text-lg title-font font-medium mb-2">#Fourth Story: Lorem ipusm groten borem widi</h2>
-
                 </div>
                 </div>
         </div>

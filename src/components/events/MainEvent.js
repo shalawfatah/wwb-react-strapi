@@ -17,7 +17,7 @@ const MainEvent = () => {
                 <div className="py-10">
                 <Header text="Name of Upcoming Event" />
                 </div>
-               <ButtonMiddle text="Register" />
+               <ButtonMiddle text="Register" link='/single-event/' />
                 </div>
             </div>
             </div>

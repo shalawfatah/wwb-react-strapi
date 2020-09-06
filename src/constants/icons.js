@@ -1,36 +1,36 @@
 import React from "react"
 import {
-  FaFacebookSquare,
-  FaInstagramSquare,
-  FaTwitterSquare,
-  FaLinkedin,
-} from "react-icons/fa"
-import {  AiFillYoutube } from 'react-icons/ai'
+  FiFacebook,
+  FiInstagram,
+  FiTwitter,
+  FiLinkedin,
+  FiYoutube,
+} from "react-icons/fi"
 
 export default [
   {
     id: 1,
-    icon: <FaFacebookSquare className="social-icon"></FaFacebookSquare>,
+    icon: <FiFacebook className="social-icon"></FiFacebook>,
     url: "https://www.facebook.com/shalawfatah",
   },
   {
     id: 2,
-    icon: <FaInstagramSquare className="social-icon"></FaInstagramSquare>,
+    icon: <FiInstagram className="social-icon"></FiInstagram>,
     url: "https://www.linkedin.com/in/shalawfatah/",
   },
   {
     id: 3,
-    icon: <FaTwitterSquare className="social-icon"></FaTwitterSquare>,
+    icon: <FiTwitter className="social-icon"></FiTwitter>,
     url: "https://www.dribbble.com/shalaw-fatah",
   },
   {
     id: 4,
-    icon: <FaLinkedin className="social-icon"></FaLinkedin>,
+    icon: <FiLinkedin className="social-icon"></FiLinkedin>,
     url: "https://www.behance.net/shalawfatada54",
   },
   {
     id: 5,
-    icon: <AiFillYoutube className="social-icon"></AiFillYoutube>,
+    icon: <FiYoutube className="social-icon"></FiYoutube>,
     url: "https://www.twitter.com/shalawfatah",
   },
 ]

@@ -19,7 +19,7 @@ const MarginalEvent = () => {
                             <p class="leading-relaxed mb-3">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
                             <p className="text-xs"><span className="text-sm text-grey-900 mr-2">⚓</span><span className="text-xs text-gray-500">123 Street Name, Vancouver, A1B 2C3</span></p>
                             <div class="flex items-center flex-wrap ">
-                            <Button text="Read More" />
+                            <Button text="Read More" link='/single-event/' />
                             </div>
                           </div>
                         </div>
