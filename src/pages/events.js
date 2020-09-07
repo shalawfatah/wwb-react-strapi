@@ -7,7 +7,11 @@ const Events = () => {
     return (
         <Layout>
               <MainEvent />
+              <div className="flex flex-wrap">
               <MarginalEvent />
+              <MarginalEvent />
+              <MarginalEvent />
+              </div>
         </Layout>
     )
 }

@@ -1,12 +1,11 @@
 .button-free {
     border-radius: 2rem;
+    display: inline;
     background-color: white;
     color: black;
     transition: all .3s ease;
-    position: absolute;
-    left: 53%;
-    top: 35%;
-    -webkit-box-shadow: 5px 10px 8px #888888;
-    -moz-box-shadow: 5px 10px 8px #888888;
-    box-shadow: 5px 10px 8px #888888;   
+    z-index: 10000;
+    -webkit-box-shadow: 2px 3px 2px #888888;
+    -moz-box-shadow: 2px 3px 2px #888888;
+    box-shadow: 2px 3px 2px #888888;   
   }

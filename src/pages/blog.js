@@ -23,8 +23,6 @@ const Blog = () => {
             <EducationCard headline="Bee title" content="lorem ipusm someone hi badsdsd lorem ipusm someone hi badsdsdlorem ipusm someone hi badsdsd lorem ipusm someone hi badsdsd" button={<Button text="Read More" link='/bee-article/' />}></EducationCard>
             <EducationCard headline="Bee title" content="lorem ipusm someone hi badsdsd lorem ipusm someone hi badsdsdlorem ipusm someone hi badsdsd lorem ipusm someone hi badsdsd" button={<Button text="Read More" link='/bee-article/' />}></EducationCard>
             <EducationCard headline="Bee title" content="lorem ipusm someone hi badsdsd lorem ipusm someone hi badsdsdlorem ipusm someone hi badsdsd lorem ipusm someone hi badsdsd" button={<Button text="Read More" link='/bee-article/' />}></EducationCard>
-
-
             </div>
         </Layout>
     )
