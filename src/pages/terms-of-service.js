@@ -6,8 +6,8 @@ const TermsOfService = () => {
         <Layout>
             <section class="text-gray-700 body-font">
             <div class="flex flex-col text-center w-full">
-      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Worldwide Bee Terms of Service</h1>
-      <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom prism food truck ugh squid celiac humblebrag.</p>
+      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900 headline">Worldwide Bee Terms of Service</h1>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-base para">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom prism food truck ugh squid celiac humblebrag.</p>
     </div>
   <div class="container px-5 py-10 mx-auto flex flex-wrap">
     <div class="flex relative pt-10 pb-20 sm:items-center md:w-2/3 mx-auto">
@@ -22,7 +22,7 @@ const TermsOfService = () => {
           </svg>
         </div>
         <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
-          <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Term One</h2>
+          <h2 class="font-medium title-font text-gray-900 mb-1 text-xl headline">Term One</h2>
           <p class="leading-relaxed">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
         </div>
       </div>
@@ -39,7 +39,7 @@ const TermsOfService = () => {
           </svg>
         </div>
         <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
-          <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Term Two</h2>
+          <h2 class="font-medium title-font text-gray-900 mb-1 text-xl headline">Term Two</h2>
           <p class="leading-relaxed">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
         </div>
       </div>
@@ -57,7 +57,7 @@ const TermsOfService = () => {
           </svg>
         </div>
         <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
-          <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Term Three</h2>
+          <h2 class="font-medium title-font text-gray-900 mb-1 text-xl headline">Term Three</h2>
           <p class="leading-relaxed">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
         </div>
       </div>
@@ -75,7 +75,7 @@ const TermsOfService = () => {
           </svg>
         </div>
         <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
-          <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Term Four</h2>
+          <h2 class="font-medium title-font text-gray-900 mb-1 text-xl headline">Term Four</h2>
           <p class="leading-relaxed">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
         </div>
       </div>

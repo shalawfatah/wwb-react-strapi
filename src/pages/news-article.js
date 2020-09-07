@@ -2,6 +2,7 @@ import Layout from '../components/layout'
 import beePic from '../images/bee-pic.jpg'
 import AuthorProfile from '../components/news/AuthorProfile'
 import RelatedStories from '../components/news/RelatedStoriesComponent'
+import Header from '../components/utilities/Header'
 
 // Remember to add React Icon "IoIosArrowBack" for Homepage link on this article"
 
@@ -16,7 +17,10 @@ const newsArticle = () => {
                     <div className="rounded-lg h-64 overflow-hidden">
                         <img alt="content" class="object-cover object-center h-full w-full" src={beePic} />
                     </div>
-                    <div className="flex flex-col sm:flex-row mt-10">
+                    <div className="py-8">
+                    <Header text="Article Title" />
+                    </div>
+                    <div className="flex flex-col sm:flex-row">
                         <div className="sm:w-1/3 text-center sm:pr-8 sm:py-8">
                         
                         <div className="flex flex-col items-center text-center justify-center">
