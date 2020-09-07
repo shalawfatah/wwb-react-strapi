@@ -15,8 +15,8 @@ const OtherNews = () => {
                     <img src={beePic} />
                 </div>
                 <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-                    <h2 class="text-gray-900 text-lg title-font font-medium mb-2">Shooting Stars</h2>
-                    <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
+                    <h2 class="text-gray-900 text-lg title-font font-medium mb-2 headline">Shooting Stars</h2>
+                    <p class="leading-relaxed text-base para">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
                     <Button text="Read More" />
                 </div>
                 </div>

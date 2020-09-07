@@ -9,9 +9,9 @@ const AuthorProfile = () => {
                     <img src={authorPic} />
                 </div>
                 <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-                    <h2 class="text-gray-900 text-lg title-font font-medium mb-2">Author Name</h2>
-                    <p class="leading-relaxed text-base">Author Profile: Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
-                    <p className="text-gray-400 italic">// Put React Icons for Social Media Here</p>
+                    <h2 class="text-gray-900 text-lg title-font font-medium mb-2 headline">Author Name</h2>
+                    <p class="leading-relaxed text-base para">Author Profile: Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
+                    <p className="text-gray-400 italic para">// Put React Icons for Social Media Here</p>
                 </div>
                 </div>
         </div>

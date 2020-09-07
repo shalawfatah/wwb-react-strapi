@@ -1,5 +1,5 @@
 .industry-card {
-    box-shadow: 1px 1px 12px 1px #888888
+    box-shadow: 1px 1px 12px 1px #888888;
 }
 .poly-news {
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
