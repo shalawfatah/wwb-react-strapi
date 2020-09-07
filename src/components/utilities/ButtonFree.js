@@ -5,7 +5,7 @@ import {Link} from 'gatsby'
 const ButtonFree = ({text}) => {
     return (
         <li className="list-none font-semibold m-1">
-                        <Link fade to='#' className="flex text-grey-700 bg-white py-2 px-8 focus:outline-none text-lg cursor-pointer button-free">{text}</Link>
+                        <Link className="flex text-gray-600 bg-white py-2 px-6 focus:outline-none text-md button-free">{text}</Link>
         </li>
     )
 }

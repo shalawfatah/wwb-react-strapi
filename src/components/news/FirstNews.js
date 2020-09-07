@@ -1,6 +1,6 @@
 import React from 'react'
 import Button from '../utilities/Button'
-import beeImage from '../../images/bee-pic.jpg'
+import beeImage from '../../images/anotherbee.png'
 
 const FirstNews = () => {
     return (

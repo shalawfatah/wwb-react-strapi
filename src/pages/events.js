@@ -11,6 +11,9 @@ const Events = () => {
               <MarginalEvent />
               <MarginalEvent />
               <MarginalEvent />
+              <MarginalEvent />
+              <MarginalEvent />
+              <MarginalEvent />
               </div>
         </Layout>
     )
