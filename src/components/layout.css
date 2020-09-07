@@ -74,6 +74,14 @@
   display: none;
   transition: all 3s ease;
 }
+.bee-icon {
+  position: absolute;
+  right: 45%;
+  top: 48%;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
 @media only screen and (max-width: 800px) {
   .logo {
     z-index: 1000;
