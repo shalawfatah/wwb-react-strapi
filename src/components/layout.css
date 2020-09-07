@@ -50,8 +50,11 @@
 .home-content {
   height: 100%;
   width: 100%;
-  background-image: url('../images/map-full-gray.png');
-  background-size: cover;
+}
+.bee-card-place {
+  position: absolute;
+  top: 5%;
+  left: 15%;
 }
 .special-menu {
   border: 2px solid var(--primary-color);
