@@ -3,8 +3,9 @@ import beePic from '../images/bee-pic.jpg'
 import AuthorProfile from '../components/news/AuthorProfile'
 import RelatedStories from '../components/news/RelatedStoriesComponent'
 import Header from '../components/utilities/Header'
+import {FiChevronLeft} from 'react-icons/fi'
+import Link from 'gatsby-link'
 
-// Remember to add React Icon "IoIosArrowBack" for Homepage link on this article"
 
 import React from 'react'
 
@@ -12,6 +13,9 @@ const newsArticle = () => {
     return (
         <Layout>
             <section className="text-gray-700 body-font">
+                <Link fade to="/news/" >
+                <FiChevronLeft className="bg-orange-600 text-white text-4xl rounded-full hover:bg-orange-500 cursor-pointer transition duration-500 ease-in-out" />
+                </Link>
                 <div className="container px-5 py-0 mx-auto flex flex-col">
                     <div className="lg:w-5/6 mx-auto">
                     <div className="rounded-lg h-64 overflow-hidden">
@@ -28,8 +32,7 @@ const newsArticle = () => {
                             <div className="w-12 h-1 bg-orange-500 rounded mt-2 mb-4"></div>
                             <p className="text-sm text-gray-500 ">12 April 2021</p>
                             <p className="text-sm text-gray-900 py-2">♣ 1min read</p>
-                            <h2 className="text-2xl text-gray-900 italic">“ Quote: lorem lorem ipusm some bipsum latin mimi”</h2>
-
+                            <h2 className="text-2xl text-gray-900 italic">“Quote: lorem lorem ipusm some bipsum latin mimi”</h2>
                         </div>
                         </div>
                         <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-300 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
@@ -43,7 +46,6 @@ const newsArticle = () => {
                     </div>
                 </div>
                 </section>
-                
             </Layout>
     )
 }

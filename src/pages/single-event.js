@@ -2,6 +2,8 @@
 import Layout from '../components/layout'
 import beePic from '../images/bee-pic.jpg'
 import ButtonMiddle from '../components/utilities/ButtonMiddle'
+import Link from 'gatsby-link'
+import {FiChevronLeft} from 'react-icons/fi'
 
 // Remember to add React Icon "IoIosArrowBack" for Homepage link on this article"
 
@@ -11,6 +13,9 @@ const singleEvent = () => {
     return (
         <Layout>
             <section className="text-gray-700 body-font">
+                <Link fade to="/events/" >
+                <FiChevronLeft className="bg-orange-600 text-white text-4xl rounded-full hover:bg-orange-500 cursor-pointer transition duration-500 ease-in-out" />
+                </Link>
                 <div className="container px-5 py-0 mx-auto flex flex-col">
                     <div className="lg:w-full mx-auto">
                     <div className="rounded-lg h-64 overflow-hidden">
