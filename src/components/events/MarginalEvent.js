@@ -17,7 +17,7 @@ const MarginalEvent = () => {
                             <h1 className="title-font text-lg font-medium text-gray-900 mb-3 headline">The Catalyzer</h1>
                             <p className="leading-relaxed mb-3 para">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
                             <p className="text-xs"><span className="text-sm text-grey-900 mr-2">⚓</span><span className="text-xs text-gray-500">123 Street Name, Vancouver, A1B 2C3</span></p>
-                            <div className="flex items-center flex-wrap ">
+                            <div className="flex items-center justify-center flex-wrap ">
                             <Button text="Read More" link='/single-event/' />
                             </div>
                       </div>
