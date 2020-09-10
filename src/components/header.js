@@ -11,7 +11,7 @@ const Header = () => {
             <div class="flex justify-between items-center px-10 border-b-2 flex-wrap">
                 <div className="logo">
                 <Link to="/">
-                <img src={Image} alt="Image" class="w-24 h-24" />
+                <img src={Image} alt="Image" class="w-16 py-4" />
                 </Link>
                 </div>
                 <div>

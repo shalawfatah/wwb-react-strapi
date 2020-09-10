@@ -3,7 +3,7 @@ import beePic from '../../images/bee-pic.jpg'
 import Header from '../utilities/Header'
 import ButtonMiddle from '../utilities/ButtonMiddle'
 
-const MainEvent = () => {
+const MainEvent = ({title, date}) => {
     return (
         <section class="text-gray-700 body-font overflow-hidden">
             <div class="container px-5 py-2 mx-auto">
@@ -15,7 +15,7 @@ const MainEvent = () => {
                     <span class="text-gray-900 text-3xl title-font font-medium mb-1 mx-8">42<span className="text-sm text-gray-600 m-1">Minutes</span></span>
                     <span class="text-gray-900 text-3xl title-font font-medium mb-1 mx-8">11<span className="text-sm text-gray-600 m-1">Seconds</span></span>
                     <div className="py-10">
-                    <Header text="Name of Upcoming Event" />
+                    <h1 className="text-3xl font-extrabold text-center">{title}</h1>
                     </div>
                 <ButtonMiddle text="Register" link='/single-event/' />
                     </div>

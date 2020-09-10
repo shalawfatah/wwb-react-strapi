@@ -1,14 +1,18 @@
 import React from 'react'
 import './ApiCard.css';
 import Header from '../utilities/Header'
+import Img from 'gatsby-image'
 
- const ApiCard = () => {
+
+ const ApiCard = ({title, subtitle, image, slug}) => {
     return (
-        <div className="mx-auto">
-            <div className="api-card mx-5 my-6">
+        <div className="mx-auto text-center all-card">
+            <div className="api-card mx-auto my-6 bg-cover bg-center" style={{backgroundColor: `orange`}} >
             </div>
-            <p className="flex justify-center">Amazing People</p>
-            <Header text="Arnand Varma"/>
+            <div className="w-3/4 text-center">
+            <p className="text-center">{subtitle} </p>
+            <Header text={title} />
+            </div>
             </div>
                 )
 }

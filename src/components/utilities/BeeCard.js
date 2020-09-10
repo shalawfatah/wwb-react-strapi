@@ -1,7 +1,5 @@
 import React from 'react'
-import Button from './Button'
 import beePic from '../../images/bee-pic.jpg'
-import ButtonRight from './ButtonRight'
 import Link from 'gatsby-link'
 
 

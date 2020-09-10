@@ -5,11 +5,14 @@ import OtherNews from '../components/news/OtherNews'
 import Header from '../components/utilities/Header'
 import Sideline from '../components/utilities/Sideline'
 import SideWithoutSearch from '../components/utilities/SideWithoutSearch'
+import ButtonMiddle from '../components/utilities/ButtonMiddle'
 
-const News = () => {
+
+const News = ({data}) => {
+    const {allStrapiIndustries: {nodes:articles}} = data
     return (
         <Layout>
-            <FirstNews />
+            <FirstNews title={articles[0].title} quote={articles[0].quote} />
             <div className="flex flex-wrap">
             <div className="lg:w-1/3 md:w-1/3 sm:w-full mx-auto">
             <Sideline  headline="Categories" subheadOne="Bee Programs" subheadTwo="Another title" subheadThree="Another Program" subheadFour="Final Title" subheadFive="Another Program" />
@@ -17,7 +20,12 @@ const News = () => {
             </div>
             <div className="lg:w-2/3 md:w-2/3 sm:w-2/3">
             <Header text="Latest News" />
-            <OtherNews />
+            {articles.map((article)=> {
+                return <OtherNews title={article.title} quote={article.quote} />
+            })}
+            <div className="py-16">
+                <ButtonMiddle text="View More ..." />
+                </div>
             </div>
             </div>
         </Layout>
@@ -25,3 +33,24 @@ const News = () => {
 }
 
 export default News
+
+export const query = graphql`
+  {
+    allStrapiIndustries {
+      nodes {
+        quote
+        content
+        title
+        minutes_read
+        date(formatString: "MM")
+        report_photo {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+  }
+`

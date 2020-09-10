@@ -26,7 +26,6 @@ const newsArticle = () => {
                     </div>
                     <div className="flex flex-col sm:flex-row">
                         <div className="sm:w-1/3 text-center sm:pr-8 sm:py-8">
-                        
                         <div className="flex flex-col items-center text-center justify-center">
                             <h2 className="font-medium title-font mt-4 text-gray-900 text-lg">Article Author</h2>
                             <div className="w-12 h-1 bg-orange-500 rounded mt-2 mb-4"></div>
@@ -40,7 +39,7 @@ const newsArticle = () => {
                         </div>
                     </div>
                     <div><AuthorProfile /></div>
-                    <p className="text-gray-400">// Put article icon before Related Stories Text</p>
+                    <p className="text-gray-400">-- Put article icon before Related Stories Text</p>
                     <div className="text-3xl"> Related Stories</div>
                    <RelatedStories />
                     </div>

@@ -19,17 +19,14 @@ module.exports = {
         postCssPlugins: [require("tailwindcss")],
       },
     },
-    // {
-    //   resolve: `gatsby-source-strapi`,
-    //   options: {
-    //     apiURL: `http://localhost:1337`,
-    //     contentTypes: [
-    //       `home`,
-    //       `articles`
-    //     ],
-    //     queryLimist: 1000,
-    //   },
-    // },
+    {
+      resolve: `gatsby-source-strapi`,
+      options: {
+        apiURL: `http://localhost:1337`,
+        queryLimit: 1000, // Default to 100
+        contentTypes: [`blogs`, `educations`, `apitherapies`, `industries`, `events`],
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -44,8 +41,6 @@ module.exports = {
         icon: `src/images/logo.png`, // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
   ],
 }
