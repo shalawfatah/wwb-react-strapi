@@ -10,7 +10,7 @@ const Blog = ({data}) => {
     const {allStrapiBlogs:{nodes:blogs}} = data
     return (
         <Layout>
-            <div className="flex flex-wrap">
+            <div className="flex flex-wrap py-5">
             <div className="lg:w-1/3 mx-auto">
             <Sideline  headline="Categories" subheadOne="Bee Programs" subheadTwo="Another title" subheadThree="Another Program" subheadFour="Final Title" subheadFive="Another Program" />
             <SideWithoutSearch headline="Top Posts" subheadOne="Blog Title 1" subheadTwo="Blog title" subheadThree="Another Program" subheadFour="Final Title" subheadFive="Another Program" />

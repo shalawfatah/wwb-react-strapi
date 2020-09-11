@@ -12,7 +12,7 @@ import React from 'react'
 const newsArticle = () => {
     return (
         <Layout>
-            <section className="text-gray-700 body-font">
+            <section className="text-gray-700 body-font py-5">
                 <Link fade to="/news/" >
                 <FiChevronLeft className="bg-orange-600 text-white text-4xl rounded-full hover:bg-orange-500 cursor-pointer transition duration-500 ease-in-out" />
                 </Link>

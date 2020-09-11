@@ -10,7 +10,7 @@ import React from 'react'
 const beeArticle = () => {
     return (
         <Layout>
-            <section className="text-gray-700 body-font">
+            <section className="text-gray-700 body-font px-5">
                 <Link fade to="/blog/" >
                 <FiChevronLeft className="bg-orange-600 text-white text-4xl rounded-full hover:bg-orange-500 cursor-pointer transition duration-500 ease-in-out" />
                 </Link>

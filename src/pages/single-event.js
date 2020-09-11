@@ -12,7 +12,7 @@ import React from 'react'
 const singleEvent = () => {
     return (
         <Layout>
-            <section className="text-gray-700 body-font">
+            <section className="text-gray-700 body-font py-5">
                 <Link fade to="/events/" >
                 <FiChevronLeft className="bg-orange-600 text-white text-4xl rounded-full hover:bg-orange-500 cursor-pointer transition duration-500 ease-in-out" />
                 </Link>
@@ -21,7 +21,7 @@ const singleEvent = () => {
                     <div className="rounded-lg h-64 overflow-hidden">
                         <img alt="content" className="object-cover object-center h-full w-full" src={beePic} />
                     </div>
-                    <div className="container px-5 py-16 mx-auto">
+                    <div className="container px-5 py-10 mx-auto">
                         <div className="lg:w-2/3 flex flex-col sm:flex-row sm:items-center items-start mx-auto mb-10">
                         <h1 className="flex-grow sm:pr-16 text-2xl font-medium title-font text-gray-900 font-bold">Name of the Event <br /> <span className="text-lg font-thin ">Great style is easy. Article offers stylish modern, mid century, and scandinavian furniture from world renowned designers at accessible prices. Shop now.</span></h1>
                         <div><ButtonMiddle text="Tickets"/>

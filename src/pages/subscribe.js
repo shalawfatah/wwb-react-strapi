@@ -5,7 +5,7 @@ import ButtonRight from '../components/utilities/ButtonRight'
 
 const Subscribe = () => (
   <Layout>
-    <section className="text-gray-700 body-font overflow-hidden">
+    <section className="text-gray-700 body-font overflow-hidden py-5" >
             <div className="container px-5 py-0 mx-auto">
             <div className="lg:w-4/5 mx-auto flex flex-wrap">
             <img alt="ecommerce" className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src={beePic} />

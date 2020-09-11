@@ -3,12 +3,12 @@ import beePic from '../../images/bee-pic.jpg'
 import Header from '../utilities/Header'
 import ButtonMiddle from '../utilities/ButtonMiddle'
 
-const MainEvent = ({title, date}) => {
+const MainEvent = ({title, date, image}) => {
     return (
-        <section class="text-gray-700 body-font overflow-hidden">
+        <section class="text-gray-700 body-font overflow-hidden py-5">
             <div class="container px-5 py-2 mx-auto">
                 <div class="lg:w-full mx-auto flex flex-wrap">
-                <img alt="ecommerce" class="lg:w-1/3 w-full lg:h-auto h-64 object-cover object-center rounded" src={beePic} />
+                <img alt="ecommerce" class="lg:w-1/3 w-full lg:h-auto h-64 object-cover object-center rounded" src={image} />
                 <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
                     <span class="text-gray-900 text-3xl title-font font-medium mb-1 mx-8">12<span className="text-sm text-gray-600 m-1">Days</span></span>
                     <span class="text-gray-900 text-3xl title-font font-medium mb-1 mx-8">03<span className="text-sm text-gray-600 m-1">Hours</span></span>

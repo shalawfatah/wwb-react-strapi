@@ -9,7 +9,7 @@ const Layout = ({children}) => {
       <div>
           <Header />
             <section class="text-gray-700 body-font relative">
-              <div class="container px-5 py-24 mx-auto">
+              <div class="container px-5 py-0 mx-auto">
                 {children}
               </div>
             </section>

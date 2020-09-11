@@ -7,11 +7,13 @@ const Events = ({data}) => {
     const {allStrapiEvents:{nodes:events}} = data
     return (
         <Layout>
-              <MainEvent title={events[0].title} />
+          <div className="py-5">
+              <MainEvent title={events[0].title} image={events[0].photo.childImageSharp.fluid.src} />
               <div className="flex flex-wrap">
                   {events.map((event)=> {
-                      return <MarginalEvent title={event.title} summary={event.summary} date={event.date} location={event.location} />
+                      return <MarginalEvent title={event.title} summary={event.summary} date={event.date} location={event.location} image={event.photo.childImageSharp.fluid.src} />
                   })}
+              </div>
               </div>
         </Layout>
     )
@@ -27,6 +29,13 @@ export const query = graphql`
         title
         date(formatString: "DD MMMM YYYY")
         location
+        photo {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }
