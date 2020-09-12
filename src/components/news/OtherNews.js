@@ -1,9 +1,9 @@
 import React from 'react'
 import Button from '../utilities/Button'
 import './OtherNews.css'
-import beePic from '../../images/bee-pic.jpg'
+import Link from 'gatsby-link'
 
-const OtherNews = ({title, quote, image}) => {
+const OtherNews = ({title, quote, image, slug}) => {
     return (
         <div>
             <section class="text-gray-700 body-font">
@@ -15,7 +15,9 @@ const OtherNews = ({title, quote, image}) => {
                 <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
                 <h2 class="text-gray-900 text-2xl title-font font-extrabold mb-2 p-4">{title}</h2>
                 <p class="leading-relaxed text-base p-4">{quote}</p>
+                <Link fade to={slug}>
                     <Button text="Read More" />
+                </Link>
                 </div>
                 </div>
                 {/* <div class="flex items-center lg:w-full mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col industry-card p-2">

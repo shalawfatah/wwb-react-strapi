@@ -12,7 +12,7 @@ const Education = ({data}) => {
             <div className="flex flex-wrap mx-auto">
             <Category  headline="Categories" subheadOne="Bee Programs" subheadTwo="Another title" subheadThree="Another Program" subheadFour="Final Title" subheadFive="Another Program" />
             {educations.map((education)=> {
-                    return <EducationCard headline={education.title} image={education.picture.childImageSharp.fixed} />
+                    return <EducationCard headline={education.title} image={education.picture.childImageSharp.fixed} slug={education.slug} />
                 })}
             </div>
             </div>

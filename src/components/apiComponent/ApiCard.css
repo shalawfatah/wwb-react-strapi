@@ -3,5 +3,10 @@
     width: 23rem;
     height: 25rem;
     box-shadow: 10px 10px 12px 10px #000;
-
+}
+.headline-api {
+    transition: all .3s ease-in-out;
+}
+.headline-api:hover {
+    color: #F08C00;
 }

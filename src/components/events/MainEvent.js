@@ -3,7 +3,7 @@ import beePic from '../../images/bee-pic.jpg'
 import Header from '../utilities/Header'
 import ButtonMiddle from '../utilities/ButtonMiddle'
 
-const MainEvent = ({title, date, image}) => {
+const MainEvent = ({title, date, image, slug}) => {
     return (
         <section class="text-gray-700 body-font overflow-hidden py-5">
             <div class="container px-5 py-2 mx-auto">
@@ -17,7 +17,7 @@ const MainEvent = ({title, date, image}) => {
                     <div className="py-10">
                     <h1 className="text-3xl font-extrabold text-center">{title}</h1>
                     </div>
-                <ButtonMiddle text="Register" link='/single-event/' />
+                <ButtonMiddle text="Register" link={slug} />
                     </div>
                 </div>
             </div>

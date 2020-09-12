@@ -1,3 +1,9 @@
 .education-card {
     background-color: #FFDE86;
 }
+.education-image {
+    transition: all .5s ease-in-out;
+}
+.education-image:hover {
+    transform: scale(1.19) rotate(10deg) skewY(-5deg);
+}

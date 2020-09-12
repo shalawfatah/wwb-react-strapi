@@ -2,7 +2,7 @@ import React from 'react'
 import Button from '../utilities/Button'
 import beeImage from '../../images/anotherbee.png'
 
-const FirstNews = ({title, quote, image}) => {
+const FirstNews = ({title, quote, image, slug}) => {
     return (
         <div>
             <section className="text-gray-700 body-font overflow-hidden">
@@ -13,7 +13,7 @@ const FirstNews = ({title, quote, image}) => {
                     <h1 className="text-gray-900 text-3xl title-font font-medium mb-6 headline">{title}</h1>
                     <p className="leading-8 p-4 para">{quote}</p>
                     <span>
-                    <Button text="Read More" link='/news-article/' />
+                    <Button text="Read More" link={slug} />
                     </span>
                     </div>
                 </div>

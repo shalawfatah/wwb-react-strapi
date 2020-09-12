@@ -16,7 +16,7 @@ const Blog = ({data}) => {
             <SideWithoutSearch headline="Top Posts" subheadOne="Blog Title 1" subheadTwo="Blog title" subheadThree="Another Program" subheadFour="Final Title" subheadFive="Another Program" />
             </div>
             {blogs.map((blog)=> {
-                return <BlogCard headline={blog.title} content={blog.quote} button={<Button text="Read More" link='/{blog.strapiId}/' />} image={blog.photo.childImageSharp.fluid.src} />
+                return <BlogCard headline={blog.title} content={blog.quote} slug={blog.slug} image={blog.photo.childImageSharp.fluid.src} />
             })}
             </div>
         </Layout>
@@ -41,6 +41,7 @@ export const query = graphql`
         mintues_read
         title
         quote
+        slug
       }
     }
   }
