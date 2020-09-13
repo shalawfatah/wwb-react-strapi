@@ -69,7 +69,7 @@ exports.createPages = async ({ graphql, actions }) => {
   paginate({
     createPage,
     items: result.data.blogs.nodes,
-    itemsPerPage: 5,
+    itemsPerPage: 9,
     pathPrefix: '/blog',
     component: path.resolve(`src/templates/blog-archive.js`)
   })
@@ -82,6 +82,13 @@ exports.createPages = async ({ graphql, actions }) => {
         slug: event.slug,
       },
     })
+  })
+  paginate({
+    createPage,
+    items: result.data.events.nodes,
+    itemsPerPage: 9,
+    pathPrefix: '/events',
+    component: path.resolve(`src/templates/events-archive.js`)
   })
   result.data.apis.nodes.forEach(api => {
     createPage({

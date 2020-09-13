@@ -16,9 +16,12 @@ const Blog = ({data, pageContext}) => {
             <SideWithoutSearch headline="Top Posts" subheadOne="Blog Title 1" subheadTwo="Blog title" subheadThree="Another Program" subheadFour="Final Title" subheadFive="Another Program" />
             </div>
             {blogs.map((blog)=> {
-                return <BlogCard headline={blog.title} content={blog.quote} slug={blog.slug} image={blog.photo.childImageSharp.fluid.src} />
+                return (
+                  <div className="flex items-stretch my-12">
+                <BlogCard headline={blog.title} content={blog.quote} slug={blog.slug} image={blog.photo.childImageSharp.fluid.src} />
+                  </div>
+                )
             })}
-            
             </div>
                 <div className="py-16">
                 <Pager pageContext={pageContext} />
