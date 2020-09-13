@@ -12,7 +12,7 @@ const News = ({data}) => {
     const {allStrapiIndustries: {nodes:articles}} = data
     return (
         <Layout>
-            <FirstNews title={articles[0].title} quote={articles[0].quote} image={articles[0].report_photo.childImageSharp.fluid.src} slug={articles[0].slug} />
+            <FirstNews title={articles[0].title} quote={articles[0].quote} image={articles[0].report_photo.childImageSharp.fluid.src} slug={`/industry-news/${articles[0].slug}`} />
             <div className="flex flex-wrap">
             <div className="lg:w-1/3 md:w-1/3 sm:w-full mx-auto">
             <Sideline  headline="Categories" subheadOne="Bee Programs" subheadTwo="Another title" subheadThree="Another Program" subheadFour="Final Title" subheadFive="Another Program" />
@@ -21,7 +21,7 @@ const News = ({data}) => {
             <div className="lg:w-2/3 md:w-2/3 sm:w-2/3">
             <Header text="Latest News" />
             {articles.map((article)=> {
-                return <OtherNews title={article.title} quote={article.quote} image={article.report_photo.childImageSharp.fluid.src} slug={article.slug} />
+                return <OtherNews title={article.title} quote={article.quote} image={article.report_photo.childImageSharp.fluid.src} slug={`/industry-news/${article.slug}`} />
             })}
             <div className="py-16">
                 <ButtonMiddle text="View More ..." />
