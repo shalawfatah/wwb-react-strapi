@@ -92,6 +92,7 @@
   box-shadow: 1px 1px 12px 1px #888888;
   padding: 1rem;
   border-radius: 1rem;
+  width: 300px;
 }
 .headline {
   font-family: var(--menu-font);
@@ -132,4 +133,36 @@
   .second-menu {
     font-size: 20px;
   }
+}
+
+/* React Markdown  */
+blockquote::before {
+  font-family: var(--menu-font);
+  content: "“";
+  font-size: 15rem;
+  color: var(--heavy-grey);
+  position: absolute;
+  left: -4rem;
+  top: -5rem;
+
+}
+blockquote {
+  font-family: var(--menu-font);
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  position: relative;
+  padding: 1rem;
+}
+
+h3 {
+  border-left: 7px solid var(--primary-color);
+  padding-left: 1rem;
+  font-family: var(--menu-font);
+  font-size: 1.6rem;
+  margin: 1rem;
+  font-weight: 900;
+}
+
+p {
+  line-height: 2.3;
 }

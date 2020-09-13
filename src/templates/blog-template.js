@@ -9,18 +9,18 @@ import ReactMarkdown from 'react-markdown'
 
 import React from 'react'
 
-const newsArticle = ({data}) => {
-    const {title, report_photo, content, minutes_read, article_date, quote, article_author:{name, author_title, author_profile, author_photo}} = data.strapiIndustries
+const blogArticle = ({data}) => {
+    const {title, photo, content, mintues_read, quote, article_date, article_author:{name, author_title, author_profile, author_photo}} = data.strapiBlogs
     return (
-                    <Layout>
+            <Layout>
                 <section className="text-gray-700 body-font py-5">
-                <Link fade to="/news/" >
+                <Link fade to="/blog/" >
                 <FiChevronLeft className="bg-orange-600 text-white text-4xl rounded-full hover:bg-orange-500 cursor-pointer transition duration-500 ease-in-out" />
                 </Link>
                 <div className="container px-5 py-0 mx-auto flex flex-col">
                     <div className="lg:w-5/6 mx-auto">
                     <div className="rounded-lg h-64 overflow-hidden">
-                        <img alt="content" class="object-cover object-center h-full w-full" src={report_photo.childImageSharp.fluid.src} />
+                        <img alt="content" class="object-cover object-center h-full w-full" src={photo.childImageSharp.fluid.src} />
                     </div>
                     <div className="py-8">
                     <Header text={title}/>
@@ -31,7 +31,7 @@ const newsArticle = ({data}) => {
                             <h2 className="font-medium title-font mt-4 text-gray-900 text-lg">{name}</h2>
                             <div className="w-12 h-1 bg-orange-500 rounded mt-2 mb-4"></div>
                             <p className="text-sm text-gray-500 ">{article_date}</p>
-                            <p className="text-sm text-gray-900 py-2">♣ {minutes_read} min read</p>
+                            <p className="text-sm text-gray-900 py-2">♣ {mintues_read} min read</p>
                             <h2 className="text-2xl text-gray-900 italic">{quote}</h2>
                         </div>
                         </div>
@@ -39,7 +39,7 @@ const newsArticle = ({data}) => {
                         <p className="leading-relaxed text-lg mb-4"><ReactMarkdown source={content} /></p>
                         </div>
                     </div>
-                    <div><AuthorProfile name={name} profile={author_profile} photo={author_photo.childImageSharp.fluid.src} title={author_title}  /></div>
+                    <div><AuthorProfile name={name} profile={author_profile} photo={author_photo.childImageSharp.fluid.src} title={author_title} /></div>
                     <p className="text-gray-400">-- Put article icon before Related Stories Text</p>
                     <div className="text-3xl"> Related Stories</div>
                    <RelatedStories />
@@ -50,36 +50,38 @@ const newsArticle = ({data}) => {
     )
 }
 
-export default newsArticle
+export default blogArticle
 
 export const query = graphql`
-    query getSingleIndustry($slug: String) {
-        strapiIndustries(slug: { eq: $slug }) {
-          article_author {
-            name
-            author_title
-            author_profile
-            author_social_media
-            author_photo {
-              childImageSharp {
-                fluid {
-                  src
+    query getSingleBlog($slug: String) {
+        strapiBlogs(slug: { eq: $slug }) {
+            article_author {
+                name
+                author_title
+                author_profile
+                author_social_media
+                author_photo {
+                  childImageSharp {
+                    fluid {
+                      src
+                    }
+                  }
                 }
               }
-            }
-          }
-        quote
-        content
-        title
-        minutes_read
-        date(formatString: "MM")
-        report_photo {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
+            photo {
+                childImageSharp {
+                  fluid {
+                    src
+                  }
+                }
+              }
+              content
+              category
+              mintues_read
+              title
+              quote
+              article_date(formatString: "DD MMMM YYYY")
+              slug
       }
     }
 `

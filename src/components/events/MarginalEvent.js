@@ -1,6 +1,5 @@
 import React from 'react'
 import Button from '../utilities/Button'
-import beePic from '../../images/wwb-team.jpeg'
 import './MarginalEvent.css'
 import {FiMapPin} from 'react-icons/fi'
 import '../utilities/ButtonFree.css'
@@ -19,7 +18,7 @@ const MarginalEvent = ({title, summary, location, date, image, slug}) => {
                             <p className="leading-relaxed mb-3 para">{summary}</p>
                             <p className="text-xs flex flex-wrap"><span className="text-lg text-grey-900 mr-2 text-orange-600"><FiMapPin /></span><span className="text-xs text-gray-600">{location}</span></p>
                             <div className="flex items-center justify-center flex-wrap ">
-                            <Button text="Read More" link={slug} />
+                            <Button text="Read More" link={`/events/${slug}`} />
                             </div>
                       </div>
                     </div>

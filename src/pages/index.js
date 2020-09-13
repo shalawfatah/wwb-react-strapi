@@ -18,7 +18,7 @@ const IndexPage = ({data}) => {
     <div className="bee-card-place">
     {hideBee && genomes.map((genome)=> {
         return (
-          <BeeCard name={genome.bee_name} genome={genome.bee_genome} summary={genome.summary} image={genome.bee_photo.childImageSharp.fluid.src} slug={genome.slug} />
+          <BeeCard name={genome.bee_name} genome={genome.bee_genome} summary={genome.summary} image={genome.bee_photo.childImageSharp.fluid.src} slug={`/genomes/${genome.slug}`} />
         )
       })}
     </div>

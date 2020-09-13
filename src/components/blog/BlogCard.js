@@ -11,7 +11,7 @@ const EducationCard = ({headline, content, button, image, slug}) => {
                 <div className="px-6 py-4 mx-auto">
                 <div className="sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 mb-4 headline">{headline}</div>
                 <p class="leading-relaxed mb-3 para">{content}</p>
-                <Link to={slug} className="flex justify-center text-grey-700 bg-white py-2 px-4 mx-16 focus:outline-none text-md cursor-pointer button font-semibold">Read More</Link>
+                <Link to={`/blog/${slug}`} className="flex justify-center text-grey-700 bg-white py-2 px-4 mx-16 focus:outline-none text-md cursor-pointer button font-semibold">Read More</Link>
                 </div>
             </div>
         </div>

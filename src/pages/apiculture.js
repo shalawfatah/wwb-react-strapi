@@ -12,7 +12,7 @@ const Apiculture = ({data}) => {
             <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 para">Showcasing the best people in the industry, all things bees and anything related to bee farmers. </p>
             <div className="flex flex-wrap mx-auto">
             {apis.map((api)=> {
-                return <ApiCard title={api.title} subtitle={api.subtitle} image={api.photo.childImageSharp.fluid.src} slug={api.slug} />
+                return <ApiCard title={api.title} subtitle={api.subtitle} image={api.photo.childImageSharp.fluid.src} slug={`/apiculture/${api.slug}`} />
             })}
              <ApiCard></ApiCard> 
             </div>

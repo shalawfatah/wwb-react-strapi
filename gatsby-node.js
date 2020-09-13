@@ -12,6 +12,31 @@ exports.createPages = async ({ graphql, actions }) => {
           slug
         }
       }
+      blogs: allStrapiBlogs {
+          nodes {
+              slug
+          }
+      }
+      events: allStrapiEvents {
+          nodes {
+              slug
+          }
+      }
+      apis: allStrapiApitherapies {
+          nodes {
+              slug
+          }
+      }
+      educations: allStrapiEducations {
+          nodes {
+              slug
+          }
+      }
+      genomes: allStrapiGenomes {
+          nodes {
+              slug
+          }
+      }
     }
   `)
 
@@ -23,15 +48,6 @@ exports.createPages = async ({ graphql, actions }) => {
 //     component: path.resolve(`src/templates/paginator.js`),
 //   })
 
-//   result.data.educations.nodes.forEach(education => {
-//     createPage({
-//       path: `/educations/${education.slug}`,
-//       component: path.resolve(`src/templates/education-template.js`),
-//       context: {
-//         slug: education.slug,
-//       },
-//     })
-//   })
   result.data.industries.nodes.forEach(industry => {
     createPage({
       path: `/industry-news/${industry.slug}`,
@@ -41,22 +57,49 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
-//   result.data.blogs.nodes.forEach(blog => {
-//     createPage({
-//       path: `/blog/${blog.slug}`,
-//       component: path.resolve(`src/templates/blog-template.js`),
-//       context: {
-//         slug: blog.slug,
-//       },
-//     })
-//   })
-//   result.data.genomes.nodes.forEach(genome => {
-//     createPage({
-//       path: `/genome/${genome.slug}`,
-//       component: path.resolve(`src/templates/genome-template.js`),
-//       context: {
-//         slug: genome.slug,
-//       },
-//     })
-//   })
+  result.data.blogs.nodes.forEach(blog => {
+    createPage({
+      path: `/blog/${blog.slug}`,
+      component: path.resolve(`src/templates/blog-template.js`),
+      context: {
+        slug: blog.slug,
+      },
+    })
+  })
+  result.data.events.nodes.forEach(event => {
+    createPage({
+      path: `/events/${event.slug}`,
+      component: path.resolve(`src/templates/event-template.js`),
+      context: {
+        slug: event.slug,
+      },
+    })
+  })
+  result.data.apis.nodes.forEach(api => {
+    createPage({
+      path: `/apiculture/${api.slug}`,
+      component: path.resolve(`src/templates/apiculture-template.js`),
+      context: {
+        slug: api.slug,
+      },
+    })
+  })
+  result.data.educations.nodes.forEach(education => {
+    createPage({
+      path: `/education/${education.slug}`,
+      component: path.resolve(`src/templates/education-template.js`),
+      context: {
+        slug: education.slug,
+      },
+    })
+  })
+  result.data.genomes.nodes.forEach(genome => {
+    createPage({
+      path: `/genomes/${genome.slug}`,
+      component: path.resolve(`src/templates/bee-template.js`),
+      context: {
+        slug: genome.slug,
+      },
+    })
+  })
 }
