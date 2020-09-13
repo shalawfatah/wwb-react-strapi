@@ -3,10 +3,10 @@ import Layout from '../components/layout'
 import Sideline from '../components/utilities/Sideline'
 import SideWithoutSearch from '../components/utilities/SideWithoutSearch'
 import BlogCard from '../components/blog/BlogCard'
-import Button from '../components/utilities/Button'
+import Pager from '../components/utilities/Pager'
 
 
-const Blog = ({data}) => {
+const Blog = ({data, pageContext}) => {
     const {allStrapiBlogs:{nodes:blogs}} = data
     return (
         <Layout>
@@ -18,7 +18,11 @@ const Blog = ({data}) => {
             {blogs.map((blog)=> {
                 return <BlogCard headline={blog.title} content={blog.quote} slug={blog.slug} image={blog.photo.childImageSharp.fluid.src} />
             })}
+            
             </div>
+                <div className="py-16">
+                <Pager pageContext={pageContext} />
+                </div>
         </Layout>
     )
 }
@@ -26,8 +30,12 @@ const Blog = ({data}) => {
 export default Blog
 
 export const query = graphql`
+query($skip: Int!, $limit: Int!)
   {
-    allStrapiBlogs {
+    allStrapiBlogs(
+        skip: $skip
+        limit: $limit
+      ) {
       nodes {
         photo {
           childImageSharp {

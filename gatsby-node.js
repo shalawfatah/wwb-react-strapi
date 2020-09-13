@@ -1,5 +1,5 @@
 const path = require("path")
-// const {paginate} = require('gatsby-awesome-pagination')
+const { paginate } = require('gatsby-awesome-pagination')
 
 // create pages dynamically
 exports.createPages = async ({ graphql, actions }) => {
@@ -40,23 +40,23 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-//   paginate({
-//     createPage,
-//     items: result.data.sports.nodes,
-//     itemsPerPage: 3,
-//     pathPrefix: '/sport-list',
-//     component: path.resolve(`src/templates/paginator.js`),
-//   })
-
   result.data.industries.nodes.forEach(industry => {
     createPage({
-      path: `/industry-news/${industry.slug}`,
+      path: `/news/${industry.slug}`,
       component: path.resolve(`src/templates/industry-template.js`),
       context: {
         slug: industry.slug,
       },
     })
   })
+  paginate({
+    createPage,
+    items: result.data.industries.nodes,
+    itemsPerPage: 5,
+    pathPrefix: '/news',
+    component: path.resolve(`src/templates/industry-archive.js`)
+  })
+
   result.data.blogs.nodes.forEach(blog => {
     createPage({
       path: `/blog/${blog.slug}`,
@@ -66,6 +66,14 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
+  paginate({
+    createPage,
+    items: result.data.blogs.nodes,
+    itemsPerPage: 5,
+    pathPrefix: '/blog',
+    component: path.resolve(`src/templates/blog-archive.js`)
+  })
+  
   result.data.events.nodes.forEach(event => {
     createPage({
       path: `/events/${event.slug}`,

@@ -1,7 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout'
 import ApiCard from '../components/apiComponent/ApiCard'
-import Img from 'gatsby-image'
 
 const Apiculture = ({data}) => {
     const {allStrapiApitherapies:{nodes:apis}} = data

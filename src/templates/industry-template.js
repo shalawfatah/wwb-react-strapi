@@ -63,7 +63,7 @@ export const query = graphql`
             author_photo {
               childImageSharp {
                 fluid {
-                  src
+                  ...GatsbyImageSharpFluid
                 }
               }
             }

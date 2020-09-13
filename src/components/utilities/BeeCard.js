@@ -1,5 +1,4 @@
 import React from 'react'
-import beePic from '../../images/bee-pic.jpg'
 import Link from 'gatsby-link'
 
 
