@@ -4,7 +4,7 @@ import wwbTeam from '../images/wwb-team.jpeg'
 
 const AboutUs = () => {
     return (
-        <Layout>
+        <Layout> 
             <section class="text-gray-700 body-font">
               <div class="container px-5 py-10 mx-auto">
                 <div class="flex flex-col text-center w-full mb-20">

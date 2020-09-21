@@ -5,14 +5,13 @@ import SideWithoutSearch from '../components/utilities/SideWithoutSearch'
 import BlogCard from '../components/blog/BlogCard'
 import Pager from '../components/utilities/Pager'
 
-
 const Blog = ({data, pageContext}) => {
     const {allStrapiBlogs:{nodes:blogs}} = data
     return (
         <Layout>
             <div className="flex flex-wrap py-5">
             <div className="lg:w-1/3 mx-auto">
-            <Sideline  headline="Categories" subheadOne="Bee Programs" subheadTwo="Another title" subheadThree="Another Program" subheadFour="Final Title" subheadFive="Another Program" />
+            <input type="search" id="gsearch" placeholder="Search..." name="gsearch" className="my-5 py-2 search-button mx-2" />
             <SideWithoutSearch headline="Top Posts" subheadOne="Blog Title 1" subheadTwo="Blog title" subheadThree="Another Program" subheadFour="Final Title" subheadFive="Another Program" />
             </div>
             {blogs.map((blog)=> {
@@ -48,7 +47,6 @@ query($skip: Int!, $limit: Int!)
           }
         }
         content
-        category
         mintues_read
         title
         quote

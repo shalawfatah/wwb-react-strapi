@@ -1,12 +1,10 @@
 const path = require("path")
 const { paginate } = require('gatsby-awesome-pagination')
 
-// create pages dynamically
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const result = await graphql(`
     {
-      
       industries: allStrapiIndustries {
         nodes {
           slug
@@ -32,6 +30,11 @@ exports.createPages = async ({ graphql, actions }) => {
               slug
           }
       }
+      education_categories: allStrapiEducationCategories {
+        nodes {
+          slug
+        }
+      }
       genomes: allStrapiGenomes {
           nodes {
               slug
@@ -56,7 +59,6 @@ exports.createPages = async ({ graphql, actions }) => {
     pathPrefix: '/news',
     component: path.resolve(`src/templates/industry-archive.js`)
   })
-
   result.data.blogs.nodes.forEach(blog => {
     createPage({
       path: `/blog/${blog.slug}`,
@@ -69,11 +71,10 @@ exports.createPages = async ({ graphql, actions }) => {
   paginate({
     createPage,
     items: result.data.blogs.nodes,
-    itemsPerPage: 9,
+    itemsPerPage: 5,
     pathPrefix: '/blog',
     component: path.resolve(`src/templates/blog-archive.js`)
   })
-  
   result.data.events.nodes.forEach(event => {
     createPage({
       path: `/events/${event.slug}`,
@@ -105,6 +106,15 @@ exports.createPages = async ({ graphql, actions }) => {
       component: path.resolve(`src/templates/education-template.js`),
       context: {
         slug: education.slug,
+      },
+    })
+  })
+  result.data.education_categories.nodes.forEach(educat => {
+    createPage({
+      path: `/education/${educat.slug}`,
+      component: path.resolve(`src/templates/education-category-template.js`),
+      context: {
+        slug: educat.slug,
       },
     })
   })

@@ -15,7 +15,7 @@ const NewsArchive = ({data, pageContext}) => {
             <FirstNews title={articles[0].title} quote={articles[0].quote} image={articles[0].report_photo.childImageSharp.fluid.src} slug={`/news/${articles[0].slug}`} />
             <div className="flex flex-wrap">
             <div className="lg:w-1/3 md:w-1/3 sm:w-full mx-auto">
-            <Sideline  headline="Categories" subheadOne="Bee Programs" subheadTwo="Another title" subheadThree="Another Program" subheadFour="Final Title" subheadFive="Another Program" />
+            <Sideline  headline="Categories" subheadOne="All" subheadTwo="Worldwide" subheadThree="Business" subheadFour="Lifestyle" />
             <SideWithoutSearch headline="Trending" subheadOne="News 1" subheadTwo="News title" subheadThree="Another Program" subheadFour="Final Title" subheadFive="Another Program" />
             </div>
             <div className="lg:w-2/3 md:w-2/3 sm:w-2/3">
@@ -34,6 +34,7 @@ const NewsArchive = ({data, pageContext}) => {
 
 export default NewsArchive
 
+
 export const query = graphql`
 query($skip: Int!, $limit: Int!)
   {
@@ -41,7 +42,7 @@ query($skip: Int!, $limit: Int!)
       skip: $skip
       limit: $limit
     ) {
-      nodes {
+        nodes {
         quote
         content
         title

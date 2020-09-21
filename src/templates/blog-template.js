@@ -10,7 +10,7 @@ import ReactMarkdown from 'react-markdown'
 import React from 'react'
 
 const blogArticle = ({data}) => {
-    const {title, photo, content, mintues_read, quote, article_date, article_author:{name, author_title, author_profile, author_photo}} = data.strapiBlogs
+    const {title, photo, content, mintues_read, quote, article_date, article_author} = data.strapiBlogs
     return (
             <Layout>
                 <section className="text-gray-700 body-font py-5">
@@ -28,7 +28,7 @@ const blogArticle = ({data}) => {
                     <div className="flex flex-col sm:flex-row">
                         <div className="sm:w-1/3 text-center sm:pr-8 sm:py-8">
                         <div className="flex flex-col items-center text-center justify-center">
-                            <h2 className="font-medium title-font mt-4 text-gray-900 text-lg">{name}</h2>
+                            <h2 className="font-medium title-font mt-4 text-gray-900 text-lg">{article_author.name}</h2>
                             <div className="w-12 h-1 bg-orange-500 rounded mt-2 mb-4"></div>
                             <p className="text-sm text-gray-500 ">{article_date}</p>
                             <p className="text-sm text-gray-900 py-2">♣ {mintues_read} min read</p>
@@ -39,7 +39,7 @@ const blogArticle = ({data}) => {
                         <p className="leading-relaxed text-lg mb-4"><ReactMarkdown source={content} /></p>
                         </div>
                     </div>
-                    <div><AuthorProfile name={name} profile={author_profile} photo={author_photo.childImageSharp.fluid.src} title={author_title} /></div>
+                    <div><AuthorProfile name={article_author.name} profile={article_author.author_profile} photo={article_author.author_photo.childImageSharp.fluid.src} title={article_author.author_title} /></div>
                     <p className="text-gray-400">-- Put article icon before Related Stories Text</p>
                     <div className="text-3xl"> Related Stories</div>
                    <RelatedStories />
@@ -76,7 +76,6 @@ export const query = graphql`
                 }
               }
               content
-              category
               mintues_read
               title
               quote

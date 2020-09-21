@@ -1,7 +1,6 @@
 import React, {useState} from "react"
 import Layout from "../components/layout"
 import BeeCard from '../components/utilities/BeeCard'
-import Slider from '../components/carousel/Slider'
 import {GiBee} from 'react-icons/gi'
 import MapImage from '../images/map-full-gray.png'
 import {graphql} from 'gatsby'
@@ -23,7 +22,6 @@ const IndexPage = ({data}) => {
       })}
     </div>
     </div>
-    <Slider />
   </Layout>
   )
 }

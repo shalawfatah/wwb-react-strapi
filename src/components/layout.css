@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
 
 :root {
   /* Colors  */
@@ -165,4 +165,16 @@ h3 {
 
 p {
   line-height: 2.3;
+}
+.search-button {
+  border-bottom: 2px solid silver;
+  outline: none;
+}
+.search-button:active {
+  outline: none;
+}
+.transformed-headline {
+  transform: translate(0, -10deg);
+  background-color: var(--primary-color);
+  color: white;
 }

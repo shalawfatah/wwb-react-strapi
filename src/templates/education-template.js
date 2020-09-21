@@ -7,7 +7,7 @@ import Link from 'gatsby-link'
 import ReactMarkdown from 'react-markdown'
 
 const educationTemplate = ({data}) => {
-    const {title, content, picture} = data.strapiEducations
+    const {title, content, picture, article_author} = data.strapiEducations
     return (
         <Layout>
                 <section className="text-gray-700 body-font py-5">
@@ -23,6 +23,7 @@ const educationTemplate = ({data}) => {
                     <Header text={title}/>
                     </div>
                         <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-300 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
+                        <p className="flex justify-start bg-white py-2 focus:outline-none text-sm text-orange-600">{article_author.name}</p>
                         <p className="leading-relaxed text-lg mb-4"><ReactMarkdown source={content} /></p>
                         </div>
                     </div>
@@ -39,6 +40,9 @@ export const query = graphql`
         strapiEducations(slug: { eq: $slug }) {
         content
         title
+        article_author {
+          name
+        }
         picture {
           childImageSharp {
             fluid {

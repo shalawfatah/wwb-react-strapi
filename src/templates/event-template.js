@@ -9,7 +9,7 @@ import ReactMarkdown from 'react-markdown'
 import React from 'react'
 
 const eventsTemplate = ({data}) => {
-    const {summary, title, date, time, location, photo, website, content} = data.strapiEvents
+    const {summary, title, date, time, location, photo, website, content, ticket} = data.strapiEvents
     return (
         <Layout>
             <section className="text-gray-700 body-font py-5">
@@ -24,7 +24,10 @@ const eventsTemplate = ({data}) => {
                     <div className="container px-5 py-10 mx-auto">
                         <div className="lg:w-2/3 flex flex-col sm:flex-row sm:items-center items-start mx-auto mb-10">
                         <h1 className="flex-grow sm:pr-16 text-2xl font-medium title-font text-gray-900 font-bold">{title} <br /> <span className="text-lg font-thin ">{summary}</span></h1>
-                        <div><ButtonMiddle text="Tickets"/>
+                        <div>
+                            <Link to={ticket}>
+                            <ButtonMiddle text="Tickets"/>
+                            </Link>
                         <ButtonMiddle text="Website" link={website} />
                         </div>
                         </div>
@@ -57,6 +60,7 @@ export const query = graphql`
             date(formatString: "DD MMMM YYYY")
             time
             location
+            ticket
             photo {
               childImageSharp {
                 fluid {
