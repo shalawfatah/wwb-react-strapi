@@ -35,6 +35,16 @@ exports.createPages = async ({ graphql, actions }) => {
           slug
         }
       }
+      blog_categories: allStrapiBlogCategories {
+        nodes {
+          slug
+        }
+      }
+      news_categories: allStrapiNewsCategories {
+        nodes {
+          slug
+        }
+      }
       genomes: allStrapiGenomes {
           nodes {
               slug
@@ -59,6 +69,15 @@ exports.createPages = async ({ graphql, actions }) => {
     pathPrefix: '/news',
     component: path.resolve(`src/templates/industry-archive.js`)
   })
+  result.data.news_categories.nodes.forEach(newsy => {
+    createPage({
+      path: `/news/${newsy.slug}`,
+      component: path.resolve(`src/templates/industry-category-archive.js`),
+      context: {
+        slug: newsy.slug,
+      },
+    })
+  })
   result.data.blogs.nodes.forEach(blog => {
     createPage({
       path: `/blog/${blog.slug}`,
@@ -74,6 +93,15 @@ exports.createPages = async ({ graphql, actions }) => {
     itemsPerPage: 5,
     pathPrefix: '/blog',
     component: path.resolve(`src/templates/blog-archive.js`)
+  })
+  result.data.blog_categories.nodes.forEach(blogger => {
+    createPage({
+      path: `/blog/${blogger.slug}`,
+      component: path.resolve(`src/templates/blog-category-archive.js`),
+      context: {
+        slug: blogger.slug,
+      },
+    })
   })
   result.data.events.nodes.forEach(event => {
     createPage({

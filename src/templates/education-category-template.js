@@ -4,6 +4,7 @@ import {FiChevronLeft} from 'react-icons/fi'
 import Link from 'gatsby-link'
 import Button from '../components/utilities/Button'
 
+
 const EduCatTemp = ({data}) => {
     const {strapiEducationCategories:{name, picture}, allStrapiEducations:{nodes:educations}} = data
     return (
@@ -62,7 +63,9 @@ query getSingleEducationCategory($slug: String!)
         }
       }
       }
-      allStrapiEducations(filter: {education_category: {slug: {eq: $slug}}}) {
+      allStrapiEducations(
+        filter: {education_category: {slug: {eq: $slug}}}
+        ) {
         nodes {
           title
           summary
@@ -72,6 +75,6 @@ query getSingleEducationCategory($slug: String!)
             name
           }
         }
-      }
+    }
   }
 `

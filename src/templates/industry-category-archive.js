@@ -6,7 +6,8 @@ import Header from '../components/utilities/Header'
 import Pager from '../components/utilities/Pager'
 import Link from 'gatsby-link'
 
-const NewsArchive = ({data, pageContext}) => {
+
+const NewsCatArchive = ({data, pageContext}) => {
     const {allStrapiIndustries: {nodes:articles}} = data
     return (
         <Layout>
@@ -37,30 +38,40 @@ const NewsArchive = ({data, pageContext}) => {
     )
 }
 
-export default NewsArchive
-
+export default NewsCatArchive
 
 export const query = graphql`
-query($skip: Int!, $limit: Int!)
+query getSingleNewsCategory($slug: String!)
   {
-    allStrapiIndustries(
-      skip: $skip
-      limit: $limit
-    ) {
+    strapiNewsCategories(slug: { eq: $slug }) {
+      name
+      }
+      allStrapiIndustries(
+        filter: {news_category: {slug: {eq: $slug}}}
+        ) {
         nodes {
-        quote
-        content
-        title
-        slug
-        minutes_read
-        date(formatString: "MM")
-        report_photo {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
+          report_photo {
+            childImageSharp {
+              fluid {
+                src
+              }
             }
           }
+          quote
+          content
+          title
+          slug
+          minutes_read
+          date(formatString: "MM")
+            article_author {
+            name
+          }
         }
+    }
+    allStrapiNewsCategories {
+      nodes {
+        slug
+        name
       }
     }
   }

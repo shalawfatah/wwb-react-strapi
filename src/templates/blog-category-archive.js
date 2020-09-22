@@ -39,26 +39,31 @@ const Blog = ({data, pageContext}) => {
 export default Blog
 
 export const query = graphql`
-query($skip: Int!, $limit: Int!)
+query getSingleBlogCategory($slug: String!)
   {
-    allStrapiBlogs(
-        skip: $skip
-        limit: $limit
-      ) {
-      nodes {
-        photo {
-          childImageSharp {
-            fluid {
-              src
+    strapiBlogCategories(slug: { eq: $slug }) {
+      name
+      }
+      allStrapiBlogs(
+        filter: {blog_category: {slug: {eq: $slug}}}
+        ) {
+        nodes {
+          photo {
+            childImageSharp {
+              fluid {
+                src
+              }
             }
           }
+            content
+            mintues_read
+            title
+            quote
+            slug
+            article_author {
+            name
+          }
         }
-        content
-        mintues_read
-        title
-        quote
-        slug
-      }
     }
     allStrapiBlogCategories {
       nodes {
