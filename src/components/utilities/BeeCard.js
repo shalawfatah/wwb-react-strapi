@@ -1,10 +1,11 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import './BeeCard.css'
 
 
 const BeeCard = ({name, genome, summary, image, slug}) => {
     return (
-                <section class="text-gray-700 body-font">
+                <section class="text-gray-700 body-font beeCard">
                   <div class="container px-1 py-1 mx-auto sm:px-0">
                     <div class="flex flex-wrap -m-4">
                       <div class="p-4 lg:w-1/3 md:w-1/3 sm:w-1/2">

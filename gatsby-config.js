@@ -7,6 +7,12 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
+      resolve: 'gatsby-plugin-react-leaflet',
+      options: {
+        linkStyles: true // (default: true) Enable/disable loading stylesheets via CDN
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -24,7 +30,7 @@ module.exports = {
       options: {
         apiURL: `http://localhost:1337`,
         queryLimit: 1000, // Default to 100
-        contentTypes: [`blogs`, `educations`, `apitherapies`, `industries`, `events`, `genomes`, `education-categories`, `blog-categories`, `news-categories`],
+        contentTypes: [`blogs`, `educations`, `apitherapies`, `industries`, `events`, `genomes`, `education-categories`, `blog-categories`, `news-categories`, `our-people`],
       },
     },
     `gatsby-transformer-sharp`,

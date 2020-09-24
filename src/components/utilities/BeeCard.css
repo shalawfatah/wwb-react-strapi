@@ -1,0 +1,6 @@
+.beeCard {
+    position: absolute;
+    left: 5%;
+    top: 10%;
+    z-index: 500;
+}
