@@ -16,7 +16,7 @@ const Apiculture = ({data}) => {
             <ApiSearch />
             <div className="flex flex-wrap mx-auto">
             {apis.map((api)=> {
-                return <ApiCard title={api.title} image={api.photo.childImageSharp.fluid.src} slug={`/apiculture/${api.slug}`} />
+                return <ApiCard title={api.title} image={api.photo.childImageSharp.fluid} slug={`/apiculture/${api.slug}`} />
             })}
              <ApiCard></ApiCard> 
             </div>

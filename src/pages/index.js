@@ -5,6 +5,7 @@ import {Icon} from 'leaflet'
 import {graphql} from 'gatsby'
 import Link from 'gatsby-link'
 import SEO from '../components/SEO'
+import Img from 'gatsby-image'
 
 
 const IndexPage = ({data}) => {
@@ -29,7 +30,7 @@ const IndexPage = ({data}) => {
                       })}
                     >
                       <Popup>
-                        <img src={genome.bee_icon.childImageSharp.fluid.src} alt={genome.bee_name} />
+                        <Img fluid={genome.bee_icon.childImageSharp.fluid} alt={genome.bee_name} />
                         <h1 className="text-xl py-2">{genome.bee_name}</h1>
                         <h1 className="text-lg text-gray-500">{genome.bee_genome}</h1>
                         <p className="text-sm text-gray-700 pb-2">{genome.summary}</p>

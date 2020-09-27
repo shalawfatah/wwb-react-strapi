@@ -4,6 +4,7 @@ import {FiChevronLeft} from 'react-icons/fi'
 import Link from 'gatsby-link'
 import Button from '../components/utilities/Button'
 import SEO from '../components/SEO'
+import Img from 'gatsby-image'
 
 
 
@@ -20,7 +21,7 @@ const EduCatTemp = ({data}) => {
                     <div>
                     <div className="lg:w-full mx-auto">
                     <div className="rounded-lg h-64 overflow-hidden">
-                        <img alt="content" className="object-cover object-center h-full w-full" src={picture.childImageSharp.fluid.src} />
+                        <Img alt="content" className="object-cover object-center h-full w-full" fluid={picture.childImageSharp.fluid} />
                     </div>
                     </div>
                     <h1 class="sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 rounded transformed-headline">{name}</h1>

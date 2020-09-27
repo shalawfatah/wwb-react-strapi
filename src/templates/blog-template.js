@@ -8,7 +8,6 @@ import ReactMarkdown from 'react-markdown'
 import SEO from '../components/SEO'
 
 
-
 import React from 'react'
 
 const blogArticle = ({data}) => {

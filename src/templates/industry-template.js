@@ -6,6 +6,7 @@ import {FiChevronLeft} from 'react-icons/fi'
 import Link from 'gatsby-link'
 import ReactMarkdown from 'react-markdown'
 import SEO from '../components/SEO'
+import Img from 'gatsby-image'
 
 
 
@@ -23,7 +24,7 @@ const newsArticle = ({data}) => {
                 <div className="container px-5 py-0 mx-auto flex flex-col">
                     <div className="lg:w-5/6 mx-auto">
                     <div className="rounded-lg h-64 overflow-hidden">
-                        <img alt="content" class="object-cover object-center h-full w-full" src={report_photo.childImageSharp.fluid.src} />
+                        <Img alt="content" class="object-cover object-center h-full w-full" fluid={report_photo.childImageSharp.fluid} />
                     </div>
                     <div className="py-8">
                     <Header text={title}/>

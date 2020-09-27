@@ -14,7 +14,7 @@ const NewsCatArchive = ({data, pageContext}) => {
     return (
         <Layout>
           <SEO title="News Categories" />
-            <FirstNews title={articles[0].title} quote={articles[0].quote} image={articles[0].report_photo.childImageSharp.fluid.src} slug={`/news/${articles[0].slug}`} />
+            <FirstNews title={articles[0].title} quote={articles[0].quote} image={articles[0].report_photo.childImageSharp.fluid} slug={`/news/${articles[0].slug}`} />
             <div className="flex flex-wrap">
             <div className="lg:w-1/3 md:w-1/3 sm:w-full mx-auto">
             <input type="search" id="gsearch" placeholder="Search..." name="gsearch" className="my-5 py-2 search-button mx-2" />

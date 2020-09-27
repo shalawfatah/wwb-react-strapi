@@ -1,5 +1,4 @@
 import React from 'react'
-import authorPic from '../../images/wwb-team.jpeg'
 
 const AuthorProfile = ({name, profile, social, photo, title}) => {
     return (

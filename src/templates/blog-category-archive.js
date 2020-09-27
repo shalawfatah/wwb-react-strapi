@@ -28,7 +28,7 @@ const Blog = ({data, pageContext}) => {
             {blogs.map((blog)=> {
                 return (
                   <div className="flex items-stretch my-12">
-                <BlogCard headline={blog.title} content={blog.quote} slug={blog.slug} image={blog.photo.childImageSharp.fluid.src} />
+                  <BlogCard headline={blog.title} content={blog.quote} slug={blog.slug} image={blog.photo.childImageSharp.fluid} />
                   </div>
                 )
             })}

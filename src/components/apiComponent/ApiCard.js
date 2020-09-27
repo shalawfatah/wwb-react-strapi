@@ -8,7 +8,7 @@ import Link from 'gatsby-link'
     return (
         <div className="mx-auto text-center all-card text-center">
             <div className="api-card mx-auto my-6 bg-cover bg-center" >
-                <img src={image} className="h-full overflow-hidden object-cover" />
+                <Img fluid={image} className="h-full overflow-hidden object-cover" />
             </div>
             <div className="w-3/4 text-center mx-auto">
             <Link fade to={slug}>
