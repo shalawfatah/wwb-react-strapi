@@ -5,12 +5,15 @@ import OtherNews from '../components/news/OtherNews'
 import Header from '../components/utilities/Header'
 import Pager from '../components/utilities/Pager'
 import Link from 'gatsby-link'
+import SEO from '../components/SEO'
+
 
 
 const NewsCatArchive = ({data, pageContext}) => {
     const {allStrapiIndustries: {nodes:articles}} = data
     return (
         <Layout>
+          <SEO title="News Categories" />
             <FirstNews title={articles[0].title} quote={articles[0].quote} image={articles[0].report_photo.childImageSharp.fluid.src} slug={`/news/${articles[0].slug}`} />
             <div className="flex flex-wrap">
             <div className="lg:w-1/3 md:w-1/3 sm:w-full mx-auto">

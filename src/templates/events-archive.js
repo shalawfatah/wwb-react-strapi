@@ -3,11 +3,14 @@ import Layout from '../components/layout'
 import MainEvent from '../components/events/MainEvent'
 import MarginalEvent from '../components/events/MarginalEvent'
 import Pager from '../components/utilities/Pager'
+import SEO from '../components/SEO'
+
 
 const Events = ({data, pageContext}) => {
     const {allStrapiEvents:{nodes:events}} = data
     return (
         <Layout>
+          <SEO title="Events" />
           <div className="py-5">
               <MainEvent title={events[0].title} image={events[0].photo.childImageSharp.fluid.src} slug={events[0].slug} />
               <div className="flex flex-wrap">

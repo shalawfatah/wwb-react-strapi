@@ -5,6 +5,8 @@ import Header from '../components/utilities/Header'
 import {FiChevronLeft} from 'react-icons/fi'
 import Link from 'gatsby-link'
 import ReactMarkdown from 'react-markdown'
+import SEO from '../components/SEO'
+
 
 
 import React from 'react'
@@ -12,7 +14,8 @@ import React from 'react'
 const newsArticle = ({data}) => {
     const {title, report_photo, content, minutes_read, article_date, quote, article_author:{name, author_title, author_profile, author_photo}} = data.strapiIndustries
     return (
-                    <Layout>
+            <Layout>
+              <SEO title={title} description={quote} />
                 <section className="text-gray-700 body-font py-5">
                 <Link fade to="/news/" >
                 <FiChevronLeft className="bg-orange-600 text-white text-4xl rounded-full hover:bg-orange-500 cursor-pointer transition duration-500 ease-in-out" />

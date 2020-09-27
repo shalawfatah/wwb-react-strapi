@@ -5,12 +5,15 @@ import Header from '../components/utilities/Header'
 import {FiChevronLeft} from 'react-icons/fi'
 import Link from 'gatsby-link'
 import ReactMarkdown from 'react-markdown'
+import SEO from '../components/SEO'
+
 
 
 const apicultureTemplate = ({data}) => {
     const {title, photo, content, subtitle} = data.strapiApitherapies
     return (
         <Layout>
+            <SEO title={title} description={subtitle} />
                 <section className="text-gray-700 body-font py-5">
                 <Link fade to="/apiculture/" >
                 <FiChevronLeft className="bg-orange-600 text-white text-4xl rounded-full hover:bg-orange-500 cursor-pointer transition duration-500 ease-in-out" />

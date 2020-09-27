@@ -3,12 +3,15 @@ import Layout from '../components/layout'
 import {FiChevronLeft} from 'react-icons/fi'
 import Link from 'gatsby-link'
 import Button from '../components/utilities/Button'
+import SEO from '../components/SEO'
+
 
 
 const EduCatTemp = ({data}) => {
     const {strapiEducationCategories:{name, picture}, allStrapiEducations:{nodes:educations}} = data
     return (
         <Layout>
+          <SEO title="Education Categories" />
           <section className="text-gray-700 body-font overflow-hidden py-5">
           <Link fade to="/education/" >
                 <FiChevronLeft className="bg-orange-600 text-white text-4xl rounded-full hover:bg-orange-500 cursor-pointer transition duration-500 ease-in-out" />

@@ -5,14 +5,15 @@ import Footer from './Footer'
 import { Helmet } from "react-helmet"
 
 
-const Layout = ({children}) => {
+const LayoutNoPadding = ({children}) => {
   return (
       <div>
         <Helmet>
+        <link href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" rel="stylesheet" type="text/css" />
         </Helmet>
           <Header />
             <section class="text-gray-700 body-font relative">
-              <div class="container px-5 py-0 mx-auto">
+              <div class="px-0 py-0 mx-auto">
                 {children}
               </div>
             </section>
@@ -21,6 +22,4 @@ const Layout = ({children}) => {
   )
 }
 
-export default Layout
-
-
+export default LayoutNoPadding

@@ -32,7 +32,7 @@
   transition: all .3s ease;
 }
 .logo {
-  z-index: 500;
+  z-index: 1000;
 }
 .footer {
   background-color: var(--light-grey);
@@ -124,7 +124,7 @@
     left: 0;
     top: 0;
     background-color: white;
-    z-index: 99;
+    z-index: 800;
     transition: all 2s ease-in;
   }
   .slider {
@@ -181,9 +181,8 @@ p {
 
 /* Map Styles */
 .leaflet-container {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
-  margin-left: -6.2rem;
   overflow: hidden;
 }
 

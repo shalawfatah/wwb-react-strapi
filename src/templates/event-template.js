@@ -4,6 +4,7 @@ import ButtonMiddle from '../components/utilities/ButtonMiddle'
 import Link from 'gatsby-link'
 import {FiChevronLeft} from 'react-icons/fi'
 import ReactMarkdown from 'react-markdown'
+import SEO from '../components/SEO'
 
 
 import React from 'react'
@@ -12,6 +13,7 @@ const eventsTemplate = ({data}) => {
     const {summary, title, date, time, location, photo, website, content, ticket} = data.strapiEvents
     return (
         <Layout>
+            <SEO title={title} description={summary} />
             <section className="text-gray-700 body-font py-5">
                 <Link fade to="/events/" >
                 <FiChevronLeft className="bg-orange-600 text-white text-4xl rounded-full hover:bg-orange-500 cursor-pointer transition duration-500 ease-in-out" />

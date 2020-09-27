@@ -5,11 +5,14 @@ import Header from '../components/utilities/Header'
 import {FiChevronLeft} from 'react-icons/fi'
 import Link from 'gatsby-link'
 import ReactMarkdown from 'react-markdown'
+import SEO from '../components/SEO'
+
 
 const educationTemplate = ({data}) => {
     const {title, content, picture, article_author} = data.strapiEducations
     return (
         <Layout>
+          <SEO title={title} />
                 <section className="text-gray-700 body-font py-5">
                 <Link fade to="/education/" >
                 <FiChevronLeft className="bg-orange-600 text-white text-4xl rounded-full hover:bg-orange-500 cursor-pointer transition duration-500 ease-in-out" />

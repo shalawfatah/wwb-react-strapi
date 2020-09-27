@@ -2,6 +2,8 @@ import React, {Component} from "react"
 import Layout from "../components/layout"
 import beePic from '../images/anotherbee.png'
 import addToMailchimp from 'gatsby-plugin-mailchimp'
+import SEO from '../components/SEO'
+
 
 
 class Subscribe extends Component {
@@ -41,6 +43,7 @@ _handleSubmit = e => {
   render () {
     return (
   <Layout>
+      <SEO title="Subscription" />
     <section className="text-gray-700 body-font overflow-hidden py-5" >
             <div className="container px-5 py-0 mx-auto">
             <div className="lg:w-4/5 mx-auto flex flex-wrap">

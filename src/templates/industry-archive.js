@@ -5,16 +5,20 @@ import OtherNews from '../components/news/OtherNews'
 import Header from '../components/utilities/Header'
 import Pager from '../components/utilities/Pager'
 import Link from 'gatsby-link'
+import NewsSearch from '../components/search/NewsSearch'
+import SEO from '../components/SEO'
+
 
 const NewsArchive = ({data, pageContext}) => {
     const {allStrapiIndustries: {nodes:articles}} = data
     return (
         <Layout>
+          <SEO title="News" />
             <FirstNews title={articles[0].title} quote={articles[0].quote} image={articles[0].report_photo.childImageSharp.fluid.src} slug={`/news/${articles[0].slug}`} />
             <div className="flex flex-wrap">
             <div className="lg:w-1/3 md:w-1/3 sm:w-full mx-auto">
-            <input type="search" id="gsearch" placeholder="Search..." name="gsearch" className="my-5 py-2 search-button mx-2" />
             <ul className="py-5">
+            <NewsSearch />
             <li className="hover:text-orange-600 cursor-pointer list-none my-5"><Link fade to='/news' activeStyle={{ color: '#F08C00'}} >All</Link></li>
             <li className="hover:text-orange-600 cursor-pointer list-none my-5"><Link fade to='/news/economy' activeStyle={{ color: '#F08C00'}} >Economy</Link></li>
             <li className="hover:text-orange-600 cursor-pointer list-none my-5"><Link fade to='/news/endangerment' activeStyle={{ color: '#F08C00'}} >Endangerment</Link></li>

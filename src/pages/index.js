@@ -1,28 +1,22 @@
-import React, {useState} from "react"
-import Layout from "../components/layout"
+import React from "react"
+import LayoutNoPadding from "../components/layoutNoPadding"
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet'
 import {Icon} from 'leaflet'
-import BeeCard from '../components/utilities/BeeCard'
 import {graphql} from 'gatsby'
 import Link from 'gatsby-link'
+import SEO from '../components/SEO'
 
 
 const IndexPage = ({data}) => {
   const {allStrapiGenomes:{nodes:genomes}} = data
-  const [hideBee, setHideBee] = useState(false)
 
   return (
-  <Layout>
-    {/* {hideBee && genomes.map((genome)=> {
-        return (
-          <BeeCard name={genome.bee_name} genome={genome.bee_genome} summary={genome.summary} image={genome.bee_photo.childImageSharp.fluid.src} slug={`/genomes/${genome.slug}`} />
-        )
-      })} */}
-        <Map center={[0, 0]} zoom={2} maxZoom={5} minZoom={2}>
+  <LayoutNoPadding>
+    <SEO title="WWB" />
+        <Map center={[0, 0]} zoom={2} maxZoom={5} minZoom={2} attributionControl={false}>
                 <TileLayer
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a>
-                contributors' />
+                url="https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png"
+                 />
                 {genomes.map((genome)=> {
                   return (
                     <div className="bee-icons">
@@ -33,13 +27,12 @@ const IndexPage = ({data}) => {
                         iconSize: [60],
                         iconAnchor: [20, 40],
                       })}
-                      // onClick={()=> setHideBee(hideBee => !hideBee)}
                     >
                       <Popup>
                         <img src={genome.bee_icon.childImageSharp.fluid.src} alt={genome.bee_name} />
-                        <h1 className="text-xl">{genome.bee_name}</h1>
-                        <h1 className="text-md text-gray-500">{genome.bee_genome}</h1>
-                        <p className="text-sm text-gray-700 py-2">{genome.summary}</p>
+                        <h1 className="text-xl py-2">{genome.bee_name}</h1>
+                        <h1 className="text-lg text-gray-500">{genome.bee_genome}</h1>
+                        <p className="text-sm text-gray-700 pb-2">{genome.summary}</p>
                         <Link fade to={`/genomes/${genome.slug}`} className="flex bg-gray-200 py-2 px-4 focus:outline-none text-lg cursor-pointer text-white rounded-full justify-center text-white hover:bg-gray-300 transition-all duration-500 ease-in-out">Read More</Link>
                       </Popup>
                     </Marker>
@@ -47,7 +40,7 @@ const IndexPage = ({data}) => {
                   )
                 })}
         </Map>
-  </Layout>
+  </LayoutNoPadding>
   )
 }
 export default IndexPage
