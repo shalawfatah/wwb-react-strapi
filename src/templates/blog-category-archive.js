@@ -3,7 +3,6 @@ import Layout from '../components/layout'
 import BlogCard from '../components/blog/BlogCard'
 import Pager from '../components/utilities/Pager'
 import Link from 'gatsby-link'
-import BlogSearch from '../components/search/BlogSearch'
 import SEO from '../components/SEO'
 
 
@@ -14,8 +13,7 @@ const Blog = ({data, pageContext}) => {
           <SEO title="Blog Categories" />
             <div className="flex flex-wrap py-5">
             <div className="lg:w-1/3 mx-auto">
-            <ul className="py-5">
-            <BlogSearch />
+            <ul className="py-5 px-5 my-8">
             <li className="hover:text-orange-600 cursor-pointer list-none my-5"><Link fade to='/blog' activeStyle={{ color: '#F08C00'}} >All</Link></li>
             <li className="hover:text-orange-600 cursor-pointer list-none my-5"><Link fade to='/blog/lifestyle' activeStyle={{ color: '#F08C00'}} >Lifestyle</Link></li>
             <li className="hover:text-orange-600 cursor-pointer list-none my-5"><Link fade to='/blog/farming' activeStyle={{ color: '#F08C00'}} >Farming</Link></li>

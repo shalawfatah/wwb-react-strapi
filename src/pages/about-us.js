@@ -18,13 +18,13 @@ const AboutUs = ({data}) => {
                         return (
                           <div className="mx-auto">
                               <div className="rounded rounded-t-lg overflow-hidden shadow max-w-xs my-3 mx-10">
-                                  <img src="https://i.imgur.com/dYcYQ7E.png" className="w-full" />
+                                  <img src="https://i.imgur.com/dYcYQ7E.png" className="w-full" alt={person.position} />
                                   <div className="flex justify-center -mt-8">
-                                      <Img fluid={person.photo.childImageSharp.fluid} className="rounded-full border-solid border-white border-2 -mt-3 h-48 w-48" />		
+                                      <Img fluid={person.photo.childImageSharp.fluid} className="rounded-full border-solid border-white border-2 -mt-3 h-48 w-48" alt={person.name} />		
                                   </div>
                                 <div className="text-center px-3 pb-6 pt-2">
-                                  <h3 className="text-black text-sm bold font-sans">{person.name}</h3>
-                                                      <p className="mt-2 font-sans font-light text-grey-dark">{person.position}</p>
+                                  <h3 className="text-black text-xl bold font-sans">{person.name}</h3>
+                                                      <p className="mt-2 font-sans font-bold text-grey-light">{person.position}</p>
                                                       <p className="mb-4 p-4">{person.profile}</p>
                                 </div>
                               </div>
