@@ -6,7 +6,7 @@ import Header from '../components/utilities/Header'
 import Pager from '../components/utilities/Pager'
 import Link from 'gatsby-link'
 import SEO from '../components/SEO'
-
+import { graphql } from 'gatsby'
 
 
 const NewsCatArchive = ({data, pageContext}) => {
@@ -27,7 +27,7 @@ const NewsCatArchive = ({data, pageContext}) => {
             </ul>
             </div>
             <div className="lg:w-2/3 md:w-2/3 sm:w-2/3">
-            <Header text="Latest News" />
+              <Header text="Latest News" />
             {articles.map((article)=> {
                 return <OtherNews title={article.title} quote={article.quote} image={article.report_photo.childImageSharp.fluid.src} slug={`/news/${article.slug}`} />
             })}

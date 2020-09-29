@@ -6,6 +6,7 @@ import Link from 'gatsby-link'
 import ReactMarkdown from 'react-markdown'
 import SEO from '../components/SEO'
 import Img from 'gatsby-image'
+import { graphql } from 'gatsby'
 
 const beeTemplate = ({data}) => {
     const {bee_name, bee_genome, content, bee_photo} = data.strapiGenomes

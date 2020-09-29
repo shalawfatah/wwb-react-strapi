@@ -5,7 +5,7 @@ import Link from 'gatsby-link'
 import Button from '../components/utilities/Button'
 import SEO from '../components/SEO'
 import Img from 'gatsby-image'
-
+import { graphql } from 'gatsby'
 
 
 const EduCatTemp = ({data}) => {

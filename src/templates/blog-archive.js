@@ -5,6 +5,7 @@ import Pager from '../components/utilities/Pager'
 import Link from 'gatsby-link'
 import BlogSearch from '../components/search/BlogSearch'
 import SEO from '../components/SEO'
+import { graphql } from 'gatsby'
 
 
 const Blog = ({data, pageContext}) => {

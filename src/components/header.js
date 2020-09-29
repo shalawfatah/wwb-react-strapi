@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react'
+import React, { useState } from 'react'
 import links from '../constants/nav-items'
 import Link from "gatsby-link"
 import Image from '../images/logo.png'
@@ -11,7 +11,7 @@ const Header = () => {
             <div class="flex justify-between items-center px-10 border-b-2 flex-wrap">
                 <div className="logo">
                 <Link to="/">
-                <img src={Image} alt="Image" class="w-16 py-4" />
+                <img src={Image} alt="WWB Logo" class="w-16 py-4" />
                 </Link>
                 </div>
                 <div>

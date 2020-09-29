@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/SEO'
 import Img from 'gatsby-image'
+import { graphql } from 'gatsby'
 
 const AboutUs = ({data}) => {
   const {allStrapiOurPeople: {nodes: people}} = data

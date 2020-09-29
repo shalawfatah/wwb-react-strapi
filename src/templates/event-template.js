@@ -6,8 +6,7 @@ import {FiChevronLeft} from 'react-icons/fi'
 import ReactMarkdown from 'react-markdown'
 import SEO from '../components/SEO'
 import Img from 'gatsby-image'
-
-
+import { graphql } from 'gatsby'
 import React from 'react'
 
 const eventsTemplate = ({data}) => {
@@ -22,7 +21,7 @@ const eventsTemplate = ({data}) => {
                 <div className="container px-5 py-0 mx-auto flex flex-col">
                     <div className="lg:w-full mx-auto">
                     <div className="rounded-lg h-64 overflow-hidden">
-                        <Img alt="content" className="object-cover object-center h-full w-full" fluid={photo.childImageSharp.fluid.src} />
+                        <Img alt="content" className="object-cover object-center h-full w-full" fluid={photo.childImageSharp.fluid} />
                     </div>
                     <div className="container px-5 py-10 mx-auto">
                         <div className="lg:w-2/3 flex flex-col sm:flex-row sm:items-center items-start mx-auto mb-10">

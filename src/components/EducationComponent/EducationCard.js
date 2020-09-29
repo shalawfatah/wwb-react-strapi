@@ -1,5 +1,4 @@
 import React from 'react'
-import mapImage from '../../images/bee-pic.jpg'
 import './EducationCard.css';
 import Img from 'gatsby-image'
 import Link from 'gatsby-link'

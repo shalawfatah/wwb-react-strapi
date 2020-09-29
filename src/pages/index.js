@@ -1,6 +1,6 @@
 import React from "react"
 import LayoutNoPadding from "../components/layoutNoPadding"
-import { Map, Marker, Popup, TileLayer } from 'react-leaflet'
+import { Map, Marker, Popup, TileLayer, Tooltip } from 'react-leaflet'
 import {Icon} from 'leaflet'
 import {graphql} from 'gatsby'
 import Link from 'gatsby-link'
@@ -10,25 +10,27 @@ import Img from 'gatsby-image'
 
 const IndexPage = ({data}) => {
   const {allStrapiGenomes:{nodes:genomes}} = data
-
+  
   return (
   <LayoutNoPadding>
     <SEO title="WWB" />
-        <Map center={[0, 0]} zoom={2} maxZoom={5} minZoom={2} attributionControl={false}>
+    {typeof window !== 'undefined' &&
+        <Map center={[0, 0]} zoom={2} maxZoom={5} minZoom={2} attributionControl={false} >
                 <TileLayer
                 url="https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png"
                  />
                 {genomes.map((genome)=> {
                   return (
                     <div className="bee-icons">
-                    <Marker 
+                    <Marker
                       position={[`${genome.coordinate_x}`,`${genome.coordinate_y}`]}
-                      icon = {new Icon({
+                      icon = { new Icon({
                         iconUrl: genome.bee_icon.childImageSharp.fluid.src,
                         iconSize: [60],
-                        iconAnchor: [20, 40],
+                        iconAnchor: [20, 40]
                       })}
                     >
+                      <Tooltip>{genome.bee_name}</Tooltip>
                       <Popup>
                         <Img fluid={genome.bee_icon.childImageSharp.fluid} alt={genome.bee_name} />
                         <h1 className="text-xl py-2">{genome.bee_name}</h1>
@@ -41,6 +43,7 @@ const IndexPage = ({data}) => {
                   )
                 })}
         </Map>
+      }
   </LayoutNoPadding>
   )
 }

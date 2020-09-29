@@ -3,12 +3,11 @@ module.exports = {
     title: `Worldwide Bee`,
     description: `The Worldwide Bee Organization was founded to connect proactive individuals dedicated to sharing, designing, and constructing valuable solutions that can truly make a difference in the bee and honey industry.`,
     author: `@shalawfatah`,
-    url: 'https://www.worldwidebee.com',
+    url: 'https://www.twitter.com/shalawfatah',
     image: 'src/images/websitescreenshot.png',
     twitterUsername: '@worldwidebee',
   },
   plugins: [
-    `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: 'gatsby-plugin-react-leaflet',
@@ -84,7 +83,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `standalone`,
-        icon: `/src/images/logo.png`, // This path is relative to the root of the site.
+        icon: `src/images/logo.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-offline`,

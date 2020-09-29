@@ -6,7 +6,7 @@ import {FiChevronLeft} from 'react-icons/fi'
 import Link from 'gatsby-link'
 import ReactMarkdown from 'react-markdown'
 import SEO from '../components/SEO'
-
+import { graphql } from 'gatsby'
 
 import React from 'react'
 

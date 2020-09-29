@@ -3,6 +3,7 @@ import Layout from '../components/layout'
 import EducationCard from '../components/EducationComponent/EducationCard'
 import EducationSearch from '../components/search/EducationSearch'
 import SEO from '../components/SEO'
+import { graphql } from 'gatsby'
 
 
 const Education = ({data}) => {

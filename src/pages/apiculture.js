@@ -3,6 +3,7 @@ import Layout from '../components/layout'
 import ApiCard from '../components/apiComponent/ApiCard'
 import ApiSearch from '../components/search/ApiSearch'
 import SEO from '../components/SEO'
+import { graphql } from 'gatsby'
 
 
 const Apiculture = ({data}) => {

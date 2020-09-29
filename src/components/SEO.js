@@ -4,7 +4,7 @@ import {useStaticQuery, graphql} from 'gatsby'
 
 
 const SEO = ({title, description}) => {
-    const {site:{siteMetadata:{url, twitterUsername, siteTitle, image, siteDescription, author}}} = useStaticQuery(query)
+    const {site:{siteMetadata:{url, twitterUsername, siteTitle, image, siteDescription}}} = useStaticQuery(query)
     return (
         <Helmet htmlAttributes={{lang: "en"}} title={`${title} | ${siteTitle}`}>
             <meta name="description" content={description || siteDescription} />

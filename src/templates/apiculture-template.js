@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Header from '../components/utilities/Header'
 import {FiChevronLeft} from 'react-icons/fi'
@@ -47,7 +47,7 @@ export const query = graphql`
             photo {
             childImageSharp {
                 fluid {
-                src
+                ...GatsbyImageSharpFluid
                 }
             }
         }

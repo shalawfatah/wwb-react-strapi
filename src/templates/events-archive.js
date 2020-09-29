@@ -4,7 +4,7 @@ import MainEvent from '../components/events/MainEvent'
 import MarginalEvent from '../components/events/MarginalEvent'
 import Pager from '../components/utilities/Pager'
 import SEO from '../components/SEO'
-
+import { graphql } from 'gatsby'
 
 const Events = ({data, pageContext}) => {
     const {allStrapiEvents:{nodes:events}} = data
