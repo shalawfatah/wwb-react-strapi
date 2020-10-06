@@ -13,7 +13,7 @@ const Apiculture = ({data}) => {
           <SEO title="Apiculture" />
           <div className="py-5">
             <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4 headline">Apiculture</h1>
-            <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 para">Showcasing the best people in the industry, all things bees and anything related to bee farmers. </p>
+            <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 para pb-5">The most entertaining page for beekeepers ever created.</p>
             <ApiSearch />
             <div className="flex flex-wrap mx-auto">
             {apis.map((api)=> {

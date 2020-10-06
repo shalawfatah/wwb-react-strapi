@@ -7,7 +7,6 @@ import Link from 'gatsby-link'
 import ReactMarkdown from 'react-markdown'
 import SEO from '../components/SEO'
 import { graphql } from 'gatsby'
-
 import React from 'react'
 
 const blogArticle = ({data}) => {
@@ -41,8 +40,7 @@ const blogArticle = ({data}) => {
                         <p className="leading-relaxed text-lg mb-4"><ReactMarkdown source={content} /></p>
                         </div>
                     </div>
-                    <div><AuthorProfile name={article_author.name} profile={article_author.author_profile} photo={article_author.author_photo.childImageSharp.fluid.src} title={article_author.author_title} /></div>
-                    <p className="text-gray-400">-- Put article icon before Related Stories Text</p>
+                    <div><AuthorProfile name={article_author.name} profile={article_author.author_summary} photo={article_author.author_photo.childImageSharp.fluid.src} title={article_author.author_title} slug={article_author.author_summary} /></div>
                     <div className="text-3xl"> Related Stories</div>
                    <RelatedStories />
                     </div>
@@ -59,8 +57,10 @@ export const query = graphql`
         strapiBlogs(slug: { eq: $slug }) {
             article_author {
                 name
+                slug
                 author_title
                 author_profile
+                author_summary
                 author_social_media
                 author_photo {
                   childImageSharp {

@@ -11,7 +11,7 @@ export default [
   },
   {
     id: 3,
-    text: "Industry News",
+    text: "News",
     url: "/news/",
   },
   {

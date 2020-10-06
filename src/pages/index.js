@@ -14,10 +14,9 @@ const IndexPage = ({data}) => {
   return (
   <LayoutNoPadding>
     <SEO title="WWB" />
-    {typeof window !== 'undefined' &&
-        <Map center={[0, 0]} zoom={2} maxZoom={5} minZoom={2} attributionControl={false} >
+        <Map center={[0, 0]} zoom={2} maxZoom={5} minZoom={2} attributionControl={false} draggable={false} >
                 <TileLayer
-                url="https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png"
+                url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png"
                  />
                 {genomes.map((genome)=> {
                   return (
@@ -43,7 +42,6 @@ const IndexPage = ({data}) => {
                   )
                 })}
         </Map>
-      }
   </LayoutNoPadding>
   )
 }
@@ -79,3 +77,6 @@ export const query = graphql`
       }
     }
 `
+
+//     {typeof window !== 'undefined' &&
+// }

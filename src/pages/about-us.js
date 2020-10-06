@@ -3,9 +3,10 @@ import Layout from '../components/layout'
 import SEO from '../components/SEO'
 import Img from 'gatsby-image'
 import { graphql } from 'gatsby'
+import Link from 'gatsby-link'
 
 const AboutUs = ({data}) => {
-  const {allStrapiOurPeople: {nodes: people}} = data
+  const {allStrapiArticleAuthors: {nodes: people}} = data
     return (
         <Layout> 
           <SEO title="About" description="About WWB Team" />
@@ -21,12 +22,15 @@ const AboutUs = ({data}) => {
                               <div className="rounded rounded-t-lg overflow-hidden shadow max-w-xs my-3 mx-10">
                                   <img src="https://i.imgur.com/dYcYQ7E.png" className="w-full" alt={person.position} />
                                   <div className="flex justify-center -mt-8">
-                                      <Img fluid={person.photo.childImageSharp.fluid} className="rounded-full border-solid border-white border-2 -mt-3 h-48 w-48" alt={person.name} />		
+                                      <Img fluid={person.author_photo.childImageSharp.fluid} className="rounded-full border-solid border-white border-2 -mt-3 h-48 w-48" alt={person.name} />		
                                   </div>
                                 <div className="text-center px-3 pb-6 pt-2">
                                   <h3 className="text-black text-xl bold font-sans">{person.name}</h3>
-                                                      <p className="mt-2 font-sans font-bold text-grey-light">{person.position}</p>
-                                                      <p className="mb-4 p-4">{person.profile}</p>
+                                    <p className="mt-2 font-sans font-bold text-grey-400 text-md">{person.author_title}</p>
+                                    <p className="mb-4 p-4">{person.author_summary}</p>
+                                    <Link fade to={person.slug}>
+                                    <button type="text" className="flex text-grey-700 bg-white py-2 px-4 focus:outline-none text-lg cursor-pointer button mx-auto">Read More</button>
+                                    </Link>
                                 </div>
                               </div>
                             </div>
@@ -42,13 +46,14 @@ export default AboutUs
 
 export const query = graphql`
   {
-    allStrapiOurPeople {
+    allStrapiArticleAuthors {
       nodes {
-        profile
+        author_profile
+        author_summary
+        author_title
+        slug
         name
-        id
-        position
-        photo {
+        author_photo {
           childImageSharp {
             fluid {
               ...GatsbyImageSharpFluid

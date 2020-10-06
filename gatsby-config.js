@@ -33,7 +33,7 @@ module.exports = {
       options: {
         apiURL: `http://localhost:1337`,
         queryLimit: 1000, // Default to 100
-        contentTypes: [`blogs`, `educations`, `apitherapies`, `industries`, `events`, `genomes`, `education-categories`, `blog-categories`, `news-categories`, `our-people`],
+        contentTypes: [`blogs`, `educations`, `apitherapies`, `industries`, `events`, `genomes`, `education-categories`, `blog-categories`, `news-categories`, `our-people`, `article-authors`],
       },
     },
     `gatsby-transformer-sharp`,

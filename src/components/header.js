@@ -9,10 +9,14 @@ const Header = () => {
     const showSidebar = () => setSidebar(!sidebar)
         return (
             <div class="flex justify-between items-center px-10 border-b-2 flex-wrap">
-                <div className="logo">
+                <div className="logo flex items-center justify-center">
                 <Link to="/">
-                <img src={Image} alt="WWB Logo" class="w-16 py-4" />
+                <img src={Image} alt="WWB Logo" class="w-16 py-4 mr-4" />
                 </Link>
+                <div className="text-sm -leading-3">
+                <p>Worldwide Bee</p>
+                <p>The Free Honey Bee Encyclopedia</p>
+                </div>
                 </div>
                 <div>
                 {links.map((link)=> {

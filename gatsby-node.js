@@ -45,6 +45,11 @@ exports.createPages = async ({ graphql, actions }) => {
           slug
         }
       }
+      people: allStrapiArticleAuthors {
+        nodes {
+          slug
+        }
+      }
       genomes: allStrapiGenomes {
           nodes {
               slug
@@ -75,6 +80,15 @@ exports.createPages = async ({ graphql, actions }) => {
       component: path.resolve(`src/templates/industry-category-archive.js`),
       context: {
         slug: newsy.slug,
+      },
+    })
+  })
+  result.data.people.nodes.forEach(person => {
+    createPage({
+      path: `/about-us/${person.slug}`,
+      component: path.resolve(`src/templates/person-template.js`),
+      context: {
+        slug: person.slug,
       },
     })
   })

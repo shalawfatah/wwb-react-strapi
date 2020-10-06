@@ -14,7 +14,7 @@ import { graphql } from 'gatsby'
 import React from 'react'
 
 const newsArticle = ({data}) => {
-    const {title, report_photo, content, minutes_read, article_date, quote, article_author:{name, author_title, author_profile, author_photo}} = data.strapiIndustries
+    const {title, report_photo, content, minutes_read, article_date, quote, article_author:{name, author_title, author_summary, slug, author_photo}} = data.strapiIndustries
     return (
             <Layout>
               <SEO title={title} description={quote} />
@@ -44,7 +44,7 @@ const newsArticle = ({data}) => {
                         <p className="leading-relaxed text-lg mb-4"><ReactMarkdown source={content} /></p>
                         </div>
                     </div>
-                    <div><AuthorProfile name={name} profile={author_profile} photo={author_photo.childImageSharp.fluid.src} title={author_title}  /></div>
+                    <div><AuthorProfile name={name} profile={author_summary} photo={author_photo.childImageSharp.fluid.src} title={author_title} slug={slug} /></div>
                     <p className="text-gray-400">-- Put article icon before Related Stories Text</p>
                     <div className="text-3xl"> Related Stories</div>
                    <RelatedStories />
@@ -63,8 +63,8 @@ export const query = graphql`
           article_author {
             name
             author_title
-            author_profile
-            author_social_media
+            slug
+            author_summary
             author_photo {
               childImageSharp {
                 fluid {
