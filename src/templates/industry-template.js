@@ -23,7 +23,7 @@ const newsArticle = ({data}) => {
                 <FiChevronLeft className="bg-orange-600 text-white text-4xl rounded-full hover:bg-orange-500 cursor-pointer transition duration-500 ease-in-out" />
                 </Link>
                 <div className="container px-5 py-0 mx-auto flex flex-col">
-                    <div className="lg:w-5/6 mx-auto">
+                    <div className="lg:w-full mx-auto">
                     <div className="rounded-lg h-64 overflow-hidden">
                         <Img alt="content" class="object-cover object-center h-full w-full" fluid={report_photo.childImageSharp.fluid} />
                     </div>
@@ -44,7 +44,7 @@ const newsArticle = ({data}) => {
                         <p className="leading-relaxed text-lg mb-4"><ReactMarkdown source={content} /></p>
                         </div>
                     </div>
-                    <div><AuthorProfile name={name} profile={author_summary} photo={author_photo.childImageSharp.fluid.src} title={author_title} slug={slug} /></div>
+                    <Link to={`/about-us/${slug}`}><AuthorProfile name={name} profile={author_summary} photo={author_photo.childImageSharp.fluid.src} title={author_title} /></Link>
                     <p className="text-gray-400">-- Put article icon before Related Stories Text</p>
                     <div className="text-3xl"> Related Stories</div>
                    <RelatedStories />

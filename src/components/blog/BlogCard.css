@@ -1,0 +1,6 @@
+.blog-card {
+    transition: all .3s ease;
+}
+.blog-card:hover {
+    transform: scale(1.03);
+}

@@ -189,3 +189,9 @@ p {
 .bee-icons {
   z-index: 600;
 }
+.person-card {
+  transition: all .3s ease;
+}
+.person-card:hover {
+  transform: scale(1.03);
+}

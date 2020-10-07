@@ -18,7 +18,7 @@ const NewsCatArchive = ({data, pageContext}) => {
             <div className="flex flex-wrap">
             <div className="lg:w-1/3 md:w-1/3 sm:w-full mx-auto">
             <ul className="py-5 px-5 my-12">
-            <li className="hover:text-orange-600 cursor-pointer list-none my-5"><Link fade to='/news' activeStyle={{ color: '#F08C00'}} >All</Link></li>
+            <li className="hover:text-orange-600 cursor-pointer list-none my-5 p-2"><Link fade to='/news' activeStyle={{ color: '#F08C00'}} >All</Link></li>
             <li className="hover:text-orange-600 cursor-pointer list-none my-5"><Link fade to='/news/economy' activeStyle={{ color: '#F08C00'}} >Economy</Link></li>
             <li className="hover:text-orange-600 cursor-pointer list-none my-5"><Link fade to='/news/endangerment' activeStyle={{ color: '#F08C00'}} >Endangerment</Link></li>
             <li className="hover:text-orange-600 cursor-pointer list-none my-5"><Link fade to='/news/innovations' activeStyle={{ color: '#F08C00'}} >Innovations</Link></li>

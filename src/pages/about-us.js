@@ -18,7 +18,8 @@ const AboutUs = ({data}) => {
                 </div>
                 {people.map((person)=> {
                         return (
-                          <div className="mx-auto">
+                          <div className="mx-auto person-card flex items-stretch">
+                            <Link fade to={person.slug}>
                               <div className="rounded rounded-t-lg overflow-hidden shadow max-w-xs my-3 mx-10">
                                   <img src="https://i.imgur.com/dYcYQ7E.png" className="w-full" alt={person.position} />
                                   <div className="flex justify-center -mt-8">
@@ -28,11 +29,9 @@ const AboutUs = ({data}) => {
                                   <h3 className="text-black text-xl bold font-sans">{person.name}</h3>
                                     <p className="mt-2 font-sans font-bold text-grey-400 text-md">{person.author_title}</p>
                                     <p className="mb-4 p-4">{person.author_summary}</p>
-                                    <Link fade to={person.slug}>
-                                    <button type="text" className="flex text-grey-700 bg-white py-2 px-4 focus:outline-none text-lg cursor-pointer button mx-auto">Read More</button>
-                                    </Link>
                                 </div>
                               </div>
+                              </Link>
                             </div>
                         )
                       })}

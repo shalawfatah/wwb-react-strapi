@@ -4,11 +4,13 @@ import './MarginalEvent.css'
 import {FiMapPin} from 'react-icons/fi'
 import '../utilities/ButtonFree.css'
 import Img from 'gatsby-image'
+import Link from 'gatsby-link'
 
 
 const MarginalEvent = ({title, summary, location, date, image, slug}) => {
     return (
-                  <div className="max-w-sm rounded overflow-hidden shadow-lg mx-2 my-4 ">
+                  <div className="max-w-sm rounded overflow-hidden shadow-lg mx-2 my-4 event-card">
+                    <Link to={`/events/${slug}`} >
                         <div className="h-full border-2 border-gray-200 rounded-lg overflow-hidden relative for-free-btn">
                           <Img className="lg:h-48 md:h-36 w-full object-cover object-center" fluid={image} alt="blog" />
                           <div className="button-event">
@@ -18,11 +20,10 @@ const MarginalEvent = ({title, summary, location, date, image, slug}) => {
                             <h1 className="title-font text-lg font-medium text-gray-900 mb-3 headline">{title}</h1>
                             <p className="leading-relaxed mb-3 para">{summary}</p>
                             <p className="text-xs flex flex-wrap"><span className="text-lg text-grey-900 mr-2 text-orange-600"><FiMapPin /></span><span className="text-xs text-gray-600">{location}</span></p>
-                            <div className="flex items-center justify-center flex-wrap ">
-                            <Button text="Read More" link={`/events/${slug}`} />
-                            </div>
+
                       </div>
                     </div>
+                    </Link>
                   </div>
     )
 }

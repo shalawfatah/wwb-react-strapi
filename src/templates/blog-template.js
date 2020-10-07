@@ -19,7 +19,7 @@ const blogArticle = ({data}) => {
                 <FiChevronLeft className="bg-orange-600 text-white text-4xl rounded-full hover:bg-orange-500 cursor-pointer transition duration-500 ease-in-out" />
                 </Link>
                 <div className="container px-5 py-0 mx-auto flex flex-col">
-                    <div className="lg:w-5/6 mx-auto">
+                    <div className="lg:w-full mx-auto">
                     <div className="rounded-lg h-64 overflow-hidden">
                         <img alt="content" class="object-cover object-center h-full w-full" src={photo.childImageSharp.fluid.src} />
                     </div>
@@ -40,7 +40,7 @@ const blogArticle = ({data}) => {
                         <p className="leading-relaxed text-lg mb-4"><ReactMarkdown source={content} /></p>
                         </div>
                     </div>
-                    <div><AuthorProfile name={article_author.name} profile={article_author.author_summary} photo={article_author.author_photo.childImageSharp.fluid.src} title={article_author.author_title} slug={article_author.author_summary} /></div>
+                    <Link to={`/about-us/${article_author.slug}`}><AuthorProfile name={article_author.name} profile={article_author.author_summary} photo={article_author.author_photo.childImageSharp.fluid.src} title={article_author.author_title} /></Link>
                     <div className="text-3xl"> Related Stories</div>
                    <RelatedStories />
                     </div>
