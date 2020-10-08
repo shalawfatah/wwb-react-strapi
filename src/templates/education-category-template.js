@@ -6,6 +6,7 @@ import Button from '../components/utilities/Button'
 import SEO from '../components/SEO'
 import Img from 'gatsby-image'
 import { graphql } from 'gatsby'
+import {navigate} from 'gatsby-link'
 
 
 const EduCatTemp = ({data}) => {
@@ -36,8 +37,8 @@ const EduCatTemp = ({data}) => {
                           </div>
                           <div className="md:flex-grow">
                           <h2 className="text-2xl font-medium text-gray-900 title-font mb-2">{education.title}</h2>
-                          <p className="leading-relaxed">{education.summary}</p>
-                          <Button text="Read More" link={`/education/${education.slug}`} />
+                          <p className="leading-relaxed mb-3">{education.summary}</p>
+                          <button className="flex justify-center text-grey-700 bg-white py-2 px-4 focus:outline-none text-sm cursor-pointer button" fade onClick={()=> navigate(`/${education.slug}`)}>Read More</button>
                           </div>
                       </div>
                       </div>

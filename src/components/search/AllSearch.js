@@ -52,6 +52,16 @@ const allDataQuery = graphql`
           }
         }
       }
+      allStrapiArticleAuthors {
+        edges {
+          node {
+            author_title
+            author_summary
+            name
+            slug
+          }
+        }
+      }
       allStrapiIndustries {
         edges {
           node {
@@ -65,12 +75,14 @@ const allDataQuery = graphql`
 `
   
 const AllSearch = () => {
-    const {allStrapiApitherapies:{edges:searchData}, allStrapiBlogs:{edges:searchDataTwo}, allStrapiEducations:{edges:searchDataThree}, allStrapiIndustries:{edges: searchDataFour}} = useStaticQuery(allDataQuery)
+    const {allStrapiApitherapies:{edges:searchData}, allStrapiBlogs:{edges:searchDataTwo}, allStrapiEducations:{edges:searchDataThree}, allStrapiIndustries:{edges: searchDataFour}, allStrapiArticleAuthors:{edges:searchDataFive}} = useStaticQuery(allDataQuery)
     const [results, setResults] = useState([])
     const fuse = useMemo(() => new Fuse(searchData, fuseOptions), [])
     const fuseTwo = useMemo(() => new Fuse(searchDataTwo, fuseOptions), [])
     const fuseThree = useMemo(() => new Fuse(searchDataThree, fuseOptions), [])
     const fuseFour = useMemo(() => new Fuse(searchDataFour, fuseOptions), [])
+    const fuseFive = useMemo(() => new Fuse(searchDataFive, fuseOptions), [])
+
 
 
     const handleSearch = e => {
@@ -79,10 +91,11 @@ const AllSearch = () => {
         const foundTwo = fuseTwo.search(input)
         const foundThree = fuseThree.search(input)
         const foundFour = fuseFour.search(input)
+        const foundFive = fuseFive.search(input)
 
         
 
-        const searchCombined = found.concat(foundTwo).concat(foundThree).concat(foundFour)
+        const searchCombined = found.concat(foundTwo).concat(foundThree).concat(foundFour).concat(foundFive)
         setResults(searchCombined)
     }
     return (

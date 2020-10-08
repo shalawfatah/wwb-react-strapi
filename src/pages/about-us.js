@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 import SEO from '../components/SEO'
 import Img from 'gatsby-image'
 import { graphql } from 'gatsby'
-import Link from 'gatsby-link'
+import {navigate} from 'gatsby-link'
 
 const AboutUs = ({data}) => {
   const {allStrapiArticleAuthors: {nodes: people}} = data
@@ -19,7 +19,7 @@ const AboutUs = ({data}) => {
                 {people.map((person)=> {
                         return (
                           <div className="mx-auto person-card flex items-stretch">
-                            <Link fade to={person.slug}>
+                             <button fade onClick={()=> navigate(`/${person.slug}`)}>
                               <div className="rounded rounded-t-lg overflow-hidden shadow max-w-xs my-3 mx-10">
                                   <img src="https://i.imgur.com/dYcYQ7E.png" className="w-full" alt={person.position} />
                                   <div className="flex justify-center -mt-8">
@@ -31,7 +31,7 @@ const AboutUs = ({data}) => {
                                     <p className="mb-4 p-4">{person.author_summary}</p>
                                 </div>
                               </div>
-                              </Link>
+                              </button>
                             </div>
                         )
                       })}

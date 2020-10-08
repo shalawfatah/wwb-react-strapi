@@ -144,7 +144,7 @@ exports.createPages = async ({ graphql, actions }) => {
   })
   result.data.educations.nodes.forEach(education => {
     createPage({
-      path: `/education/${education.slug}`,
+      path: `${education.slug}`,
       component: path.resolve(`src/templates/education-template.js`),
       context: {
         slug: education.slug,

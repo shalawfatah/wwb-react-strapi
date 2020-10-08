@@ -16,9 +16,15 @@ const IndexPage = ({data}) => {
   <LayoutNoPadding>
     <SEO title="WWB" />
     <AllSearch />
+    <div className="relative">
+    <div className="mx-10 px-6 absolute left-0 top-0 home-headline my-1">
+    <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 headline home-headline">Worldwide Bee</h1>
+    <p class="text-base leading-relaxed xl:w-full lg:w-full para pb-5 text-black">The Free Honey Bee Encyclopedia</p>
+    </div>
+    </div>
         <Map center={[0, 0]} zoom={2} maxZoom={5} minZoom={2} attributionControl={false} tap={false} scrollWheelZoom={false} >
                 <TileLayer
-                url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png"
+                url="https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png"
                  />
                 {genomes.map((genome)=> {
                   return (
@@ -82,3 +88,9 @@ export const query = graphql`
 
 //     {typeof window !== 'undefined' &&
 // }
+
+// light map 
+// https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png
+
+// dark map
+// https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png
