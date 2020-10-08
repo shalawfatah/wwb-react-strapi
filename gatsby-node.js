@@ -60,7 +60,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   result.data.industries.nodes.forEach(industry => {
     createPage({
-      path: `/news/${industry.slug}`,
+      path: `${industry.slug}`,
       component: path.resolve(`src/templates/industry-template.js`),
       context: {
         slug: industry.slug,
@@ -85,7 +85,7 @@ exports.createPages = async ({ graphql, actions }) => {
   })
   result.data.people.nodes.forEach(person => {
     createPage({
-      path: `/about-us/${person.slug}`,
+      path: `${person.slug}`,
       component: path.resolve(`src/templates/person-template.js`),
       context: {
         slug: person.slug,
@@ -94,7 +94,7 @@ exports.createPages = async ({ graphql, actions }) => {
   })
   result.data.blogs.nodes.forEach(blog => {
     createPage({
-      path: `/blog/${blog.slug}`,
+      path: `${blog.slug}`,
       component: path.resolve(`src/templates/blog-template.js`),
       context: {
         slug: blog.slug,
@@ -135,7 +135,7 @@ exports.createPages = async ({ graphql, actions }) => {
   })
   result.data.apis.nodes.forEach(api => {
     createPage({
-      path: `/apiculture/${api.slug}`,
+      path: `${api.slug}`,
       component: path.resolve(`src/templates/apiculture-template.js`),
       context: {
         slug: api.slug,

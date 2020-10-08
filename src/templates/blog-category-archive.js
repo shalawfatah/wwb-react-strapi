@@ -5,6 +5,7 @@ import Pager from '../components/utilities/Pager'
 import Link from 'gatsby-link'
 import SEO from '../components/SEO'
 import { graphql } from 'gatsby'
+import BlogSearch from '../components/search/BlogSearch'
 
 
 const Blog = ({data, pageContext}) => {
@@ -12,18 +13,19 @@ const Blog = ({data, pageContext}) => {
     return (
         <Layout>
           <SEO title="Blog Categories" />
-            <div className="flex flex-wrap py-5">
-            <div className="lg:w-1/3 mx-auto">
-            <ul className="py-5 px-5 my-8">
-            <li className="hover:text-orange-600 cursor-pointer list-none my-5"><Link fade to='/blog' activeStyle={{ color: '#F08C00'}} >All</Link></li>
-            <li className="hover:text-orange-600 cursor-pointer list-none my-5"><Link fade to='/blog/lifestyle' activeStyle={{ color: '#F08C00'}} >Lifestyle</Link></li>
-            <li className="hover:text-orange-600 cursor-pointer list-none my-5"><Link fade to='/blog/farming' activeStyle={{ color: '#F08C00'}} >Farming</Link></li>
-            <li className="hover:text-orange-600 cursor-pointer list-none my-5"><Link fade to='/blog/sustainability' activeStyle={{ color: '#F08C00'}} >Sustainability</Link></li>
-            <li className="hover:text-orange-600 cursor-pointer list-none my-5"><Link fade to='/blog/health-and-wellness' activeStyle={{ color: '#F08C00'}} >Health & Wellness</Link></li>
-            <li className="hover:text-orange-600 cursor-pointer list-none my-5"><Link fade to='/blog/cooking' activeStyle={{ color: '#F08C00'}} >Cooking</Link></li>
-            <li className="hover:text-orange-600 cursor-pointer list-none my-5"><Link fade to='/blog/education' activeStyle={{ color: '#F08C00'}} >Education</Link></li>
+          <div className="lg:w-full mx-auto">
+            <ul className="py-5 px-5 flex flex-wrap justify-center">
+            <BlogSearch />
+            <li className="hover:text-orange-600 cursor-pointer list-none  my-2 mx-5 p-2 rounded-full"><Link fade to='/blog' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >All</Link></li>
+            <li className="hover:text-orange-600 cursor-pointer list-none  my-2 mx-5 p-2 rounded-full"><Link fade to='/blog/lifestyle' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >Lifestyle</Link></li>
+            <li className="hover:text-orange-600 cursor-pointer list-none  my-2 mx-5 p-2 rounded-full"><Link fade to='/blog/farming' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >Farming</Link></li>
+            <li className="hover:text-orange-600 cursor-pointer list-none  my-2 mx-5 p-2 rounded-full"><Link fade to='/blog/sustainability' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >Sustainability</Link></li>
+            <li className="hover:text-orange-600 cursor-pointer list-none  my-2 mx-5 p-2 rounded-full"><Link fade to='/blog/health-and-wellness' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >Health & Wellness</Link></li>
+            <li className="hover:text-orange-600 cursor-pointer list-none  my-2 mx-5 p-2 rounded-full"><Link fade to='/blog/cooking' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >Cooking</Link></li>
+            <li className="hover:text-orange-600 cursor-pointer list-none  my-2 mx-5 p-2 rounded-full"><Link fade to='/blog/education' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >Education</Link></li>
             </ul>
             </div>
+            <div className="flex flex-wrap py-5">
             {blogs.map((blog)=> {
                 return (
                   <div className="flex items-stretch my-12">

@@ -1,20 +1,20 @@
 import React from 'react'
 import './ApiCard.css';
 import Img from 'gatsby-image'
-import Link from 'gatsby-link'
+import {navigate} from 'gatsby-link'
 
 
  const ApiCard = ({title, image, slug}) => {
     return (
-        <div className="mx-auto text-center all-card text-center">
-            <Link fade to={slug}>
-            <div className="api-card mx-auto my-6 bg-cover bg-center" >
+        <div className="mx-auto text-center all-card text-center outline-none">
+            <button fade onClick={()=> navigate(`/${slug}`)} className="outline-none">
+            <div className="api-card mx-auto my-6 bg-cover bg-center outline-none" >
                 <Img fluid={image} className="h-full overflow-hidden object-cover" />
             </div>
-            <div className="w-3/4 text-center mx-auto">
+            <div className="w-3/4 text-center mx-auto outline-none">
             <h1 className="text-xl text-center font-extrabold headline-api">{title}</h1>
             </div>
-            </Link>
+            </button>
             </div>
                 )
 }

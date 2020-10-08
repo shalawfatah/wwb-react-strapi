@@ -1,7 +1,7 @@
 import React, {useState, useMemo} from 'react'
 import { useStaticQuery, graphql } from "gatsby"
 import Fuse from "fuse.js";
-import Link from 'gatsby-link'
+import {navigate} from 'gatsby-link'
 import './SearchStyle.css'
 
 const fuseOptions = {
@@ -49,7 +49,7 @@ const ApiSearch = () => {
     return (
         <>
             <input
-            className="shadow appearnce-none border rounded w-full py-2 px-3"
+            className="shadow appearnce-none border rounded-full w-full py-2 px-3 outline-none "
             id="search"
             type="text"
             placeholder="Search..."
@@ -61,7 +61,9 @@ const ApiSearch = () => {
                     <div className="mt-6">
                     <div className="text-gray-900 text-xl py-2">{result.item.node.title}</div> 
                     <div className="text-gray-600 text-md py-2">{result.item.node.summary}</div>
-                    <Link className="text-white bg-orange-600 rounded-full p-2 my-8 hover:bg-orange-400 transition-all duration-500 ease-in" to={result.item.node.slug}>Read More...</Link>
+                    <button fade onClick={()=> navigate(`/${result.item.node.slug}`)}>
+                    <p className="text-white bg-orange-600 rounded-full p-2 my-8 hover:bg-orange-400 transition-all duration-500 ease-in">Read More...</p>
+                    </button>
                     </div>
                     )
                 })}

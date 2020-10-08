@@ -40,7 +40,7 @@ const blogArticle = ({data}) => {
                         <p className="leading-relaxed text-lg mb-4"><ReactMarkdown source={content} /></p>
                         </div>
                     </div>
-                    <Link to={`/about-us/${article_author.slug}`}><AuthorProfile name={article_author.name} profile={article_author.author_summary} photo={article_author.author_photo.childImageSharp.fluid.src} title={article_author.author_title} /></Link>
+                    <Link to={`${article_author.slug}`}><AuthorProfile name={article_author.name} profile={article_author.author_summary} photo={article_author.author_photo.childImageSharp.fluid.src} title={article_author.author_title} /></Link>
                     <div className="text-3xl"> Related Stories</div>
                    <RelatedStories />
                     </div>

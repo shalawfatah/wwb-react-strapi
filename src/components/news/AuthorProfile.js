@@ -1,10 +1,10 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import {navigate} from 'gatsby-link'
 
 const AuthorProfile = ({name, profile, photo, title, slug}) => {
     return (
         <div>
-        <Link fade to={slug}>
+        <button fade onClick={()=> navigate(`/${slug}`)}>
         <div class="flex items-center lg:w-full mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col industry-card p-8 m-8">
                 <div class="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center text-indigo-500 flex-shrink-0 poly-news">
                     <img src={photo} alt={name}/>
@@ -15,7 +15,7 @@ const AuthorProfile = ({name, profile, photo, title, slug}) => {
                     <p class="leading-relaxed text-base para">{profile}</p>
                 </div>
                 </div>
-                </Link>
+                </button>
         </div>
     )
 }

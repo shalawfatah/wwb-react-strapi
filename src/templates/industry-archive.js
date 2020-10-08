@@ -15,23 +15,23 @@ const NewsArchive = ({data, pageContext}) => {
     return (
         <Layout>
           <SEO title="News" />
-            <FirstNews title={articles[0].title} quote={articles[0].quote} image={articles[0].report_photo.childImageSharp.fluid.src} slug={`/news/${articles[0].slug}`} />
-            <div className="flex flex-wrap">
-            <div className="lg:w-1/3 md:w-1/3 sm:w-full mx-auto">
-            <ul className="py-5 px-5 my-12">
+          <div className="lg:w-full md:w-1/3 sm:w-full mx-auto">
+            <ul className="py-5 px-5 flex flex-wrap justify-center">
             <NewsSearch />
-            <li className="hover:text-orange-600 cursor-pointer list-none my-5"><Link fade to='/news' activeStyle={{ color: '#F08C00'}} >All</Link></li>
-            <li className="hover:text-orange-600 cursor-pointer list-none my-5"><Link fade to='/news/economy' activeStyle={{ color: '#F08C00'}} >Economy</Link></li>
-            <li className="hover:text-orange-600 cursor-pointer list-none my-5"><Link fade to='/news/endangerment' activeStyle={{ color: '#F08C00'}} >Endangerment</Link></li>
-            <li className="hover:text-orange-600 cursor-pointer list-none my-5"><Link fade to='/news/innovations' activeStyle={{ color: '#F08C00'}} >Innovations</Link></li>
-            <li className="hover:text-orange-600 cursor-pointer list-none my-5"><Link fade to='/news/medical-science' activeStyle={{ color: '#F08C00'}} >Medical Science</Link></li>
-            <li className="hover:text-orange-600 cursor-pointer list-none my-5"><Link fade to='/news/opportunity' activeStyle={{ color: '#F08C00'}} >Opportunity</Link></li>
+            <li className="hover:text-orange-500 cursor-pointer list-none my-2 mx-5 p-2 rounded-full"><Link fade to='/news' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >All</Link></li>
+            <li className="hover:text-orange-500 cursor-pointer list-none my-2 mx-5 p-2 rounded-full"><Link fade to='/news/economy' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >Economy</Link></li>
+            <li className="hover:text-orange-500 cursor-pointer list-none my-2 mx-5 p-2 rounded-full"><Link fade to='/news/endangerment' activeStyle={{ backgroundColor: '#F08C00', color: 'white',  padding: '.75rem', borderRadius: '9999px'}} >Endangerment</Link></li>
+            <li className="hover:text-orange-500 cursor-pointer list-none my-2 mx-5 p-2 rounded-full"><Link fade to='/news/innovations' activeStyle={{ backgroundColor: '#F08C00', color: 'white',  padding: '.75rem', borderRadius: '9999px'}} >Innovations</Link></li>
+            <li className="hover:text--orange-500 cursor-pointer list-none my-2 mx-5 p-2 rounded-full"><Link fade to='/news/medical-science' activeStyle={{ backgroundColor: '#F08C00', color: 'white',  padding: '.75rem', borderRadius: '9999px'}} >Medical Science</Link></li>
+            <li className="hover:text-orange-500 cursor-pointer list-none my-2 mx-5 p-2 rounded-full"><Link fade to='/news/opportunity' activeStyle={{ backgroundColor: '#F08C00', color: 'white',  padding: '.75rem', borderRadius: '9999px'}} >Opportunity</Link></li>
             </ul>
             </div>
+            <FirstNews title={articles[0].title} quote={articles[0].quote} image={articles[0].report_photo.childImageSharp.fluid.src} slug={`${articles[0].slug}`} />
+            <div className="flex flex-wrap justify-center">
             <div className="lg:w-2/3 md:w-2/3 sm:w-2/3">
             <Header text="Latest News" />
             {articles.map((article)=> {
-                return <OtherNews title={article.title} quote={article.quote} image={article.report_photo.childImageSharp.fluid.src} slug={`/news/${article.slug}`} />
+                return <OtherNews title={article.title} quote={article.quote} image={article.report_photo.childImageSharp.fluid.src} slug={`${article.slug}`} />
             })}
             <div className="py-16">
                 <Pager pageContext={pageContext} />

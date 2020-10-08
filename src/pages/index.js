@@ -6,6 +6,7 @@ import {graphql} from 'gatsby'
 import Link from 'gatsby-link'
 import SEO from '../components/SEO'
 import Img from 'gatsby-image'
+import AllSearch from '../components/search/AllSearch'
 
 
 const IndexPage = ({data}) => {
@@ -14,6 +15,7 @@ const IndexPage = ({data}) => {
   return (
   <LayoutNoPadding>
     <SEO title="WWB" />
+    <AllSearch />
         <Map center={[0, 0]} zoom={2} maxZoom={5} minZoom={2} attributionControl={false} tap={false} scrollWheelZoom={false} >
                 <TileLayer
                 url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png"

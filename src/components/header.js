@@ -3,21 +3,17 @@ import links from '../constants/nav-items'
 import Link from "gatsby-link"
 import Image from '../images/logo.png'
 import * as FaIcons from 'react-icons/fa';
+import AllSearch from './search/AllSearch'
 
 const Header = () => {
     const [sidebar, setSidebar] = useState(false)
     const showSidebar = () => setSidebar(!sidebar)
         return (
             <div class="flex justify-between items-center px-10 border-b-2 flex-wrap">
-                <div className="logo flex items-center justify-center">
                 <Link to="/">
                 <img src={Image} alt="WWB Logo" class="w-16 py-4 mr-4" />
                 </Link>
-                <div className="text-sm -leading-3">
-                <p>Worldwide Bee</p>
-                <p>The Free Honey Bee Encyclopedia</p>
-                </div>
-                </div>
+
                 <div>
                 {links.map((link)=> {
                 return (

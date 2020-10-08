@@ -15,9 +15,9 @@ const Apiculture = ({data}) => {
             <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4 headline">Apiculture</h1>
             <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 para pb-5">The most entertaining page for beekeepers ever created.</p>
             <ApiSearch />
-            <div className="flex flex-wrap mx-auto">
+            <div className="flex flex-wrap mx-auto outline-none">
             {apis.map((api)=> {
-                return <ApiCard title={api.title} image={api.photo.childImageSharp.fluid} slug={`/apiculture/${api.slug}`} />
+                return <ApiCard title={api.title} image={api.photo.childImageSharp.fluid} slug={`${api.slug}`} />
             })}
              <ApiCard></ApiCard> 
             </div>
