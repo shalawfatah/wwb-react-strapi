@@ -55,7 +55,7 @@ const EducationSearch = () => {
             placeholder="Search..."
             onChange={handleSearch} 
             />
-            <div className="absolute bg-white w-1/3 overflow-auto shadow px-4 someZee">
+            <div className="absolute bg-white w-1/3 overflow-auto shadow px-4 someZee ">
                 {results.map((result)=> {
                     return (
                     <div className="mt-6">

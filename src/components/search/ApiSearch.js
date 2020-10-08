@@ -49,7 +49,7 @@ const ApiSearch = () => {
     return (
         <>
             <input
-            className="shadow appearnce-none border rounded-full w-full py-2 px-3 outline-none "
+            className="shadow appearnce-none border rounded-full w-full py-2 px-3 outline-none someZee"
             id="search"
             type="text"
             placeholder="Search..."

@@ -48,13 +48,13 @@ const BlogSearch = () => {
     return (
         <>
             <input
-            className="shadow appearnce-none border rounded-full w-full py-2 px-3 outline-none "
+            className="shadow appearnce-none border rounded-full w-full py-2 px-3 outline-none someZee"
             id="search"
             type="text"
             placeholder="Search..."
             onChange={handleSearch} 
             />
-            <div className="absolute bg-white w-1/3 overflow-auto shadow px-4">
+            <div className="absolute bg-white w-1/3 overflow-auto shadow px-4 someZee">
                 {results.map((result)=> {
                     return (
                     <div className="mt-6">

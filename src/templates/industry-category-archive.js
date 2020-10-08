@@ -16,8 +16,10 @@ const NewsCatArchive = ({data, pageContext}) => {
         <Layout>
           <SEO title="News Categories" />
           <div className="lg:w-full md:w-1/3 sm:w-full mx-auto">
+          <div className="my-4">
+          <NewsSearch />
+          </div>
             <ul className="py-5 px-5 flex flex-wrap justify-center">
-            <NewsSearch />
             <li className="hover:text-orange-500 cursor-pointer list-none my-2 mx-5 p-2 rounded-full"><Link fade to='/news' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >All</Link></li>
             <li className="hover:text-orange-500 cursor-pointer list-none my-2 mx-5 p-2 rounded-full"><Link fade to='/news/economy' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >Economy</Link></li>
             <li className="hover:text-orange-500 cursor-pointer list-none my-2 mx-5 p-2 rounded-full"><Link fade to='/news/endangerment' activeStyle={{ backgroundColor: '#F08C00', color: 'white',  padding: '.75rem', borderRadius: '9999px'}} >Endangerment</Link></li>
