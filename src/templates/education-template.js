@@ -7,6 +7,8 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 import ReactMarkdown from 'react-markdown'
 import SEO from '../components/SEO'
 import Img from 'gatsby-image'
+import AuthorProfile from '../components/news/AuthorProfile'
+
 
 
 const educationTemplate = ({data}) => {
@@ -26,11 +28,14 @@ const educationTemplate = ({data}) => {
                     <div className="py-8">
                     <Header text={title}/>
                     </div>
-                        <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-300 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
+                        <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-300 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left mx-auto">
                         <p className="flex justify-start bg-white py-2 focus:outline-none text-sm text-orange-600">{article_author.name}</p>
                         {youtube ?  <iframe  title={title} className="responsive-iframe" src={`${youtube}`} frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> : ''}
                           <br />
                         <p className="leading-relaxed text-lg mb-4"><ReactMarkdown source={content} /></p>
+                        <div className="flex justify-center">
+                        <AuthorProfile name={article_author.name} profile={article_author.author_summary} photo={article_author.author_photo.childImageSharp.fluid.src} title={article_author.author_title} slug={article_author.slug} />
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -49,6 +54,16 @@ export const query = graphql`
         youtube
         article_author {
           name
+          author_title
+          slug
+          author_summary
+          author_photo {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
         picture {
           childImageSharp {

@@ -22,11 +22,11 @@ const apicultureTemplate = ({data}) => {
                     <div className="rounded-lg h-64 overflow-hidden">
                         <Img alt="content" class="object-cover object-center h-full w-full" fluid={photo.childImageSharp.fluid} />
                     </div>
-                    <div className="py-8">
+                    <div className="py-2">
                     <Header text={title}/>
-                    <p className="text-2xl py-4 text-grey-700">{subtitle}</p>
+                    <p className="text-2xl pt-4 text-grey-700 text-center">{subtitle}</p>
                     </div>
-                        <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-300 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
+                        <div className="sm:w-2/3 sm:pl-8 sm:py-2 sm:border-l border-gray-300 sm:border-t-0 border-t mt-2 pt-2 sm:mt-0 text-center sm:text-left mx-auto">
                         {youtube ?  <iframe  title={title} className="responsive-iframe" src={`${youtube}`} frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> : ''}
                           <br />
                         <p className="leading-relaxed text-lg mb-4"><ReactMarkdown source={content} /></p>
