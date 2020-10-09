@@ -10,10 +10,3 @@
     height: 7rem;
     width: 12em;
 }
-.first-news {
-    transition: all .3s ease;
-}
-.first-news:hover {
-    box-shadow: 1px 1px 12px 1px #888888;
-    transform: scale(1.03);
-}
