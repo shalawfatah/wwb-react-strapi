@@ -9,7 +9,7 @@ import SEO from '../components/SEO'
 import Img from 'gatsby-image'
 
 const apicultureTemplate = ({data}) => {
-    const {title, photo, content, subtitle} = data.strapiApitherapies
+    const {title, photo, content, subtitle, youtube} = data.strapiApitherapies
     return (
         <Layout>
             <SEO title={title} description={subtitle} />
@@ -27,6 +27,8 @@ const apicultureTemplate = ({data}) => {
                     <p className="text-2xl py-4 text-grey-700">{subtitle}</p>
                     </div>
                         <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-300 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
+                        {youtube ?  <iframe  title={title} className="responsive-iframe" src={`${youtube}`} frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> : ''}
+                          <br />
                         <p className="leading-relaxed text-lg mb-4"><ReactMarkdown source={content} /></p>
                         </div>
                     </div>
@@ -43,6 +45,7 @@ export const query = graphql`
         strapiApitherapies(slug: { eq: $slug }) {
             title
             subtitle
+            youtube
             content
             photo {
             childImageSharp {

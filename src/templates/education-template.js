@@ -10,7 +10,7 @@ import Img from 'gatsby-image'
 
 
 const educationTemplate = ({data}) => {
-    const {title, content, picture, article_author} = data.strapiEducations
+    const {title, content, picture, article_author, youtube} = data.strapiEducations
     return (
         <Layout>
           <SEO title={title} />
@@ -28,6 +28,8 @@ const educationTemplate = ({data}) => {
                     </div>
                         <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-300 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
                         <p className="flex justify-start bg-white py-2 focus:outline-none text-sm text-orange-600">{article_author.name}</p>
+                        {youtube ?  <iframe  title={title} className="responsive-iframe" src={`${youtube}`} frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> : ''}
+                          <br />
                         <p className="leading-relaxed text-lg mb-4"><ReactMarkdown source={content} /></p>
                         </div>
                     </div>
@@ -44,6 +46,7 @@ export const query = graphql`
         strapiEducations(slug: { eq: $slug }) {
         content
         title
+        youtube
         article_author {
           name
         }

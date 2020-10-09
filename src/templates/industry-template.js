@@ -13,7 +13,14 @@ import { graphql } from 'gatsby'
 import React from 'react'
 
 const newsArticle = ({data}) => {
-    const {title, report_photo, content, minutes_read, article_date, quote, article_author:{name, author_title, author_summary, slug, author_photo}} = data.strapiIndustries
+    const { title, 
+            report_photo, 
+            content, 
+            minutes_read, 
+            article_date, 
+            youtube, 
+            quote, 
+            article_author:{name, author_title, author_summary, slug, author_photo}} = data.strapiIndustries
     return (
             <Layout>
               <SEO title={title} description={quote} />
@@ -40,6 +47,8 @@ const newsArticle = ({data}) => {
                         </div>
                         </div>
                         <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-300 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
+                        {youtube ?  <iframe  title={title} className="responsive-iframe" src={`${youtube}`} frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> : ''}
+                          <br />
                         <p className="leading-relaxed text-lg mb-4"><ReactMarkdown source={content} /></p>
                         </div>
                     </div>
@@ -74,6 +83,7 @@ export const query = graphql`
         quote
         content
         title
+        youtube
         minutes_read
         date(formatString: "MM")
         report_photo {

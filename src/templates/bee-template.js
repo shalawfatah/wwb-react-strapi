@@ -9,7 +9,7 @@ import Img from 'gatsby-image'
 import { graphql } from 'gatsby'
 
 const beeTemplate = ({data}) => {
-    const {bee_name, bee_genome, content, bee_photo} = data.strapiGenomes
+    const {bee_name, bee_genome, content, bee_photo, youtube} = data.strapiGenomes
     return (
         <Layout>
           <SEO title={bee_name} description={bee_genome}/>
@@ -27,6 +27,8 @@ const beeTemplate = ({data}) => {
                     <p className="text-2xl py-4 text-grey-700 text-center text-gray-600">{bee_genome}</p>
                     </div>
                         <div className="sm:w-full sm:pl-8 sm:py-8 sm:border-l border-gray-300 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
+                        {youtube ?  <iframe  title={bee_name} className="responsive-iframe" src={`${youtube}`} frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> : ''}
+                          <br />
                         <p className="leading-relaxed text-lg mb-4"><ReactMarkdown source={content} /></p>
                         </div>
                     </div>
@@ -51,6 +53,7 @@ export const query = graphql`
         bee_name
         bee_genome
         content
+        youtube
       }
     }
 `
