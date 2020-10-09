@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import './BeeCard.css'
 
 
@@ -16,7 +16,7 @@ const BeeCard = ({name, genome, summary, image, slug}) => {
                             <h1 class="title-font text-lg font-medium text-gray-900 mb-3 headline">{genome}</h1>
                             <p class="leading-relaxed mb-3 para">{summary}</p>
                               <li className="list-none font-semibold m-1 flex flex-wrap justify-center mx-auto">
-                              <Link fade to={slug} className="flex text-grey-700 bg-white py-2 px-4 focus:outline-none text-lg cursor-pointer button">Read More</Link>
+                              <AniLink fade to={slug} className="flex text-grey-700 bg-white py-2 px-4 focus:outline-none text-lg cursor-pointer button">Read More</AniLink>
                               </li>
                           </div>
                         </div>

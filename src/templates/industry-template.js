@@ -1,9 +1,8 @@
 import Layout from '../components/layout'
 import AuthorProfile from '../components/news/AuthorProfile'
-import RelatedStories from '../components/news/RelatedStoriesComponent'
 import Header from '../components/utilities/Header'
 import {FiChevronLeft} from 'react-icons/fi'
-import Link from 'gatsby-link'
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import ReactMarkdown from 'react-markdown'
 import SEO from '../components/SEO'
 import Img from 'gatsby-image'
@@ -19,9 +18,9 @@ const newsArticle = ({data}) => {
             <Layout>
               <SEO title={title} description={quote} />
                 <section className="text-gray-700 body-font py-5">
-                <Link fade to="/news/" >
+                <AniLink fade to="/news/" >
                 <FiChevronLeft className="bg-orange-600 text-white text-4xl rounded-full hover:bg-orange-500 cursor-pointer transition duration-500 ease-in-out" />
-                </Link>
+                </AniLink>
                 <div className="container px-5 py-0 mx-auto flex flex-col">
                     <div className="lg:w-full mx-auto">
                     <div className="rounded-lg h-64 overflow-hidden">
@@ -45,9 +44,6 @@ const newsArticle = ({data}) => {
                         </div>
                     </div>
                     <AuthorProfile name={name} profile={author_summary} photo={author_photo.childImageSharp.fluid.src} title={author_title} slug={slug} />
-                    <p className="text-gray-400">-- Put article icon before Related Stories Text</p>
-                    <div className="text-3xl"> Related Stories</div>
-                   <RelatedStories />
                     </div>
                 </div>
                 </section>

@@ -1,6 +1,5 @@
 import React from 'react'
 import './OtherNews.css'
-import Link from 'gatsby-link'
 import {navigate} from 'gatsby-link'
 
 const OtherNews = ({title, quote, image, slug}) => {

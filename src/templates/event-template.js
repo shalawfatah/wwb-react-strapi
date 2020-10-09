@@ -1,7 +1,7 @@
 
 import Layout from '../components/layout'
 import ButtonMiddle from '../components/utilities/ButtonMiddle'
-import Link from 'gatsby-link'
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import {FiChevronLeft} from 'react-icons/fi'
 import ReactMarkdown from 'react-markdown'
 import SEO from '../components/SEO'
@@ -15,9 +15,9 @@ const eventsTemplate = ({data}) => {
         <Layout>
             <SEO title={title} description={summary} />
             <section className="text-gray-700 body-font py-5">
-                <Link fade to="/events/" >
+                <AniLink fade to="/events/" >
                 <FiChevronLeft className="bg-orange-600 text-white text-4xl rounded-full hover:bg-orange-500 cursor-pointer transition duration-500 ease-in-out" />
-                </Link>
+                </AniLink>
                 <div className="container px-5 py-0 mx-auto flex flex-col">
                     <div className="lg:w-full mx-auto">
                     <div className="rounded-lg h-64 overflow-hidden">
@@ -27,9 +27,9 @@ const eventsTemplate = ({data}) => {
                         <div className="lg:w-2/3 flex flex-col sm:flex-row sm:items-center items-start mx-auto mb-10">
                         <h1 className="flex-grow sm:pr-16 text-2xl font-medium title-font text-gray-900 font-bold">{title} <br /> <span className="text-lg font-thin ">{summary}</span></h1>
                         <div>
-                            <Link to={ticket}>
+                            <AniLink fade to={ticket}>
                             <ButtonMiddle text="Tickets"/>
-                            </Link>
+                            </AniLink>
                         <ButtonMiddle text="Website" link={website} />
                         </div>
                         </div>

@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import Header from '../components/utilities/Header'
 import {FiChevronLeft} from 'react-icons/fi'
-import Link from 'gatsby-link'
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import ReactMarkdown from 'react-markdown'
 import SEO from '../components/SEO'
 import Img from 'gatsby-image'
@@ -14,9 +14,9 @@ const beeTemplate = ({data}) => {
         <Layout>
           <SEO title={bee_name} description={bee_genome}/>
                 <section className="text-gray-700 body-font py-5">
-                <Link fade to="/" >
+                <AniLink fade to="/" >
                 <FiChevronLeft className="bg-orange-600 text-white text-4xl rounded-full hover:bg-orange-500 cursor-pointer transition duration-500 ease-in-out" />
-                </Link>
+                </AniLink>
                 <div className="container px-5 py-0 mx-auto flex flex-col">
                     <div className="lg:w-full mx-auto">
                     <div className="rounded-lg h-64 overflow-hidden">

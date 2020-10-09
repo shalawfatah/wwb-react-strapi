@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import BlogCard from '../components/blog/BlogCard'
 import Pager from '../components/utilities/Pager'
-import Link from 'gatsby-link'
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import SEO from '../components/SEO'
 import { graphql } from 'gatsby'
 import BlogSearch from '../components/search/BlogSearch'
@@ -18,13 +18,13 @@ const Blog = ({data, pageContext}) => {
             <BlogSearch />
             </div>
             <ul className="py-5 px-5 flex flex-wrap justify-center">
-            <li className="hover:text-orange-600 cursor-pointer list-none  my-2 mx-5 p-2 rounded-full"><Link fade to='/blog' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >All</Link></li>
-            <li className="hover:text-orange-600 cursor-pointer list-none  my-2 mx-5 p-2 rounded-full"><Link fade to='/blog/lifestyle' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >Lifestyle</Link></li>
-            <li className="hover:text-orange-600 cursor-pointer list-none  my-2 mx-5 p-2 rounded-full"><Link fade to='/blog/farming' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >Farming</Link></li>
-            <li className="hover:text-orange-600 cursor-pointer list-none  my-2 mx-5 p-2 rounded-full"><Link fade to='/blog/sustainability' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >Sustainability</Link></li>
-            <li className="hover:text-orange-600 cursor-pointer list-none  my-2 mx-5 p-2 rounded-full"><Link fade to='/blog/health-and-wellness' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >Health & Wellness</Link></li>
-            <li className="hover:text-orange-600 cursor-pointer list-none  my-2 mx-5 p-2 rounded-full"><Link fade to='/blog/cooking' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >Cooking</Link></li>
-            <li className="hover:text-orange-600 cursor-pointer list-none  my-2 mx-5 p-2 rounded-full"><Link fade to='/blog/education' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >Education</Link></li>
+            <li className="hover:text-orange-600 cursor-pointer list-none  my-2 mx-5 p-2 rounded-full"><AniLink fade to='/blog' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >All</AniLink></li>
+            <li className="hover:text-orange-600 cursor-pointer list-none  my-2 mx-5 p-2 rounded-full"><AniLink fade to='/blog/lifestyle' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >Lifestyle</AniLink></li>
+            <li className="hover:text-orange-600 cursor-pointer list-none  my-2 mx-5 p-2 rounded-full"><AniLink fade to='/blog/farming' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >Farming</AniLink></li>
+            <li className="hover:text-orange-600 cursor-pointer list-none  my-2 mx-5 p-2 rounded-full"><AniLink fade to='/blog/sustainability' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >Sustainability</AniLink></li>
+            <li className="hover:text-orange-600 cursor-pointer list-none  my-2 mx-5 p-2 rounded-full"><AniLink fade to='/blog/health-and-wellness' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >Health & Wellness</AniLink></li>
+            <li className="hover:text-orange-600 cursor-pointer list-none  my-2 mx-5 p-2 rounded-full"><AniLink fade to='/blog/cooking' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >Cooking</AniLink></li>
+            <li className="hover:text-orange-600 cursor-pointer list-none  my-2 mx-5 p-2 rounded-full"><AniLink fade to='/blog/education' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >Education</AniLink></li>
             </ul>
             </div>
             <div className="flex flex-wrap py-5">

@@ -4,8 +4,6 @@ import beePic from '../images/anotherbee.png'
 import addToMailchimp from 'gatsby-plugin-mailchimp'
 import SEO from '../components/SEO'
 
-
-
 class Subscribe extends Component {
   state = {
     name: null,

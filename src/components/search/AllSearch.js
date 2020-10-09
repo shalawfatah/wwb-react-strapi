@@ -1,7 +1,7 @@
 import React, {useState, useMemo} from 'react'
 import { useStaticQuery, graphql } from "gatsby"
 import Fuse from "fuse.js";
-import Link from 'gatsby-link'
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import './SearchStyle.css'
 
 const fuseOptions = {
@@ -115,7 +115,7 @@ const AllSearch = () => {
                     <div className="mt-6">
                     <div className="text-gray-900 text-xl py-2">{result.item.node.title}</div> 
                     <div className="text-gray-600 text-md py-2">{result.item.node.summary}</div>
-                    <Link className="text-white bg-orange-600 rounded-full p-2 my-8 hover:bg-orange-400 transition-all duration-500 ease-in" to={result.item.node.slug}>Read More...</Link>
+                    <AniLink fade className="text-white bg-orange-600 rounded-full p-2 my-8 hover:bg-orange-400 transition-all duration-500 ease-in" to={result.item.node.slug}>Read More...</AniLink>
                     </div>
                     )
                 })}

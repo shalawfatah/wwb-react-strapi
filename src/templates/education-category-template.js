@@ -1,8 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 import {FiChevronLeft} from 'react-icons/fi'
-import Link from 'gatsby-link'
-import Button from '../components/utilities/Button'
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import SEO from '../components/SEO'
 import Img from 'gatsby-image'
 import { graphql } from 'gatsby'
@@ -15,9 +14,9 @@ const EduCatTemp = ({data}) => {
         <Layout>
           <SEO title="Education Categories" />
           <section className="text-gray-700 body-font overflow-hidden py-5">
-          <Link fade to="/education/" >
+          <AniLink fade to="/education/" >
                 <FiChevronLeft className="bg-orange-600 text-white text-4xl rounded-full hover:bg-orange-500 cursor-pointer transition duration-500 ease-in-out" />
-                </Link>
+                </AniLink>
           <div className="container px-5 mx-auto flex flex-col">
                     <div>
                     <div className="lg:w-full mx-auto">

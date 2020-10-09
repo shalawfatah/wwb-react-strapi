@@ -1,6 +1,5 @@
 import React from 'react'
 import Search from './Search'
-import Link from 'gatsby-link'
 
  
 const Sideline = ({headline, subheadOne, subheadTwo, subheadThree, subheadFour, subheadFive}) => {

@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Header from '../components/utilities/Header'
 import {FiChevronLeft} from 'react-icons/fi'
-import Link from 'gatsby-link'
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import ReactMarkdown from 'react-markdown'
 import SEO from '../components/SEO'
 import Img from 'gatsby-image'
@@ -14,9 +14,9 @@ const apicultureTemplate = ({data}) => {
         <Layout>
             <SEO title={title} description={subtitle} />
                 <section className="text-gray-700 body-font py-5">
-                <Link fade to="/apiculture/" >
+                <AniLink fade to="/apiculture/" >
                 <FiChevronLeft className="bg-orange-600 text-white text-4xl rounded-full hover:bg-orange-500 cursor-pointer transition duration-500 ease-in-out" />
-                </Link>
+                </AniLink>
                 <div className="container px-5 py-0 mx-auto flex flex-col">
                     <div className="lg:w-full mx-auto">
                     <div className="rounded-lg h-64 overflow-hidden">

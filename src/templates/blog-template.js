@@ -1,9 +1,8 @@
 import Layout from '../components/layout'
 import AuthorProfile from '../components/news/AuthorProfile'
-import RelatedStories from '../components/news/RelatedStoriesComponent'
 import Header from '../components/utilities/Header'
 import {FiChevronLeft} from 'react-icons/fi'
-import Link from 'gatsby-link'
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import ReactMarkdown from 'react-markdown'
 import SEO from '../components/SEO'
 import { graphql } from 'gatsby'
@@ -15,9 +14,9 @@ const blogArticle = ({data}) => {
             <Layout>
               <SEO title={title} description={quote} />
                 <section className="text-gray-700 body-font py-5">
-                <Link fade to="/blog/" >
+                <AniLink fade to="/blog/" >
                 <FiChevronLeft className="bg-orange-600 text-white text-4xl rounded-full hover:bg-orange-500 cursor-pointer transition duration-500 ease-in-out" />
-                </Link>
+                </AniLink>
                 <div className="container px-5 py-0 mx-auto flex flex-col">
                     <div className="lg:w-full mx-auto">
                     <div className="rounded-lg h-64 overflow-hidden">
@@ -40,10 +39,8 @@ const blogArticle = ({data}) => {
                         <p className="leading-relaxed text-lg mb-4"><ReactMarkdown source={content} /></p>
                         </div>
                     </div>
-                    <AuthorProfile name={article_author.name} profile={article_author.author_summary} photo={article_author.author_photo.childImageSharp.fluid.src} title={article_author.author_title} slug={article_author.slug} />
-                    <div className="text-3xl"> Related Stories</div>
-                   <RelatedStories />
-                    </div>
+                          <AuthorProfile name={article_author.name} profile={article_author.author_summary} photo={article_author.author_photo.childImageSharp.fluid.src} title={article_author.author_title} slug={article_author.slug} />
+                          </div>
                 </div>
                 </section>
                 </Layout>
