@@ -52,10 +52,10 @@ _handleSubmit = e => {
                 <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-200 mb-5">
                     </div>
                 <form className="flex py-10 flex-wrap" onSubmit={this._handleSubmit}>
-                <input type="text" className="border-solid border-2 border-gray-300 mx-2 w-full rounded-md px-4 p-2 m-2" placeholder="Enter your name here" name="name" onChange={this._handleChange}/>
-                <input type="text" className="border-solid border-2 border-gray-300 mx-2 w-full rounded-md px-4 p-2 m-2" placeholder="Enter your email here" name="email" onChange={this._handleChange}/>
+                <input type="text" className="border-solid border-2 border-gray-300 mx-2 w-full rounded-full px-4 p-2 m-2 outline-none" placeholder="Enter your name here" name="name" onChange={this._handleChange}/>
+                <input type="text" className="border-solid border-2 border-gray-300 mx-2 w-full rounded-full px-4 p-2 m-2 outline-none" placeholder="Enter your email here" name="email" onChange={this._handleChange}/>
                 <li className="list-none font-semibold m-1 flex flex-wrap justify-center">
-                <button type="submit" className="flex text-grey-700 bg-white py-2 px-4 focus:outline-none text-lg cursor-pointer button">Submit</button>
+                <button type="submit" className="flex text-grey-700 bg-white py-2 px-4 focus:outline-none text-lg cursor-pointer button m-2">Submit</button>
                 </li>
                 </form>
             </div>

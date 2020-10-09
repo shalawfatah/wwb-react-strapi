@@ -43,7 +43,9 @@ const newsArticle = ({data}) => {
                         <p className="leading-relaxed text-lg mb-4"><ReactMarkdown source={content} /></p>
                         </div>
                     </div>
+                    <div className="flex justify-center">
                     <AuthorProfile name={name} profile={author_summary} photo={author_photo.childImageSharp.fluid.src} title={author_title} slug={slug} />
+                    </div>
                     </div>
                 </div>
                 </section>

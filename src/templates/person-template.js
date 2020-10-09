@@ -6,6 +6,7 @@ import SEO from '../components/SEO'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import {AiOutlineUnorderedList} from 'react-icons/ai'
+import {BiCaretRight} from 'react-icons/bi'
 import {navigate} from 'gatsby-link'
 
 
@@ -45,12 +46,13 @@ const ArticleAuthor = ({data}) => {
                           </div>
                         </div>
                       </div>
-                      <div className="text-3xl flex items-center"> <span className="mx-4"><AiOutlineUnorderedList></AiOutlineUnorderedList> </span>Stories by {name}</div>
+                      <div className="mx-10">
+                      <div className="text-3xl flex items-center "> <span className="mx-4"><AiOutlineUnorderedList></AiOutlineUnorderedList> </span>Stories by {name}</div>
                       {blogs.map((blog)=> {
                         return (
                         <div>
                         <button fade onClick={()=> navigate(`/${blog.slug}`)} className="outline-none">
-                        <p className="hover:text-orange-500 cursor-pointer ml-16 transition-all duration-500 ease outline-none">{blog.title}</p>
+                        <p className="hover:text-orange-500 cursor-pointer transition-all duration-500 ease outline-none flex items-center"><span className="mx-4"><BiCaretRight></BiCaretRight></span>{blog.title}</p>
                         </button>
                         </div>
                         )
@@ -59,12 +61,12 @@ const ArticleAuthor = ({data}) => {
                         return (
                         <div>
                         <button fade onClick={()=> navigate(`/${industry.slug}`)} className="outline-none">
-                        <p className="hover:text-orange-500 cursor-pointer ml-16 transition-all duration-500 ease outline-none">{industry.title}</p>
+                        <p className="hover:text-orange-500 cursor-pointer transition-all duration-500 ease outline-none flex items-center"><span className="mx-4"><BiCaretRight></BiCaretRight></span>{industry.title}</p>
                         </button>
                         </div>
                         )
                       })}
-                   {/* <RelatedStories news_slug={industries.slug} title_blog={blogs.title} title_news={industries.title}/> */}
+                      </div>
                     </section>
                 </Layout>
     )
