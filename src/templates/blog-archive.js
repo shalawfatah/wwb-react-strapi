@@ -18,7 +18,7 @@ const Blog = ({data, pageContext}) => {
             <BlogSearch />
             </div>
             <ul className="py-5 px-5 flex flex-wrap justify-center">
-            <li className="hover:text-orange-600 cursor-pointer list-none  my-2 mx-5 p-2 rounded-full"><AniLink fade to='/blog' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >All</AniLink></li>
+            <li className="hover:text-orange-600 cursor-pointer list-none  my-2 mx-5 p-2 rounded-full"><AniLink fade to='/blog' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >All Topics</AniLink></li>
             <li className="hover:text-orange-600 cursor-pointer list-none  my-2 mx-5 p-2 rounded-full"><AniLink fade to='/blog/lifestyle' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >Lifestyle</AniLink></li>
             <li className="hover:text-orange-600 cursor-pointer list-none  my-2 mx-5 p-2 rounded-full"><AniLink fade to='/blog/farming' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >Farming</AniLink></li>
             <li className="hover:text-orange-600 cursor-pointer list-none  my-2 mx-5 p-2 rounded-full"><AniLink fade to='/blog/sustainability' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >Sustainability</AniLink></li>

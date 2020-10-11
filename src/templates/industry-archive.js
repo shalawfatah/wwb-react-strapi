@@ -20,7 +20,7 @@ const NewsArchive = ({data, pageContext}) => {
           <NewsSearch />
           </div>
             <ul className="py-5 px-5 flex flex-wrap justify-center">
-            <li className="hover:text-orange-500 cursor-pointer list-none my-2 mx-5 p-2 rounded-full"><AniLink fade to='/news' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >All</AniLink></li>
+            <li className="hover:text-orange-500 cursor-pointer list-none my-2 mx-5 p-2 rounded-full"><AniLink fade to='/news' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >All News</AniLink></li>
             <li className="hover:text-orange-500 cursor-pointer list-none my-2 mx-5 p-2 rounded-full"><AniLink fade to='/news/economy' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >Economy</AniLink></li>
             <li className="hover:text-orange-500 cursor-pointer list-none my-2 mx-5 p-2 rounded-full"><AniLink fade to='/news/endangerment' activeStyle={{ backgroundColor: '#F08C00', color: 'white',  padding: '.75rem', borderRadius: '9999px'}} >Endangerment</AniLink></li>
             <li className="hover:text-orange-500 cursor-pointer list-none my-2 mx-5 p-2 rounded-full"><AniLink fade to='/news/innovations' activeStyle={{ backgroundColor: '#F08C00', color: 'white',  padding: '.75rem', borderRadius: '9999px'}} >Innovations</AniLink></li>

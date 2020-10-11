@@ -13,7 +13,7 @@ const FirstNews = ({title, quote, image, slug}) => {
                     <h1 className="text-gray-900 text-3xl title-font font-medium mb-6 headline">{title}</h1>
                     <p className="leading-8 p-4 para">{quote}</p>
                     <div className="leading-8 p-4 para outline-none">
-                    <button className="bg-orange-500 text-white px-4 py-1 hover:bg-orange-600 rounded-full e outline-none transition-all duration-500 ease" fade onClick={()=> navigate(`/${slug}`)}>
+                    <button className="bg-orange-500 text-white px-4 py-1 hover:bg-orange-700 rounded-full e outline-none transition-all duration-500 ease" fade onClick={()=> navigate(`/${slug}`)}>
                         Read More
                     </button>
                     </div>
