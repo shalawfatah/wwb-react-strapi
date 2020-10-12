@@ -198,7 +198,7 @@ p {
 
 .home-headline {
   z-index: 5000;
-  text-shadow: 1px 1px 6px #F08C00;
+  text-shadow: 1px 1px 3px #000;
 }
 
 .responsive-iframe {

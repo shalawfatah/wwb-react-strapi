@@ -26,7 +26,7 @@ const apicultureTemplate = ({data}) => {
                     <Header text={title}/>
                     <p className="text-2xl pt-4 text-grey-700 text-center">{subtitle}</p>
                     </div>
-                        <div className="sm:w-2/3 sm:pl-8 sm:py-2 sm:border-l border-gray-300 sm:border-t-0 border-t mt-2 pt-2 sm:mt-0 text-center sm:text-left mx-auto">
+                        <div className="sm:w-2/3 sm:pl-8 sm:py-2 mt-2 pt-2 sm:mt-0 text-center sm:text-left mx-auto">
                         {youtube ?  <iframe  title={title} className="responsive-iframe" src={`${youtube}`} frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> : ''}
                           <br />
                         <p className="leading-relaxed text-lg mb-4"><ReactMarkdown source={content} /></p>

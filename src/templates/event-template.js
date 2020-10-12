@@ -24,7 +24,7 @@ const eventsTemplate = ({data}) => {
                         <Img alt="content" className="object-cover object-center h-full w-full" fluid={photo.childImageSharp.fluid} />
                     </div>
                     <div className="container px-5 py-10 mx-auto">
-                        <div className="lg:w-2/3 flex flex-col sm:flex-row sm:items-center items-start mx-auto mb-10">
+                        <div className="lg:w-5/6 flex flex-col sm:flex-row sm:items-center items-start mx-auto mb-10">
                         <h1 className="flex-grow sm:pr-16 text-2xl font-medium title-font text-gray-900 font-bold">{title} <br /> <span className="text-lg font-thin ">{summary}</span></h1>
                         <div>
                             <AniLink fade to={ticket}>
@@ -33,7 +33,7 @@ const eventsTemplate = ({data}) => {
                         <ButtonMiddle text="Website" link={website} />
                         </div>
                         </div>
-                        <div className="lg:w-2/3 flex flex-col sm:flex-row items-start mx-auto">
+                        <div className="lg:w-5/6 flex flex-col sm:flex-row items-start mx-auto">
                         <h1 className="flex-grow  text-2xl font-medium title-font text-gray-900 font-bold lg:w-2/3">About this Event <br /> <span className="text-lg font-thin para">{content}</span></h1>
                         <div className="event-shadow w-1/3 mx-6">
                         <h1 className="flex-grow text-2xl font-medium title-font text-gray-900 font-bold lg:w-full">Date and Time <br /><span className="text-sm font-thin para">{date}</span> <br /> <span className="text-sm font-thin para">{time}</span></h1>
