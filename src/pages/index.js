@@ -7,6 +7,8 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 import SEO from '../components/SEO'
 import Img from 'gatsby-image'
 import AllSearch from '../components/search/AllSearch'
+import {FiArrowUpCircle, FiArrowDownCircle} from 'react-icons/fi'
+import scrollTo from 'gatsby-plugin-smoothscroll';
 
 
 const IndexPage = ({data}) => {
@@ -17,14 +19,24 @@ const IndexPage = ({data}) => {
     <SEO title="WWB" />
     <AllSearch />
     <div className="relative">
-    <div className="mx-10 px-6 absolute left-0 top-0 home-headline my-1">
+    <div className="mx-10 px-6 absolute left-0 top-0 home-headline" >
     <h1 class="sm:text-3xl text-2xl font-medium title-font text-white headline home-headline">Worldwide Bee</h1>
     <p class="text-base leading-relaxed xl:w-full lg:w-full para pb-5 text-white">The Free Honey Bee Encyclopedia</p>
+    <button onClick={() => scrollTo('#my-cool-header')}><FiArrowUpCircle className="text-3xl cursor-pointer arrow-button-up" /></button>
+    <button onClick={() => scrollTo('#my-cool-footer')}><FiArrowDownCircle className="text-3xl cursor-pointer arrow-button-down" /></button>
     </div>
     </div>
-        <Map center={[0, 0]} zoom={2} maxZoom={5} minZoom={2} attributionControl={false} tap={false} scrollWheelZoom={false} >
+    {typeof window !== 'undefined' &&
+        <Map center={[0, 0]} 
+            zoom={2} maxZoom={5}
+            minZoom={2} 
+            attributionControl={false} 
+            tap={false} 
+            scrollWheelZoom={false} 
+            dragging={true} 
+        >
                 <TileLayer
-                url="https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png"
+                url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png"
                  />
                 {genomes.map((genome)=> {
                   return (
@@ -50,6 +62,7 @@ const IndexPage = ({data}) => {
                   )
                 })}
         </Map>
+  }
   </LayoutNoPadding>
   )
 }
@@ -86,11 +99,6 @@ export const query = graphql`
     }
 `
 
-//     {typeof window !== 'undefined' &&
-// }
-
-// light map 
-// https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png
-
-// dark map
-// https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png
+// https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png
+// https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png
+// https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png

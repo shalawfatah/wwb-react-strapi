@@ -18,13 +18,13 @@ const Blog = ({data, pageContext}) => {
             <BlogSearch />
             </div>
             <ul className="py-5 px-5 flex flex-wrap justify-center">
-            <li className="hover:text-orange-600 cursor-pointer list-none  my-2 mx-5 p-2 rounded-full"><AniLink fade to='/blog' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >All Topics</AniLink></li>
-            <li className="hover:text-orange-600 cursor-pointer list-none  my-2 mx-5 p-2 rounded-full"><AniLink fade to='/blog/lifestyle' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >Lifestyle</AniLink></li>
-            <li className="hover:text-orange-600 cursor-pointer list-none  my-2 mx-5 p-2 rounded-full"><AniLink fade to='/blog/farming' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >Farming</AniLink></li>
-            <li className="hover:text-orange-600 cursor-pointer list-none  my-2 mx-5 p-2 rounded-full"><AniLink fade to='/blog/sustainability' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >Sustainability</AniLink></li>
-            <li className="hover:text-orange-600 cursor-pointer list-none  my-2 mx-5 p-2 rounded-full"><AniLink fade to='/blog/health-and-wellness' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >Health & Wellness</AniLink></li>
-            <li className="hover:text-orange-600 cursor-pointer list-none  my-2 mx-5 p-2 rounded-full"><AniLink fade to='/blog/cooking' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >Cooking</AniLink></li>
-            <li className="hover:text-orange-600 cursor-pointer list-none  my-2 mx-5 p-2 rounded-full"><AniLink fade to='/blog/education' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >Education</AniLink></li>
+            <li className="hover:text-orange-600 cursor-pointer list-none  my-2 mx-5 p-2 rounded-full blog-archive-cat"><AniLink fade to='/blog' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >All Topics</AniLink></li>
+            <li className="hover:text-orange-600 cursor-pointer list-none  my-2 mx-5 p-2 rounded-full blog-archive-cat"><AniLink fade to='/blog/lifestyle' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >Lifestyle</AniLink></li>
+            <li className="hover:text-orange-600 cursor-pointer list-none  my-2 mx-5 p-2 rounded-full blog-archive-cat"><AniLink fade to='/blog/farming' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >Farming</AniLink></li>
+            <li className="hover:text-orange-600 cursor-pointer list-none  my-2 mx-5 p-2 rounded-full blog-archive-cat"><AniLink fade to='/blog/sustainability' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >Sustainability</AniLink></li>
+            <li className="hover:text-orange-600 cursor-pointer list-none  my-2 mx-5 p-2 rounded-full blog-archive-cat"><AniLink fade to='/blog/health-and-wellness' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >Health & Wellness</AniLink></li>
+            <li className="hover:text-orange-600 cursor-pointer list-none  my-2 mx-5 p-2 rounded-full blog-archive-cat"><AniLink fade to='/blog/cooking' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >Cooking</AniLink></li>
+            <li className="hover:text-orange-600 cursor-pointer list-none  my-2 mx-5 p-2 rounded-full blog-archive-cat"><AniLink fade to='/blog/education' activeStyle={{ backgroundColor: '#F08C00', color: 'white', padding: '.75rem', borderRadius: '9999px'}} >Education</AniLink></li>
             </ul>
             </div>
             <div className="flex flex-wrap py-5">

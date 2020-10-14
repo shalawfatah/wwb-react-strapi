@@ -38,6 +38,7 @@ class Footer extends Component {
                     })}
                     </div>
                     </div>
+                    <div id="my-cool-footer"></div>
 </footer>
             </div>
         )
