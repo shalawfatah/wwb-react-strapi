@@ -13,9 +13,7 @@ import {navigate} from 'gatsby-link'
 import React from 'react'
 
 const ArticleAuthor = ({data}) => {
-    const {author_profile, author_photo, author_title, name, email, phone, blogs, industries} = data.strapiArticleAuthors
-    console.log(blogs)
-    console.log(industries)
+    const {author_profile, author_photo, author_title, name, email, phone, blogs, industries, educations} = data.strapiArticleAuthors
         
     return (
             <Layout>
@@ -66,6 +64,15 @@ const ArticleAuthor = ({data}) => {
                         </div>
                         )
                       })}
+                      {educations.map((education)=> {
+                        return (
+                        <div>
+                        <button fade onClick={()=> navigate(`/${education.slug}`)} className="outline-none">
+                        <p className="hover:text-orange-500 cursor-pointer transition-all duration-500 ease outline-none flex items-center"><span className="mx-4"><BiCaretRight></BiCaretRight></span>{education.title}</p>
+                        </button>
+                        </div>
+                        )
+                      })}
                       </div>
                     </section>
                 </Layout>
@@ -88,6 +95,10 @@ query getSingleArticleAuthor($slug: String) {
           slug
         }
         industries {
+          title
+          slug
+        }
+        educations {
           title
           slug
         }

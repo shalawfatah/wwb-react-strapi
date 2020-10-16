@@ -69,7 +69,6 @@ export const query = graphql`
                 author_title
                 author_profile
                 author_summary
-                author_social_media
                 author_photo {
                   childImageSharp {
                     fluid {
