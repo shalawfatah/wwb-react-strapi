@@ -219,3 +219,19 @@ p {
   top: 22rem;
   left: 1rem;
 }
+.color-white {
+  background-color: white;
+  color: black;
+}
+.color-purple {
+  background-color: rgb(147, 28, 147);
+  color: white;
+}
+.color-blue {
+  background-color: rgb(104, 116, 208);
+  color: white;
+}
+.color-pink {
+  background-color: rgb(220, 63, 89);
+  color: white;
+}

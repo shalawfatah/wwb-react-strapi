@@ -6,10 +6,11 @@ import SEO from '../components/SEO'
 import Img from 'gatsby-image'
 import { graphql } from 'gatsby'
 import {navigate} from 'gatsby-link'
+import EducationSearch from '../components/search/EducationSearch'
 
 
 const EduCatTemp = ({data}) => {
-    const {strapiEducationCategories:{name, picture}, allStrapiEducations:{nodes:educations}} = data
+    const {strapiEducationCategories:{name, picture, special_color}, allStrapiEducations:{nodes:educations}} = data
     return (
         <Layout>
           <SEO title="Education Categories" />
@@ -24,7 +25,8 @@ const EduCatTemp = ({data}) => {
                         <Img alt="content" className="object-cover object-center h-full w-full" fluid={picture.childImageSharp.fluid} />
                     </div>
                     </div>
-                    <h1 class="sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 rounded transformed-headline">{name}</h1>
+                    <h1 class={`sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 rounded transformed-headline mb-3 ${special_color}`}>{name}</h1>
+            <EducationSearch />
           {educations.map((education)=> {
             return (
                   <div className="container px-5 mx-auto py-5">
@@ -59,6 +61,7 @@ query getSingleEducationCategory($slug: String!)
   {
     strapiEducationCategories(slug: { eq: $slug }) {
       name
+      special_color
       picture {
         childImageSharp {
           fluid {

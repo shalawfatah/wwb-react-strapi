@@ -81,7 +81,7 @@ const beeTemplate = ({data}) => {
                                 </svg>
                               </div>
                               <div className="flex-grow pl-4">
-                                <h2 className="font-medium title-font text-sm text-gray-600 mb-1 tracking-wider">SHAPE</h2>
+                                <h2 className="font-medium title-font text-sm text-gray-600 mb-1 tracking-wider">APPEARANCE</h2>
                                 <p className="leading-relaxed">{shape}</p>
                               </div>
                             </div>
@@ -106,7 +106,7 @@ const beeTemplate = ({data}) => {
                                 </svg>
                               </div>
                               <div className="flex-grow pl-4">
-                                <h2 className="font-medium title-font text-sm text-gray-600 mb-1 tracking-wider">ANTENNA</h2>
+                                <h2 className="font-medium title-font text-sm text-gray-600 mb-1 tracking-wider">TRAITS</h2>
                                 <p className="leading-relaxed">{antenna}</p>
                               </div>
                             </div>

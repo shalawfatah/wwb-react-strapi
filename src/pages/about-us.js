@@ -14,7 +14,7 @@ const AboutUs = ({data}) => {
               <div className="container px-5 py-10 flex flex-wrap">
                 <div className="flex flex-col text-center w-full mb-20">
                   <h1 className="text-2xl font-medium title-font mb-4 text-gray-900 tracking-widest headline">About Us</h1>
-                  <p className="lg:w-2/3 mx-auto leading-relaxed text-base para">WWB Team: Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them.</p>
+                  <p className="lg:w-2/3 mx-auto leading-relaxed text-base para">Our mission is to educate beekeepers, activists, hobbyists, and bee lovers on the craft of commercial apiculture. Here are the people who continue to innovate the beekeeping industry.</p>
                 </div>
                 {people.map((person)=> {
                         return (

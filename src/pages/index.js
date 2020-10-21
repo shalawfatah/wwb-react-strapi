@@ -51,7 +51,7 @@ const IndexPage = ({data}) => {
                     >
                       <Tooltip>{genome.bee_name}</Tooltip>
                       <Popup>
-                        <Img fluid={genome.bee_icon.childImageSharp.fluid} alt={genome.bee_name} />
+                        <Img fluid={genome.bee_photo.childImageSharp.fluid} alt={genome.bee_name} />
                         <h1 className="text-xl py-2">{genome.bee_name}</h1>
                         <h1 className="text-lg text-gray-500">{genome.bee_genome}</h1>
                         <p className="text-sm text-gray-700 pb-2">{genome.summary}</p>

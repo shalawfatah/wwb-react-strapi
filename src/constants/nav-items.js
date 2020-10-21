@@ -2,7 +2,7 @@ export default [
   {
     id: 1,
     text: "Education",
-    url: "/education",
+    url: "/education/",
   },
   {
     id: 2,

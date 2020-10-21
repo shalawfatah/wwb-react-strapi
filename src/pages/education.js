@@ -16,7 +16,7 @@ const Education = ({data}) => {
             <EducationSearch />
             <div className="flex flex-wrap justify-center">
             {educations.map((education)=> {
-                    return <EducationCard headline={education.name} image={education.picture.childImageSharp.fixed} slug={`/education/${education.slug}`} />
+                    return <EducationCard headline={education.name} image={education.picture.childImageSharp.fixed} special={education.special_color} slug={`/education/${education.slug}`} />
                 })}
             </div>
             </div>
@@ -40,6 +40,7 @@ export const query = graphql`
           }
         }
         name
+        special_color
       }
     }
   }

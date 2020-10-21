@@ -9,14 +9,17 @@ import { graphql } from 'gatsby'
 import React from 'react'
 
 const blogArticle = ({data}) => {
-    const { title, 
+    const { 
+            title, 
             photo, 
             content, 
             youtube, 
             mintues_read, 
             quote, 
             article_date, 
-            article_author} = data.strapiBlogs
+            article_author
+          } = data.strapiBlogs
+          console.log(article_author)
     return (
             <Layout>
               <SEO title={title} description={quote} />

@@ -5,7 +5,3 @@
 .education-image:hover {
     transform: scale(1.19) rotate(10deg) skewY(-5deg);
 }
-.education-card {
-    background-color: var(--primary-color);
-    color: white;
-}
