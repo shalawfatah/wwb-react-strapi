@@ -10,6 +10,7 @@ import {BiCaretRight} from 'react-icons/bi'
 import {navigate} from 'gatsby-link'
 
 
+
 import React from 'react'
 
 const ArticleAuthor = ({data}) => {
@@ -18,12 +19,10 @@ const ArticleAuthor = ({data}) => {
     return (
             <Layout>
               <SEO title={name} description={author_title} />
-
-
               <section class="text-gray-700 body-font">
-              <AniLink fade to="/about-us/" >
+              <button fade onClick={()=> navigate(-1)}>
                 <FiChevronLeft className="bg-orange-600 text-white text-4xl rounded-full hover:bg-orange-500 cursor-pointer transition duration-500 ease-in-out mt-3" />
-                </AniLink>
+                </button>
                       <div class="container px-5 py-2 mx-auto flex flex-col">
                         <div class="lg:w-5/6 mx-auto">
                           <div class="flex flex-col sm:flex-row mt-10">

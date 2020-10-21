@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Header from '../components/utilities/Header'
 import {FiChevronLeft} from 'react-icons/fi'
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import {navigate} from 'gatsby-link'
 import ReactMarkdown from 'react-markdown'
 import SEO from '../components/SEO'
 import Img from 'gatsby-image'
@@ -17,9 +17,9 @@ const educationTemplate = ({data}) => {
         <Layout>
           <SEO title={title} />
                 <section className="text-gray-700 body-font py-5">
-                <AniLink fade to="/education/" >
+                <button fade onClick={()=> navigate(-1)}>
                 <FiChevronLeft className="bg-orange-600 text-white text-4xl rounded-full hover:bg-orange-500 cursor-pointer transition duration-500 ease-in-out" />
-                </AniLink>
+                </button>
                 <div className="container px-5 py-0 mx-auto flex flex-col">
                     <div className="lg:w-full mx-auto">
                     <div className="rounded-lg h-64 overflow-hidden">
