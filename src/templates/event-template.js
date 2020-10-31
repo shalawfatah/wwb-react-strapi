@@ -10,7 +10,9 @@ import { graphql } from 'gatsby'
 import React from 'react'
 
 const eventsTemplate = ({data}) => {
-    const {summary, title, date, time, location, photo, website, content, ticket} = data.strapiEvents
+    const {summary, title, date, time, location, photo, website, content, ticket, price, strapiId, slug} = data.strapiEvents
+    const currently = window.location.href
+
     return (
         <Layout>
             <SEO title={title} description={summary} />
@@ -27,9 +29,15 @@ const eventsTemplate = ({data}) => {
                         <div className="lg:w-5/6 flex flex-col sm:flex-row sm:items-center items-start mx-auto mb-10">
                         <h1 className="flex-grow sm:pr-16 text-2xl font-medium title-font text-gray-900 font-bold">{title} <br /> <span className="text-lg font-thin ">{summary}</span></h1>
                         <div>
-                            <AniLink fade to={ticket}>
-                            <ButtonMiddle text="Tickets"/>
-                            </AniLink>
+                        <li className="list-none font-semibold m-1 flex flex-wrap justify-center">
+                            <button fade className="snipcart-add-item flex text-grey-700 bg-white py-2 px-4 focus:outline-none text-lg cursor-pointer button"
+                            data-item-id={title}
+                            data-item-price={price}
+                            data-item-url={currently}
+                            data-item-description={summary}
+                            data-item-name={title}
+                            >Tickets</button>
+                        </li>
                         <ButtonMiddle text="Website" link={website} />
                         </div>
                         </div>
@@ -63,6 +71,9 @@ export const query = graphql`
             time
             location
             ticket
+            id
+            slug
+            price
             photo {
               childImageSharp {
                 fluid {
