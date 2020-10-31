@@ -20,12 +20,12 @@ const NewsArchive = ({data, pageContext}) => {
           <NewsSearch />
           </div>
             <ul className="py-5 px-5 flex flex-wrap justify-center">
-            <li className="hover:font-extrabold cursor-pointer list-none my-2 mx-5 p-2 blog-archive-cat bg-blue-400 text-gray-200 rounded"><AniLink fade to='/news' activeStyle={{ color: 'white', fontWeight: '800', borderBottom: '2px solid white'}} >All News</AniLink></li>
-            <li className="hover:font-extrabold cursor-pointer list-none my-2 mx-5 p-2 blog-archive-cat bg-pink-400 text-gray-200 rounded"><AniLink fade to='/news/economy' activeStyle={{ color: 'white', fontWeight: '800', borderBottom: '2px solid white'}} >Economy</AniLink></li>
-            <li className="hover:font-extrabold cursor-pointer list-none my-2 mx-5 p-2 blog-archive-cat bg-purple-400 text-gray-200 rounded"><AniLink fade to='/news/endangerment' activeStyle={{ color: 'white', fontWeight: '800', borderBottom: '2px solid white'}} >Endangerment</AniLink></li>
-            <li className="hover:font-extrabold cursor-pointer list-none my-2 mx-5 p-2 blog-archive-cat bg-orange-400 text-gray-200 rounded"><AniLink fade to='/news/innovations' activeStyle={{ color: 'white', fontWeight: '800', borderBottom: '2px solid white'}} >Innovations</AniLink></li>
-            <li className="hover:font-extrabold cursor-pointer list-none my-2 mx-5 p-2 blog-archive-cat bg-gray-600 text-gray-200 rounded"><AniLink fade to='/news/medical-science' activeStyle={{ color: 'white', fontWeight: '800', borderBottom: '2px solid white'}} >Medical Science</AniLink></li>
-            <li className="hover:font-extrabold cursor-pointer list-none my-2 mx-5 p-2 blog-archive-cat bg-red-400 text-gray-200 rounded"><AniLink fade to='/news/opportunity' activeStyle={{color: 'white', fontWeight: '800', borderBottom: '2px solid white'}} >Opportunity</AniLink></li>
+            <li className="hover:font-extrabold cursor-pointer list-none my-2 mx-5 p-2 blog-archive-cat rounded menu-all"><AniLink fade to='/news' activeStyle={{ color: 'white', fontWeight: '800', borderBottom: '2px solid white'}} >All News</AniLink></li>
+            <li className="hover:font-extrabold cursor-pointer list-none my-2 mx-5 p-2 blog-archive-cat rounded menu-economy"><AniLink fade to='/news/economy' activeStyle={{ color: 'black', fontWeight: '800', borderBottom: '2px solid black'}} >Economy</AniLink></li>
+            <li className="hover:font-extrabold cursor-pointer list-none my-2 mx-5 p-2 blog-archive-cat rounded menu-endangerment"><AniLink fade to='/news/endangerment' activeStyle={{ black: 'white', fontWeight: '800', borderBottom: '2px solid black'}} >Endangerment</AniLink></li>
+            <li className="hover:font-extrabold cursor-pointer list-none my-2 mx-5 p-2 blog-archive-cat text-gray-200 rounded menu-innovations"><AniLink fade to='/news/innovations' activeStyle={{ color: 'white', fontWeight: '800', borderBottom: '2px solid white'}} >Innovations</AniLink></li>
+            <li className="hover:font-extrabold cursor-pointer list-none my-2 mx-5 p-2 blog-archive-cat rounded menu-medical"><AniLink fade to='/news/medical-science' activeStyle={{ color: 'black', fontWeight: '800', borderBottom: '2px solid black'}} >Medical Science</AniLink></li>
+            <li className="hover:font-extrabold cursor-pointer list-none my-2 mx-5 p-2 blog-archive-cat text-gray-200 rounded menu-opportunity"><AniLink fade to='/news/opportunity' activeStyle={{color: 'white', fontWeight: '800', borderBottom: '2px solid white'}} >Opportunity</AniLink></li>
             </ul>
             </div>
             <FirstNews title={articles[0].title} quote={articles[0].quote} image={articles[0].report_photo.childImageSharp.fluid.src} slug={`${articles[0].slug}`} />
