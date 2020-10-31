@@ -29,8 +29,8 @@ const blogArticle = ({data}) => {
                 </button>
                 <div className="container px-5 py-0 mx-auto flex flex-col">
                     <div className="lg:w-full mx-auto">
-                    <div className="rounded-lg h-64 overflow-hidden">
-                        <img alt="content" class="object-cover object-center h-full w-full" src={photo.childImageSharp.fluid.src} />
+                    <div className="rounded-lg h-76 overflow-hidden">
+                        <img alt={title} className="object-cover object-center w-full" src={photo.childImageSharp.fluid.src} />
                     </div>
                     <div className="py-8">
                     <Header text={title}/>

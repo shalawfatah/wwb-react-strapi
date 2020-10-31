@@ -64,7 +64,7 @@ query($skip: Int!, $limit: Int!)
         report_photo {
           childImageSharp {
             fluid {
-              ...GatsbyImageSharpFluid
+              src
             }
           }
         }

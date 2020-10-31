@@ -31,7 +31,7 @@ const beeTemplate = ({data}) => {
                 </AniLink>
                 <div className="container px-5 py-0 mx-auto flex flex-col">
                     <div className="lg:w-full mx-auto">
-                    <div className="rounded-lg h-64 overflow-hidden">
+                    <div className="rounded-lg h-76 overflow-hidden">
                         <Img alt="content" className="object-cover object-center h-full w-full" fluid={bee_photo.childImageSharp.fluid} />
                     </div>
                     <div className="py-2">

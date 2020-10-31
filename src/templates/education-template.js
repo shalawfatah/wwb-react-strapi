@@ -22,7 +22,7 @@ const educationTemplate = ({data}) => {
                 </button>
                 <div className="container px-5 py-0 mx-auto flex flex-col">
                     <div className="lg:w-full mx-auto">
-                    <div className="rounded-lg h-64 overflow-hidden">
+                    <div className="rounded-lg h-76 overflow-hidden">
                         <Img alt="content" class="object-cover object-center h-full w-full" fluid={picture.childImageSharp.fluid} />
                     </div>
                     <div className="py-8">
