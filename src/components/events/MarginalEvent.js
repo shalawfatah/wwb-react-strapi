@@ -12,7 +12,7 @@ const MarginalEvent = ({title, summary, location, date, image, slug}) => {
                   <div className="max-w-sm rounded overflow-hidden shadow-lg mx-2 my-4 event-card">
                     <AniLink to={`/events/${slug}`} >
                         <div className="h-full border-2 border-gray-200 rounded-lg overflow-hidden relative for-free-btn">
-                          <Img className="lg:h-48 md:h-36 w-full object-cover object-center" fluid={image} alt="blog" />
+                          <Img className="lg:h-48 md:h-36 w-full object-cover object-center" fluid={image} alt={title} />
                           <div className="button-event">
                           <p className="flex text-gray-600 bg-white py-2 px-6 focus:outline-none text-md button-free">{date}</p>
                           </div>

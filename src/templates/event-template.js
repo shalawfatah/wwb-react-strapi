@@ -11,7 +11,7 @@ import React from 'react'
 
 const eventsTemplate = ({data}) => {
     const {summary, title, date, time, location, photo, website, content, ticket, price, strapiId, slug} = data.strapiEvents
-    const currently = window.location.href
+    const currently = `https://thirsty-poitras-635a61.netlify.app/events/${slug}`
 
     return (
         <Layout>

@@ -8,6 +8,10 @@ import { graphql } from 'gatsby'
 
 const Events = ({data, pageContext}) => {
     const {allStrapiEvents:{nodes:events}} = data
+    const eventDate = events.map((event)=> {
+      return event.date
+    })
+
     return (
         <Layout>
           <SEO title="Events" />
@@ -15,7 +19,11 @@ const Events = ({data, pageContext}) => {
               <MainEvent title={events[0].title} image={events[0].photo.childImageSharp.fluid.src} slug={events[0].slug} />
               <div className="flex flex-wrap">
                   {events.map((event)=> {
-                      return <MarginalEvent title={event.title} summary={event.summary} date={event.date} location={event.location} image={event.photo.childImageSharp.fluid} slug={event.slug} />
+                      return ( 
+                      <> 
+                      <MarginalEvent title={event.title} summary={event.summary} date={event.date} location={event.location} image={event.photo.childImageSharp.fluid} slug={event.slug} /> 
+                      {console.log(`Event Date: ${event.date}`)}
+                      </> )
                   })}
               </div>
               <div className="py-16">

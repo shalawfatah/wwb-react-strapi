@@ -15,7 +15,7 @@ const MainEvent = ({title, date, image, slug}) => {
                     <div className="py-10">
                     <h1 className="text-3xl font-extrabold text-center">{title}</h1>
                     </div>
-                <ButtonMiddle text="Register" link={`/events/${slug}`} />
+                        <ButtonMiddle text="Register" link={`/events/${slug}`} />
                     </div>
                 </div>
             </div>
