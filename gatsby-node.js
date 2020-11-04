@@ -133,6 +133,13 @@ exports.createPages = async ({ graphql, actions }) => {
     pathPrefix: '/events',
     component: path.resolve(`src/templates/events-archive.js`)
   })
+  paginate({
+    createPage,
+    items: result.data.events.nodes,
+    itemsPerPage: 9,
+    pathPrefix: '/past-events',
+    component: path.resolve(`src/templates/past-events-archive.js`)
+  })
   result.data.apis.nodes.forEach(api => {
     createPage({
       path: `${api.slug}`,

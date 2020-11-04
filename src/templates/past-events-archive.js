@@ -6,7 +6,8 @@ import Pager from '../components/utilities/Pager'
 import SEO from '../components/SEO'
 import { graphql } from 'gatsby'
 import {navigate} from 'gatsby-link'
-
+import Header from '../components/utilities/Header'
+import {FiChevronLeft} from 'react-icons/fi'
 
 const Events = ({data, pageContext}) => {
     const {allStrapiEvents:{nodes:events}} = data
@@ -15,12 +16,15 @@ const Events = ({data, pageContext}) => {
         <Layout>
           <SEO title="Events" />
           <div className="py-5">
-              <MainEvent title={events[0].title} image={events[0].photo.childImageSharp.fluid.src} slug={events[0].slug} />
+          <button fade onClick={()=> navigate(-1)}>
+                <FiChevronLeft className="bg-orange-600 text-white text-4xl rounded-full hover:bg-orange-500 cursor-pointer transition duration-500 ease-in-out" />
+        </button>
+            <Header text="Past Events" />
               <div className="flex flex-wrap">
                   {events.map((event)=> {
                       return ( 
                       <>
-                      {new Date(event.date) > new Date() ?
+                      {new Date(event.date) < new Date() ?
                       <MarginalEvent title={event.title} summary={event.summary} date={event.date} location={event.location} image={event.photo.childImageSharp.fluid} slug={event.slug} />
                       :
                       ''
@@ -29,8 +33,8 @@ const Events = ({data, pageContext}) => {
                   })}
               </div>
               <div className="py-16 flex justify-center items-end">
-              <button className="bg-orange-500 text-white px-4 py-2 hover:bg-orange-700 rounded-full outline-none transition-all duration-500 ease" fade onClick={()=> navigate(`/past-events`)}>
-                        Past Events
+              <button className="bg-orange-500 text-white px-4 py-2 hover:bg-orange-700 rounded-full outline-none transition-all duration-500 ease" fade onClick={()=> navigate(`/events`)}>
+                        Upcoming Events
                     </button>
                 <Pager pageContext={pageContext} />
                 </div>
