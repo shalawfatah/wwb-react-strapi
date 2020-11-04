@@ -20,9 +20,12 @@ const Events = ({data, pageContext}) => {
               <div className="flex flex-wrap">
                   {events.map((event)=> {
                       return ( 
-                      <> 
-                      <MarginalEvent title={event.title} summary={event.summary} date={event.date} location={event.location} image={event.photo.childImageSharp.fluid} slug={event.slug} /> 
-                      {console.log(`Event Date: ${event.date}`)}
+                      <>
+                      {new Date(event.date) > new Date() ?
+                      <MarginalEvent title={event.title} summary={event.summary} date={event.date} location={event.location} image={event.photo.childImageSharp.fluid} slug={event.slug} />
+                      :
+                      ''
+                    }                      
                       </> )
                   })}
               </div>
