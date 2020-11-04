@@ -1,5 +1,6 @@
 .blog-card {
     transition: all .3s ease;
+    height: 30rem;
 }
 .blog-card:hover {
     transform: scale(1.03);
