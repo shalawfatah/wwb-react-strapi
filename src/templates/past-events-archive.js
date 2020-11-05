@@ -8,6 +8,8 @@ import { graphql } from 'gatsby'
 import {navigate} from 'gatsby-link'
 import Header from '../components/utilities/Header'
 import {FiChevronLeft} from 'react-icons/fi'
+import DayJS from 'react-dayjs'
+
 
 const Events = ({data, pageContext}) => {
     const {allStrapiEvents:{nodes:events}} = data
@@ -25,10 +27,10 @@ const Events = ({data, pageContext}) => {
                       return ( 
                       <>
                       {new Date(event.date) < new Date() ?
-                      <MarginalEvent title={event.title} summary={event.summary} date={event.date} location={event.location} image={event.photo.childImageSharp.fluid} slug={event.slug} />
+                      <MarginalEvent title={event.title} summary={event.summary} date={<DayJS format="dddd, DD MMM YYYY">{event.date}</DayJS>} location={event.location} image={event.photo.childImageSharp.fluid} slug={event.slug} />
                       :
                       ''
-                    }                      
+                    }
                       </> )
                   })}
               </div>
@@ -57,7 +59,7 @@ query($skip: Int!, $limit: Int!)
         summary
         title
         slug
-        date(formatString: "DD MMMM YYYY")
+        date
         location
         photo {
           childImageSharp {
