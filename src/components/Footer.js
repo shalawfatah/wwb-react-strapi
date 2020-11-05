@@ -32,7 +32,7 @@ class Footer extends Component {
                     {SocialLinks.map((link)=> {
                     return (
                     <li key={link.id} className="list-none font-semibold m-1 my-5 float-left">
-                        <a href={link.url} activeStyle={{ color: '#F08C00'}} className="flex text-gray-600 hover:text-orange-500 bg-none focus:outline-none text-2xl cursor-pointer transition-all duration-500 ease-in-out" target="_blank">{link.icon}</a>
+                        <a href={link.url} className="flex text-gray-600 hover:text-orange-500 bg-none focus:outline-none text-2xl cursor-pointer transition-all duration-500 ease-in-out" target="_blank" rel="noreferrer">{link.icon}</a>
                     </li>
                     )
                     })}
