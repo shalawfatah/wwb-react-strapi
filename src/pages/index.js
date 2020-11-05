@@ -22,8 +22,8 @@ const IndexPage = ({data}) => {
     <div className="mx-10 px-6 absolute left-0 top-0 home-headline" >
     <h1 className="sm:text-3xl text-2xl font-medium title-font text-white headline home-headline">Worldwide Bee</h1>
     <p className="text-base leading-relaxed xl:w-full lg:w-full para pb-5 text-white">The Free Honey Bee Encyclopedia</p>
-    <button onClick={() => scrollTo('#my-cool-header')}><FiArrowUpCircle className="text-3xl cursor-pointer arrow-button-up" /></button>
-    <button onClick={() => scrollTo('#my-cool-footer')}><FiArrowDownCircle className="text-3xl cursor-pointer arrow-button-down" /></button>
+    <button onClick={() => scrollTo('#my-cool-header')}><FiArrowUpCircle className="text-3xl cursor-pointer arrow-button-up" aria-label="Up" /></button>
+    <button onClick={() => scrollTo('#my-cool-footer')}><FiArrowDownCircle className="text-3xl cursor-pointer arrow-button-down" aria-label="Down" /></button>
     </div>
     </div>
     {typeof window !== 'undefined' &&

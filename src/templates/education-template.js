@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
-import Header from '../components/utilities/Header'
+import TextHeader from '../components/utilities/TextHeader'
 import {FiChevronLeft} from 'react-icons/fi'
 import {navigate} from 'gatsby-link'
 import ReactMarkdown from 'react-markdown'
@@ -26,7 +26,7 @@ const educationTemplate = ({data}) => {
                         <Img alt="content" class="object-cover object-center h-full w-full" fluid={picture.childImageSharp.fluid} />
                     </div>
                     <div className="py-8">
-                    <Header text={title}/>
+                    <TextHeader text={title}/>
                     </div>
                         <div className="sm:w-2/3 sm:pl-8 sm:py-8 mt-4 pt-4 sm:mt-0 text-center sm:text-left mx-auto">
                         <p className="flex justify-start bg-white py-2 focus:outline-none text-lg text-orange-600">{article_author.name}</p>

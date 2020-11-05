@@ -1,6 +1,6 @@
 import Layout from '../components/layout'
 import AuthorProfile from '../components/news/AuthorProfile'
-import Header from '../components/utilities/Header'
+import TextHeader from '../components/utilities/TextHeader'
 import {FiChevronLeft} from 'react-icons/fi'
 import {navigate} from 'gatsby-link'
 import ReactMarkdown from 'react-markdown'
@@ -34,7 +34,7 @@ const newsArticle = ({data}) => {
                         <Img alt={title} fluid={report_photo.childImageSharp.fluid} />
                     </div>
                     <div className="py-8">
-                    <Header text={title}/>
+                    <TextHeader text={title}/>
                     </div>
                     <div className="flex flex-col sm:flex-row">
                         <div className="sm:w-1/3 text-center sm:pr-8 sm:py-8">

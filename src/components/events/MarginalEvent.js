@@ -1,5 +1,4 @@
 import React from 'react'
-import Button from '../utilities/Button'
 import './MarginalEvent.css'
 import {FiMapPin} from 'react-icons/fi'
 import '../utilities/ButtonFree.css'

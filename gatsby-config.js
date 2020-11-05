@@ -3,7 +3,7 @@ module.exports = {
     title: `Worldwide Bee`,
     description: `The Worldwide Bee Organization was founded to connect proactive individuals dedicated to sharing, designing, and constructing valuable solutions that can truly make a difference in the bee and honey industry.`,
     author: `@shalawfatah`,
-    url: 'https://www.twitter.com/shalawfatah',
+    url: 'https://www.worldwidebee.com/',
     image: 'src/images/websitescreenshot.png',
     twitterUsername: '@worldwidebee',
   },
@@ -99,7 +99,7 @@ module.exports = {
       options: {
         name: `Wordwide Bee`,
         short_name: `WWB`,
-        start_url: `https://www.worldwidebee.com`,
+        start_url: `https://www.worldwidebee.com/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `standalone`,

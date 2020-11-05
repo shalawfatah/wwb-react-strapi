@@ -1,6 +1,5 @@
 import Layout from '../components/layout'
 import {FiChevronLeft} from 'react-icons/fi'
-import AniLink from "gatsby-plugin-transition-link/AniLink"
 import ReactMarkdown from 'react-markdown'
 import SEO from '../components/SEO'
 import { graphql } from 'gatsby'

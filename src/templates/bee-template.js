@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout'
-import Header from '../components/utilities/Header'
+import TextHeader from '../components/utilities/TextHeader'
 import {FiChevronLeft} from 'react-icons/fi'
 import {BiCurrentLocation} from 'react-icons/ai'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
@@ -35,7 +35,7 @@ const beeTemplate = ({data}) => {
                         <Img alt="content" className="object-cover object-center h-full w-full" fluid={bee_photo.childImageSharp.fluid} />
                     </div>
                     <div className="py-2">
-                    <Header text={bee_name}/>
+                    <TextHeader text={bee_name}/>
                     <p className="text-2xl pt-4 text-grey-700 text-center text-gray-600">{bee_genome}</p>
                     </div>
 

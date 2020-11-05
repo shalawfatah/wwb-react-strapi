@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import FirstNews from '../components/news/FirstNews'
 import OtherNews from '../components/news/OtherNews'
-import Header from '../components/utilities/Header'
+import TextHeader from '../components/utilities/TextHeader'
 import Pager from '../components/utilities/Pager'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import NewsSearch from '../components/search/NewsSearch'
@@ -31,7 +31,7 @@ const NewsArchive = ({data, pageContext}) => {
             <FirstNews title={articles[0].title} quote={articles[0].quote} image={articles[0].report_photo.childImageSharp.fluid.src} slug={`${articles[0].slug}`} />
             <div className="flex flex-wrap justify-center">
             <div className="lg:w-2/3 md:w-2/3 sm:w-2/3">
-            <Header text="Latest News" />
+            <TextHeader text="Latest News" />
             {articles.map((article)=> {
                 return <OtherNews title={article.title} quote={article.quote} image={article.report_photo.childImageSharp.fluid.src} slug={`${article.slug}`} />
             })}

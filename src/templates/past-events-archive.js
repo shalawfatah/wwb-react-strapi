@@ -6,7 +6,7 @@ import Pager from '../components/utilities/Pager'
 import SEO from '../components/SEO'
 import { graphql } from 'gatsby'
 import {navigate} from 'gatsby-link'
-import Header from '../components/utilities/Header'
+import TextHeader from '../components/utilities/TextHeader'
 import {FiChevronLeft} from 'react-icons/fi'
 import DayJS from 'react-dayjs'
 
@@ -21,7 +21,7 @@ const Events = ({data, pageContext}) => {
           <button fade onClick={()=> navigate(-1)}>
                 <FiChevronLeft className="bg-orange-600 text-white text-4xl rounded-full hover:bg-orange-500 cursor-pointer transition duration-500 ease-in-out" />
         </button>
-            <Header text="Past Events" />
+            <TextHeader text="Past Events" />
               <div className="flex flex-wrap">
                   {events.map((event)=> {
                       return ( 

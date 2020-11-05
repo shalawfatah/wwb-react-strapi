@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
-import Header from '../components/utilities/Header'
+import TextHeader from '../components/utilities/TextHeader'
 import {FiChevronLeft} from 'react-icons/fi'
 import {navigate} from 'gatsby-link'
 import ReactMarkdown from 'react-markdown'
@@ -23,7 +23,7 @@ const apicultureTemplate = ({data}) => {
                         <Img alt="content" class="object-cover object-center h-full w-full" fluid={photo.childImageSharp.fluid} />
                     </div>
                     <div className="py-2">
-                    <Header text={title}/>
+                    <TextHeader text={title}/>
                     <p className="text-2xl pt-4 text-grey-700 text-center">{subtitle}</p>
                     </div>
                         <div className="sm:w-2/3 sm:pl-8 sm:py-2 mt-2 pt-2 sm:mt-0 text-center sm:text-left mx-auto">
