@@ -46,7 +46,7 @@ const eventsTemplate = ({data}) => {
                         <div className="lg:w-5/6 flex flex-col sm:flex-row items-start mx-auto">
                         <h1 className="flex-grow  text-2xl font-medium title-font text-gray-900 font-bold lg:w-2/3">About this Event <br /> <span className="text-lg font-thin para">{content}</span></h1>
                         <div className="event-shadow w-1/3 mx-6">
-                        <h1 className="flex-grow text-2xl font-medium title-font text-gray-900 font-bold lg:w-full">Date and Duration<br /><span className="text-sm font-thin para">Date: <DayJS format="dddd, DD MMM YYYY">{date}</DayJS></span> <br /> <span className="text-sm font-thin para">Time: <DayJS format="HH:MM">{date}</DayJS></span> <br /> <span className="text-sm font-thin para">Duration: {duration}</span></h1>
+                        <h1 className="flex-grow text-2xl font-medium title-font text-gray-900 font-bold lg:w-full">Date and Duration<br /><span className="text-sm font-thin para">Date: <DayJS format="dddd, DD MMM YYYY">{date}</DayJS></span> <br /> <span className="text-sm font-thin para bg-gray-600 text-white p-2 rounded">Time: <DayJS format="HH:mm">{date}</DayJS></span> <br /> <span className="text-sm font-thin para">Duration: {duration}</span></h1>
                         <h1 className="flex-grow text-2xl font-medium title-font text-gray-900 font-bold">Location<br /> <span className="text-sm font-thin para"><ReactMarkdown source={location} /></span></h1>
                         </div>
                         </div>
