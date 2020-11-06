@@ -1,6 +1,6 @@
 .api-card {
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    width: 23rem;
+    width: 22rem;
     height: 25rem;
     box-shadow: 10px 10px 12px 10px #000;
     transition: all .3s ease-in-out;
