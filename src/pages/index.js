@@ -12,7 +12,7 @@ import scrollTo from 'gatsby-plugin-smoothscroll';
 
 const IndexPage = ({data}) => {
   const {allStrapiGenomes:{nodes:genomes}} = data
-  
+
   return (
   <LayoutNoPadding>
     <SEO title="WWB" />
@@ -97,3 +97,8 @@ export const query = graphql`
       }
     }
 `
+
+/*
+{typeof window !== 'undefined' && }
+
+*/

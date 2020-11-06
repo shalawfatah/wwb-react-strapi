@@ -6,8 +6,7 @@ import Pager from '../components/utilities/Pager'
 import SEO from '../components/SEO'
 import { graphql } from 'gatsby'
 import {navigate} from 'gatsby-link'
-import DayJS from 'react-dayjs'
-
+import { format } from 'date-fns'
 
 const Events = ({data, pageContext}) => {
     const {allStrapiEvents:{nodes:events}} = data
@@ -74,7 +73,7 @@ const Events = ({data, pageContext}) => {
                       return ( 
                       <div key={event.id}>
                       {new Date(event.date) > new Date() ?
-                      <MarginalEvent title={event.title} summary={event.summary} date={<DayJS format="dddd, DD MMM YYYY">{event.date}</DayJS>} location={event.location} image={event.photo.childImageSharp.fluid} slug={event.slug} />
+                      <MarginalEvent title={event.title} summary={event.summary} date={format(new Date(event.date), 'dd MMMM, yyyy')} location={event.location} image={event.photo.childImageSharp.fluid} slug={event.slug} />
                       :
                       ''
                     }                      

@@ -5,6 +5,7 @@
 }
 .event-card {
     transition: all .3s ease;
+    height: 30rem;
 }
 .event-card:hover {
     transform: scale(1.03);

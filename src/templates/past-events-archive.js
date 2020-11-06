@@ -7,8 +7,7 @@ import { graphql } from 'gatsby'
 import {navigate} from 'gatsby-link'
 import TextHeader from '../components/utilities/TextHeader'
 import {FiChevronLeft} from 'react-icons/fi'
-import DayJS from 'react-dayjs'
-
+import { format } from 'date-fns'
 
 const Events = ({data, pageContext}) => {
     const {allStrapiEvents:{nodes:events}} = data
@@ -26,7 +25,7 @@ const Events = ({data, pageContext}) => {
                       return ( 
                       <>
                       {new Date(event.date) < new Date() ?
-                      <MarginalEvent title={event.title} summary={event.summary} date={<DayJS format="dddd, DD MMM YYYY">{event.date}</DayJS>} location={event.location} image={event.photo.childImageSharp.fluid} slug={event.slug} />
+                      <MarginalEvent title={event.title} summary={event.summary} date={format(new Date(event.date), 'dd MMMM, yyyy')} location={event.location} image={event.photo.childImageSharp.fluid} slug={event.slug} />
                       :
                       ''
                     }
