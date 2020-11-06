@@ -14,7 +14,7 @@ const apicultureTemplate = ({data}) => {
         <Layout>
             <SEO title={title} description={subtitle} />
                 <section className="text-gray-700 body-font py-5">
-                <button fade onClick={()=> navigate(-1)}>
+                <button onClick={()=> navigate(-1)}>
                 <FiChevronLeft className="bg-orange-600 text-white text-4xl rounded-full hover:bg-orange-500 cursor-pointer transition duration-500 ease-in-out" />
                 </button>
                 <div className="container px-5 py-0 mx-auto flex flex-col">
@@ -27,9 +27,9 @@ const apicultureTemplate = ({data}) => {
                     <p className="text-2xl pt-4 text-grey-700 text-center">{subtitle}</p>
                     </div>
                         <div className="sm:w-2/3 sm:pl-8 sm:py-2 mt-2 pt-2 sm:mt-0 text-center sm:text-left mx-auto">
-                        {youtube ?  <iframe  title={title} className="responsive-iframe" src={`${youtube}`} frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> : ''}
+                        {youtube ?  <iframe  title={title} className="responsive-iframe" src={`${youtube}`} frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe> : ''}
                           <br />
-                        <p className="leading-relaxed text-lg mb-4"><ReactMarkdown source={content} /></p>
+                        <div className="leading-relaxed text-lg mb-4"><ReactMarkdown source={content} /></div>
                         </div>
                     </div>
                 </div>

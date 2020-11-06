@@ -33,7 +33,11 @@ const NewsCatArchive = ({data, pageContext}) => {
             <div className="lg:w-2/3 md:w-2/3 sm:w-2/3">
               <TextHeader text="Latest News" />
             {articles.map((article)=> {
-                return <OtherNews title={article.title} quote={article.quote} image={article.report_photo.childImageSharp.fluid.src} slug={`${article.slug}`} />
+                return (
+                  <div key={article.id}>
+                  <OtherNews title={article.title} quote={article.quote} image={article.report_photo.childImageSharp.fluid.src} slug={`${article.slug}`} />
+                  </div>
+                )
             })}
             <div className="py-16">
                 <Pager pageContext={pageContext} />
@@ -67,6 +71,7 @@ query getSingleNewsCategory($slug: String!)
           content
           title
           slug
+          id
           minutes_read
           date(formatString: "MM")
             article_author {

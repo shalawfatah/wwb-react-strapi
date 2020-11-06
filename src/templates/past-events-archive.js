@@ -1,6 +1,5 @@
 import React from 'react'
 import Layout from '../components/layout'
-import MainEvent from '../components/events/MainEvent'
 import MarginalEvent from '../components/events/MarginalEvent'
 import Pager from '../components/utilities/Pager'
 import SEO from '../components/SEO'

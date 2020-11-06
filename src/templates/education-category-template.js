@@ -10,7 +10,7 @@ import EducationSearch from '../components/search/EducationSearch'
 
 
 const EduCatTemp = ({data}) => {
-    const {strapiEducationCategories:{name, picture, special_color}, allStrapiEducations:{nodes:educations}} = data
+    const {strapiEducationCategories:{name, picture, special_color, id}, allStrapiEducations:{nodes:educations}} = data
     return (
         <Layout>
           <SEO title="Education Categories" />
@@ -25,11 +25,11 @@ const EduCatTemp = ({data}) => {
                         <Img alt="content" className="object-cover object-center h-full w-full" fluid={picture.childImageSharp.fluid} />
                     </div>
                     </div>
-                    <h1 class={`sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 rounded transformed-headline mb-3 ${special_color}`}>{name}</h1>
+                    <h1 className={`sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 rounded transformed-headline mb-3 ${special_color}`}>{name}</h1>
             <EducationSearch />
           {educations.map((education)=> {
             return (
-                  <div className="container px-5 mx-auto py-5">
+                  <div className="container px-5 mx-auto py-5" key={id}>
                       <div className="-my-8">
                       <div className="py-8 flex flex-wrap md:flex-no-wrap">
                           <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
@@ -39,7 +39,7 @@ const EduCatTemp = ({data}) => {
                           <div className="md:flex-grow">
                           <h2 className="text-2xl font-medium text-gray-900 title-font mb-2">{education.title}</h2>
                           <p className="leading-relaxed mb-3">{education.summary}</p>
-                          <button className="flex justify-center text-grey-700 bg-white py-2 px-4 focus:outline-none text-sm cursor-pointer button" fade onClick={()=> navigate(`/${education.slug}`)}>Read More</button>
+                          <button className="flex justify-center text-grey-700 bg-white py-2 px-4 focus:outline-none text-sm cursor-pointer button" onClick={()=> navigate(`/${education.slug}`)}>Read More</button>
                           </div>
                       </div>
                       </div>
@@ -61,6 +61,7 @@ query getSingleEducationCategory($slug: String!)
   {
     strapiEducationCategories(slug: { eq: $slug }) {
       name
+      id
       special_color
       picture {
         childImageSharp {

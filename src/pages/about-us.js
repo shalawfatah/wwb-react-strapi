@@ -18,8 +18,8 @@ const AboutUs = ({data}) => {
                 </div>
                 {people.map((person)=> {
                         return (
-                          <div className="mx-auto person-card flex items-stretch">
-                             <button fade onClick={()=> navigate(`/${person.slug}`)}>
+                          <div className="mx-auto person-card flex items-stretch" key={person.id}>
+                             <button onClick={()=> navigate(`/${person.slug}`)}>
                               <div className="rounded rounded-t-lg overflow-hidden shadow max-w-xs my-3 mx-5 hover:bg-gray-100 transition-all duration-500 ease">
                                   <div className="flex justify-center">
                                       <Img fluid={person.author_photo.childImageSharp.fluid} className="rounded-full border-solid border-white border-2 mt-4 h-48 w-48" alt={person.name} />		
@@ -50,6 +50,7 @@ export const query = graphql`
         author_summary
         author_title
         slug
+        id
         name
         author_photo {
           childImageSharp {

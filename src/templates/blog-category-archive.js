@@ -30,7 +30,7 @@ const Blog = ({data, pageContext}) => {
             <div className="flex flex-wrap py-5">
             {blogs.map((blog)=> {
                 return (
-                  <div className="flex items-stretch my-12">
+                  <div className="flex items-stretch my-12" key={blog.id}>
                   <BlogCard headline={blog.title} content={blog.quote} slug={blog.slug} image={blog.photo.childImageSharp.fluid} />
                   </div>
                 )
@@ -66,6 +66,7 @@ query getSingleBlogCategory($slug: String!)
             mintues_read
             title
             quote
+            id
             slug
             article_author {
             name

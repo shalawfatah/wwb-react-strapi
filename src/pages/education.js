@@ -16,7 +16,11 @@ const Education = ({data}) => {
             <EducationSearch />
             <div className="flex flex-wrap justify-center">
             {educations.map((education)=> {
-                    return <EducationCard headline={education.name} image={education.picture.childImageSharp.fixed} special={education.special_color} slug={`/education/${education.slug}`} />
+                    return (
+                      <div key={education.id}>
+                    <EducationCard headline={education.name} image={education.picture.childImageSharp.fixed} special={education.special_color} slug={`/education/${education.slug}`} />
+                    </div>
+                    )
                 })}
             </div>
             </div>
@@ -31,6 +35,7 @@ export const query = graphql`
     allStrapiEducationCategories {
       nodes {
         slug
+        id
         picture {
           childImageSharp {
             fixed(width: 400

@@ -19,12 +19,11 @@ const blogArticle = ({data}) => {
             article_date, 
             article_author
           } = data.strapiBlogs
-          console.log(article_author)
-    return (
+          return (
             <Layout>
               <SEO title={title} description={quote} />
                 <section className="text-gray-700 body-font py-5">
-                <button fade onClick={()=> navigate(-1)}>
+                <button onClick={()=> navigate(-1)}>
                 <FiChevronLeft className="bg-orange-600 text-white text-4xl rounded-full hover:bg-orange-500 cursor-pointer transition duration-500 ease-in-out" />
                 </button>
                 <div className="container px-5 py-0 mx-auto flex flex-col">
@@ -46,9 +45,9 @@ const blogArticle = ({data}) => {
                         </div>
                         </div>
                         <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-300 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
-                          {youtube ?  <iframe  title={title} className="responsive-iframe" src={`${youtube}`} frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> : ''}
+                          {youtube ?  <iframe  title={title} className="responsive-iframe" src={`${youtube}`} frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe> : ''}
                           <br />
-                        <p className="leading-relaxed text-lg mb-4"><ReactMarkdown source={content} /></p>
+                        <div className="leading-relaxed text-lg mb-4"><ReactMarkdown source={content} /></div>
                         </div>
                     </div>
                     <div className="flex justify-center">

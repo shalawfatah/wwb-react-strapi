@@ -17,7 +17,7 @@ const educationTemplate = ({data}) => {
         <Layout>
           <SEO title={title} />
                 <section className="text-gray-700 body-font py-5">
-                <button fade onClick={()=> navigate(-1)}>
+                <button onClick={()=> navigate(-1)}>
                 <FiChevronLeft className="bg-orange-600 text-white text-4xl rounded-full hover:bg-orange-500 cursor-pointer transition duration-500 ease-in-out" />
                 </button>
                 <div className="container px-5 py-0 mx-auto flex flex-col">
@@ -31,9 +31,9 @@ const educationTemplate = ({data}) => {
                         <div className="sm:w-2/3 sm:pl-8 sm:py-8 mt-4 pt-4 sm:mt-0 text-center sm:text-left mx-auto">
                         <p className="flex justify-start bg-white py-2 focus:outline-none text-lg text-orange-600">{article_author.name}</p>
                         <p className="flex justify-start bg-white py-2 focus:outline-none text-sm text-gray-400">{date}</p>
-                        {youtube ?  <iframe  title={title} className="responsive-iframe" src={`${youtube}`} frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> : ''}
+                        {youtube ?  <iframe  title={title} className="responsive-iframe" src={`${youtube}`} frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe> : ''}
                           <br />
-                        <p className="leading-relaxed text-lg mb-4"><ReactMarkdown source={content} /></p>
+                        <div className="leading-relaxed text-lg mb-4"><ReactMarkdown source={content} /></div>
                         <div className="flex justify-center">
                         <AuthorProfile name={article_author.name} profile={article_author.author_summary} photo={article_author.author_photo.childImageSharp.fluid.src} title={article_author.author_title} slug={article_author.slug} />
                         </div>

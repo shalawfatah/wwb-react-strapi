@@ -12,7 +12,7 @@ import DayJS from 'react-dayjs'
 
 
 const eventsTemplate = ({data}) => {
-    const {summary, title, date, duration, location, photo, website, content, price, strapiId, slug} = data.strapiEvents
+    const {summary, title, date, duration, location, photo, website, content, price, slug} = data.strapiEvents
     const currently = `https://thirsty-poitras-635a61.netlify.app/events/${slug}`
 
     return (
@@ -32,7 +32,7 @@ const eventsTemplate = ({data}) => {
                         <h1 className="flex-grow sm:pr-16 text-2xl font-medium title-font text-gray-900 font-bold">{title} <br /> <span className="text-lg font-thin ">{summary}</span></h1>
                         <div>
                         <li className="list-none font-semibold m-1 flex flex-wrap justify-center">
-                            <button fade className="snipcart-add-item flex text-grey-700 bg-white py-2 px-4 focus:outline-none text-lg cursor-pointer button"
+                            <button className="snipcart-add-item flex text-grey-700 bg-white py-2 px-4 focus:outline-none text-lg cursor-pointer button"
                             data-item-id={title}
                             data-item-price={price}
                             data-item-url={currently}
@@ -72,7 +72,6 @@ export const query = graphql`
             date
             duration
             location
-            id
             slug
             price
             photo {

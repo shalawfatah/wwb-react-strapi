@@ -72,17 +72,17 @@ const Events = ({data, pageContext}) => {
               <div className="flex flex-wrap">
                   {events.map((event)=> {
                       return ( 
-                      <>
+                      <div key={event.id}>
                       {new Date(event.date) > new Date() ?
                       <MarginalEvent title={event.title} summary={event.summary} date={<DayJS format="dddd, DD MMM YYYY">{event.date}</DayJS>} location={event.location} image={event.photo.childImageSharp.fluid} slug={event.slug} />
                       :
                       ''
                     }                      
-                      </> )
+                      </div> )
                   })}
               </div>
               <div className="py-16 flex justify-center items-end">
-              <button className="bg-orange-500 text-white px-4 py-2 hover:bg-orange-700 rounded-full outline-none transition-all duration-500 ease" fade onClick={()=> navigate(`/past-events`)}>
+              <button className="bg-orange-500 text-white px-4 py-2 hover:bg-orange-700 rounded-full outline-none transition-all duration-500 ease" onClick={()=> navigate(`/past-events`)}>
                         Past Events
                     </button>
                 <Pager pageContext={pageContext} />
@@ -106,6 +106,7 @@ query($skip: Int!, $limit: Int!)
         summary
         title
         slug
+        id
         date
         location
         photo {

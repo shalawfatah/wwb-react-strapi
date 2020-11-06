@@ -18,26 +18,26 @@ const ArticleAuthor = ({data}) => {
     return (
             <Layout>
               <SEO title={name} description={author_title} />
-              <section class="text-gray-700 body-font">
-              <button fade onClick={()=> navigate(-1)}>
+              <section className="text-gray-700 body-font">
+              <button onClick={()=> navigate(-1)}>
                 <FiChevronLeft className="bg-orange-600 text-white text-4xl rounded-full hover:bg-orange-500 cursor-pointer transition duration-500 ease-in-out mt-3" />
                 </button>
-                      <div class="container px-5 py-2 mx-auto flex flex-col">
-                        <div class="lg:w-5/6 mx-auto">
-                          <div class="flex flex-col sm:flex-row mt-10">
-                            <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
+                      <div className="container px-5 py-2 mx-auto flex flex-col">
+                        <div className="lg:w-5/6 mx-auto">
+                          <div className="flex flex-col sm:flex-row mt-10">
+                            <div className="sm:w-1/3 text-center sm:pr-8 sm:py-8">
                               <Img className="w-48 h-48 rounded-full inline-flex items-center justify-center" alt={name} fluid={author_photo.childImageSharp.fluid} />
-                              <div class="flex flex-col items-center text-center justify-center">
-                                <h2 class="font-medium title-font mt-4 mb-4 text-gray-900 text-xl">{name}</h2>
-                                <div class="w-12 h-1 bg-orange-600 rounded mt-2 mb-4"></div>
-                        <p class="text-base text-gray-600">{author_title}</p>
-                        <p class="text-base text-gray-600">{email}</p>
-                        <p class="text-base text-gray-600">{phone}</p>
+                              <div className="flex flex-col items-center text-center justify-center">
+                                <h2 className="font-medium title-font mt-4 mb-4 text-gray-900 text-xl">{name}</h2>
+                                <div className="w-12 h-1 bg-orange-600 rounded mt-2 mb-4"></div>
+                        <p className="text-base text-gray-600">{author_title}</p>
+                        <p className="text-base text-gray-600">{email}</p>
+                        <p className="text-base text-gray-600">{phone}</p>
 
                               </div>
                             </div>
-                            <div class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-300 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
-                            <p className="leading-relaxed text-lg mb-4"><ReactMarkdown source={author_profile} /></p>
+                            <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-300 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
+                            <div className="leading-relaxed text-lg mb-4"><ReactMarkdown source={author_profile} /></div>
                             </div>
                           </div>
                         </div>
@@ -46,8 +46,8 @@ const ArticleAuthor = ({data}) => {
                       <div className="text-3xl flex items-center "> <span className="mx-4"><AiOutlineUnorderedList></AiOutlineUnorderedList> </span>Stories by {name}</div>
                       {blogs.map((blog)=> {
                         return (
-                        <div>
-                        <button fade onClick={()=> navigate(`/${blog.slug}`)} className="outline-none">
+                        <div key={blog.id}>
+                        <button onClick={()=> navigate(`/${blog.slug}`)} className="outline-none">
                         <p className="hover:text-orange-500 cursor-pointer transition-all duration-500 ease outline-none flex items-center"><span className="mx-4"><BiCaretRight></BiCaretRight></span>{blog.title}</p>
                         </button>
                         </div>
@@ -55,8 +55,8 @@ const ArticleAuthor = ({data}) => {
                       })}
                       {industries.map((industry)=> {
                         return (
-                        <div>
-                        <button fade onClick={()=> navigate(`/${industry.slug}`)} className="outline-none">
+                        <div key={industry.id}>
+                        <button onClick={()=> navigate(`/${industry.slug}`)} className="outline-none">
                         <p className="hover:text-orange-500 cursor-pointer transition-all duration-500 ease outline-none flex items-center"><span className="mx-4"><BiCaretRight></BiCaretRight></span>{industry.title}</p>
                         </button>
                         </div>
@@ -64,8 +64,8 @@ const ArticleAuthor = ({data}) => {
                       })}
                       {educations.map((education)=> {
                         return (
-                        <div>
-                        <button fade onClick={()=> navigate(`/${education.slug}`)} className="outline-none">
+                        <div key={education.id}>
+                        <button onClick={()=> navigate(`/${education.slug}`)} className="outline-none">
                         <p className="hover:text-orange-500 cursor-pointer transition-all duration-500 ease outline-none flex items-center"><span className="mx-4"><BiCaretRight></BiCaretRight></span>{education.title}</p>
                         </button>
                         </div>
@@ -87,18 +87,22 @@ query getSingleArticleAuthor($slug: String) {
         slug
         name
         email
+        id
         phone
         blogs {
           title
           slug
+          id
         }
         industries {
           title
           slug
+          id
         }
         educations {
           title
           slug
+          id
         }
         author_photo {
           childImageSharp {
