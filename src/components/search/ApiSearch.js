@@ -40,7 +40,7 @@ const allDataQuery = graphql`
 const ApiSearch = () => {
     const {allStrapiApitherapies:{edges:searchData}} = useStaticQuery(allDataQuery)
     const [results, setResults] = useState([])
-    const fuse = useMemo(() => new Fuse(searchData, fuseOptions), [])
+    const fuse = useMemo(() => new Fuse(searchData, fuseOptions), [searchData])
     const handleSearch = e => {
         const input = e.target.value
         const found = fuse.search(input)
@@ -58,7 +58,7 @@ const ApiSearch = () => {
             <div className="absolute bg-white w-1/3 overflow-auto shadow px-4 someZee">
                 {results.map((result)=> {
                     return (
-                    <div className="mt-6">
+                    <div className="mt-6" key={result.item.node.id}>
                     <div className="text-gray-900 text-xl py-2">{result.item.node.title}</div> 
                     <div className="text-gray-600 text-md py-2">{result.item.node.summary}</div>
                     <button fade onClick={()=> navigate(`/${result.item.node.slug}`)}>

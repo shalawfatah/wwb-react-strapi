@@ -2,7 +2,6 @@ import React from 'react'
 import Layout from '../components/layout'
 import TextHeader from '../components/utilities/TextHeader'
 import {FiChevronLeft} from 'react-icons/fi'
-import {BiCurrentLocation} from 'react-icons/ai'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import ReactMarkdown from 'react-markdown'
 import SEO from '../components/SEO'

@@ -4,7 +4,7 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Image from '../images/logo.png'
 import * as FaIcons from 'react-icons/fa';
 
-const Header = () => {
+const NavHeader = () => {
     const [sidebar, setSidebar] = useState(false)
     const showSidebar = () => setSidebar(!sidebar)
         return (
@@ -38,4 +38,4 @@ const Header = () => {
         )
 }
 
-export default Header
+export default NavHeader
