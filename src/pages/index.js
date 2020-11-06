@@ -12,7 +12,7 @@ import scrollTo from 'gatsby-plugin-smoothscroll';
 
 const IndexPage = ({data}) => {
   const {allStrapiGenomes:{nodes:genomes}} = data
-  const isBrowser = typeof window !== `undefined`
+  
   return (
   <LayoutNoPadding>
     <SEO title="WWB" />
@@ -25,7 +25,7 @@ const IndexPage = ({data}) => {
     <button onClick={() => scrollTo('#my-cool-footer')}><FiArrowDownCircle className="text-3xl cursor-pointer arrow-button-down" aria-label="Down" /></button>
     </div>
     </div>
-    {isBrowser &&
+    {typeof window !== 'undefined' &&
         <Map center={[0, 0]} 
             zoom={2} maxZoom={5}
             minZoom={2} 
