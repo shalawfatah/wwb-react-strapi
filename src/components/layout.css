@@ -270,4 +270,10 @@ p {
 .snipcart-cart-button {
   border-radius: 2rem;
   background-image: linear-gradient(90deg,#F08C00,#e9bd7f) !important;
+  color: white;
+}
+.disable-btn {
+  background-color: gray !important;
+  cursor: not-allowed;
+  color: silver;
 }
