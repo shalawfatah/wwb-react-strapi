@@ -1,6 +1,5 @@
 
 import Layout from '../components/layout'
-import ButtonMiddle from '../components/utilities/ButtonMiddle'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import {FiChevronLeft} from 'react-icons/fi'
 import ReactMarkdown from 'react-markdown'
@@ -41,7 +40,9 @@ const eventsTemplate = ({data}) => {
                             disabled={new Date(date) < new Date()}
                             >Tickets</button>
                         </li>
-                        <ButtonMiddle text="Website" link={website} />
+                        <li className="list-none font-semibold m-1 flex flex-wrap justify-center">
+                        <a href={website} className="flex text-grey-700 bg-white py-2 px-4 focus:outline-none text-lg cursor-pointer button" target="_blank" rel="noreferrer">Website</a>
+                        </li>
                         </div>
                         </div>
                         <div className="lg:w-5/6 flex flex-col sm:flex-row items-start mx-auto">
