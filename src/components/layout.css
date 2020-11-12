@@ -135,6 +135,15 @@
   }
   .blog-archive-cat {
     font-size: 14px;
+    width: 100%;
+  }
+  .submit-text {
+    text-align: center;
+  }
+  .sub-form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
 

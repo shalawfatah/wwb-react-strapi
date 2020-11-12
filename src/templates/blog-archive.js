@@ -18,16 +18,16 @@ const Blog = ({data, pageContext}) => {
             <BlogSearch />
             </div>
             <ul className="py-5 px-5 flex flex-wrap justify-center">
-            <li className="hover:font-extrabold cursor-pointer list-none my-2 mx-5 p-2 blog-archive-cat text-gray-200 rounded menu-all"><AniLink fade to='/blog' activeStyle={{ color: 'white', fontWeight: '800', borderBottom: '2px solid white'}} >All Topics</AniLink></li>
-            <li className="hover:font-extrabold cursor-pointer list-none my-2 mx-5 p-2 blog-archive-cat text-gray-200 rounded menu-economy"><AniLink fade to='/blog/lifestyle' activeStyle={{ color: 'black', fontWeight: '800', borderBottom: '2px solid black'}} >Lifestyle</AniLink></li>
-            <li className="hover:font-extrabold cursor-pointer list-none my-2 mx-5 p-2 blog-archive-cat text-gray-200 rounded menu-endangerment"><AniLink fade to='/blog/farming' activeStyle={{ color: 'black', fontWeight: '800', borderBottom: '2px solid black'}} >Farming</AniLink></li>
-            <li className="hover:font-extrabold cursor-pointer list-none my-2 mx-5 p-2 blog-archive-cat text-gray-200 rounded menu-innovations"><AniLink fade to='/blog/sustainability' activeStyle={{ color: 'white', fontWeight: '800', borderBottom: '2px solid white'}} >Sustainability</AniLink></li>
-            <li className="hover:font-extrabold cursor-pointer list-none my-2 mx-5 p-2 blog-archive-cat rounded menu-medical"><AniLink fade to='/blog/health-and-wellness' activeStyle={{ color: 'black', fontWeight: '800', borderBottom: '2px solid black'}} >Health & Wellness</AniLink></li>
-            <li className="hover:font-extrabold cursor-pointer list-none my-2 mx-5 p-2 blog-archive-cat text-gray-200 rounded menu-opportunity"><AniLink fade to='/blog/cooking' activeStyle={{ color: 'white', fontWeight: '800', borderBottom: '2px solid white'}} >Cooking</AniLink></li>
-            <li className="hover:font-extrabold cursor-pointer list-none my-2 mx-5 p-2 blog-archive-cat rounded menu-education"><AniLink fade to='/blog/education' activeStyle={{ color: 'black', fontWeight: '800', borderBottom: '2px solid black'}} >Education</AniLink></li>
+            <li className="hover:font-extrabold cursor-pointer list-none my-2 mx-5 p-2 blog-archive-cat text-gray-200 rounded menu-all text-center"><AniLink fade to='/blog' activeStyle={{ color: 'white', fontWeight: '800', borderBottom: '2px solid white'}} >All Topics</AniLink></li>
+            <li className="hover:font-extrabold cursor-pointer list-none my-2 mx-5 p-2 blog-archive-cat text-gray-200 rounded menu-economy text-center"><AniLink fade to='/blog/lifestyle' activeStyle={{ color: 'black', fontWeight: '800', borderBottom: '2px solid black'}} >Lifestyle</AniLink></li>
+            <li className="hover:font-extrabold cursor-pointer list-none my-2 mx-5 p-2 blog-archive-cat text-gray-200 rounded menu-endangerment text-center"><AniLink fade to='/blog/farming' activeStyle={{ color: 'black', fontWeight: '800', borderBottom: '2px solid black'}} >Farming</AniLink></li>
+            <li className="hover:font-extrabold cursor-pointer list-none my-2 mx-5 p-2 blog-archive-cat text-gray-200 rounded menu-innovations text-center"><AniLink fade to='/blog/sustainability' activeStyle={{ color: 'white', fontWeight: '800', borderBottom: '2px solid white'}} >Sustainability</AniLink></li>
+            <li className="hover:font-extrabold cursor-pointer list-none my-2 mx-5 p-2 blog-archive-cat rounded menu-medical text-center"><AniLink fade to='/blog/health-and-wellness' activeStyle={{ color: 'black', fontWeight: '800', borderBottom: '2px solid black'}} >Health & Wellness</AniLink></li>
+            <li className="hover:font-extrabold cursor-pointer list-none my-2 mx-5 p-2 blog-archive-cat text-gray-200 rounded menu-opportunity text-center"><AniLink fade to='/blog/cooking' activeStyle={{ color: 'white', fontWeight: '800', borderBottom: '2px solid white'}} >Cooking</AniLink></li>
+            <li className="hover:font-extrabold cursor-pointer list-none my-2 mx-5 p-2 blog-archive-cat rounded menu-education text-center"><AniLink fade to='/blog/education' activeStyle={{ color: 'black', fontWeight: '800', borderBottom: '2px solid black'}} >Education</AniLink></li>
             </ul>
             </div>
-            <div className="flex flex-wrap py-5">
+            <div className="flex flex-wrap py-5 justify-center">
            
             {blogs.map((blog)=> {
                 return (

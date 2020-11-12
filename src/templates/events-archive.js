@@ -68,7 +68,7 @@ const Events = ({data, pageContext}) => {
                          setMinutes={timerMinutes} 
                          setSeconds={timerSeconds} 
                          />
-              <div className="flex flex-wrap">
+              <div className="flex flex-wrap justify-center">
                   {events.map((event)=> {
                       return ( 
                       <div key={event.id}>
