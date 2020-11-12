@@ -20,7 +20,7 @@ const Events = ({data, pageContext}) => {
                 <FiChevronLeft className="bg-orange-600 text-white text-4xl rounded-full hover:bg-orange-500 cursor-pointer transition duration-500 ease-in-out" />
         </button>
             <TextHeader text="Past Events" />
-              <div className="flex flex-wrap">
+              <div className="flex flex-wrap justify-center">
                   {events.map((event)=> {
                       return ( 
                       <>
