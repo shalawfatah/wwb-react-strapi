@@ -54,7 +54,7 @@ const BlogSearch = () => {
             placeholder="Search..."
             onChange={handleSearch} 
             />
-            <div className="absolute bg-white sm:w-2/3 overflow-auto shadow px-4 someZee bp-10 search-box">
+            <div className="absolute bg-white sm:w-2/3 overflow-auto shadow px-4 someZee search-box">
                 {results.map((result)=> {
                     return (
                     <div className="mt-6" key={result.item.node.id}>

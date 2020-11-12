@@ -109,13 +109,15 @@ const AllSearch = () => {
             onChange={handleSearch} 
             />
         </div>
-            <div className="absolute bg-white sm:w-2/3 overflow-auto shadow px-4 someZee mx-20 search-box pb-10">
+            <div className="absolute bg-white sm:w-2/3 overflow-auto shadow px-4 someZee mx-20 search-box">
                 {results.map((result)=> {
                     return (
+                    <div className="pb-10">
                     <div className="mt-6" key={result.item.node.id}>
                     <div className="text-gray-900 text-xl py-2">{result.item.node.title}</div> 
                     <div className="text-gray-600 text-md py-2">{result.item.node.summary}</div>
                     <AniLink fade className="text-white bg-orange-600 rounded-full p-2 my-8 hover:bg-orange-400 transition-all duration-500 ease-in" to={result.item.node.slug}>Read More...</AniLink>
+                    </div>
                     </div>
                     )
                 })}
