@@ -145,6 +145,9 @@
     justify-content: center;
     flex-wrap: wrap;
   }
+  .search-box {
+    width: 75%;
+  }
 }
 
 /* React Markdown  */

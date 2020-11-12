@@ -54,7 +54,7 @@ const NewsSearch = () => {
             placeholder="Search..."
             onChange={handleSearch} 
             />
-            <div className="absolute bg-white w-1/3 overflow-auto shadow px-4 someZee">
+            <div className="absolute bg-white sm:w-2/3 overflow-auto shadow px-4 someZee pb-10 search-box">
                 {results.map((result)=> {
                     return (
                     <div className="mt-6" key={result.item.node.id}>

@@ -102,14 +102,14 @@ const AllSearch = () => {
         <>
         <div className="flex justify-center">
             <input
-            className=" shadow appearnce-none border rounded-full py-2 my-2 px-3 w-full outline-none mx-20"
+            className="shadow appearnce-none border rounded-full py-2 my-2 px-3 w-full outline-none mx-20"
             id="search"
             type="text"
             placeholder="Search..."
             onChange={handleSearch} 
             />
         </div>
-            <div className="absolute bg-white w-1/3 overflow-auto shadow px-4 someZee mx-20">
+            <div className="absolute bg-white sm:w-2/3 overflow-auto shadow px-4 someZee mx-20 search-box pb-10">
                 {results.map((result)=> {
                     return (
                     <div className="mt-6" key={result.item.node.id}>
