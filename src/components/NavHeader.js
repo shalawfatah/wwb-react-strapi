@@ -10,7 +10,7 @@ const NavHeader = () => {
         return (
             <div className="flex justify-between items-center px-10 border-b-2 flex-wrap">
                 <AniLink to="/">
-                <img src={Image} alt="WWB Logo" className="w-16 py-4 mr-4" />
+                <img src={Image} alt="WWB Logo" className="w-16 py-4" />
                 </AniLink>
 
                 <div>
