@@ -12,7 +12,7 @@ const Education = ({data}) => {
         <Layout>
           <SEO title="Education" />
           <div className="p-5">
-            <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 headline py-10">Free Online Educational Portal</h1>
+            <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 headline py-10 submit-text">Free Online Educational Portal</h1>
             <EducationSearch />
             <div className="flex flex-wrap justify-center">
             {educations.map((education)=> {
