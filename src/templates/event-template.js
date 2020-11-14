@@ -44,6 +44,7 @@ const eventsTemplate = ({data}) => {
                         <a href={website} className="flex text-grey-700 bg-white py-2 px-4 focus:outline-none text-lg cursor-pointer button" target="_blank" rel="noreferrer">Website</a>
                         </li>
                         </div>
+                        
                         </div>
                         <div className="lg:w-5/6 flex flex-col sm:flex-row items-start mx-auto">
                         <h1 className="flex-grow  text-2xl font-medium title-font text-gray-900 font-bold lg:w-2/3">About this Event <br /> <span className="text-lg font-thin para">{content}</span></h1>

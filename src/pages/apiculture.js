@@ -19,7 +19,7 @@ const Apiculture = ({data}) => {
             {apis.map((api)=> {
                 return (
                   <div key={api.id}>
-                <ApiCard title={api.title} image={api.photo.childImageSharp.fluid} slug={`${api.slug}`} />
+                <ApiCard title={api.title} image={api.photo.childImageSharp.fluid.src} slug={`${api.slug}`} />
                 </div>
                 )
             })}
@@ -43,7 +43,7 @@ export const query = graphql`
         photo {
           childImageSharp {
             fluid {
-              ...GatsbyImageSharpFluid
+              src
             }
           }
         }
