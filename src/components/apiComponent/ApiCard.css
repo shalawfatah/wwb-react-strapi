@@ -14,8 +14,3 @@
 .headline-api:hover {
     color: #F08C00;
 }
-.all-card {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 1rem;
-}

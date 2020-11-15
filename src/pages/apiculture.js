@@ -15,7 +15,7 @@ const Apiculture = ({data}) => {
             <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4 headline submit-text">Apiculture</h1>
             <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 para pb-5 submit-text">The most entertaining page for beekeepers ever created.</p>
             <ApiSearch />
-            <div className="flex flex-wrap outline-none justify-center">
+            <div className="outline-none flex flex-wrap justify-center gap-8 my-5">
             {apis.map((api)=> {
                 return (
                   <div key={api.id}>
