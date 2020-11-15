@@ -61,7 +61,7 @@ const ApiSearch = () => {
                     <div className="mt-6" key={result.item.node.id}>
                     <div className="text-gray-900 text-xl py-2">{result.item.node.title}</div> 
                     <div className="text-gray-600 text-md py-2">{result.item.node.summary}</div>
-                    <button fade onClick={()=> navigate(`/${result.item.node.slug}`)}>
+                    <button onClick={()=> navigate(`/${result.item.node.slug}`)}>
                     <p className="text-white bg-orange-600 rounded-full p-2 my-8 hover:bg-orange-400 transition-all duration-500 ease-in">Read More...</p>
                     </button>
                     </div>
