@@ -58,7 +58,7 @@ query getSingleBlogCategory($slug: String!)
           photo {
             childImageSharp {
               fluid {
-                src
+                ...GatsbyImageSharpFluid
               }
             }
           }
