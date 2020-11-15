@@ -16,24 +16,24 @@ const Events = ({data, pageContext}) => {
         <Layout>
           <SEO title="Events" />
           <div className="py-5">
-          <button fade onClick={()=> navigate(-1)}>
+          <button onClick={()=> navigate(-1)}>
                 <FiChevronLeft className="bg-orange-600 text-white text-4xl rounded-full hover:bg-orange-500 cursor-pointer transition duration-500 ease-in-out" />
         </button>
             <TextHeader text="Past Events" />
               <div className="flex flex-wrap justify-center">
                   {events.map((event)=> {
                       return ( 
-                      <>
+                      <div key={event.id}>
                       {new Date(event.date) < new Date() ?
                       <MarginalEvent title={event.title} summary={event.summary} date={format(new Date(event.date), 'dd MMMM, yyyy')} location={event.location} image={event.photo.childImageSharp.fluid} slug={event.slug} />
                       :
                       ''
                     }
-                      </> )
+                      </div> )
                   })}
               </div>
               <div className="py-16 flex justify-center items-end">
-              <button className="bg-orange-500 text-white px-4 py-2 hover:bg-orange-700 rounded-full outline-none transition-all duration-500 ease" fade onClick={()=> navigate(`/events`)}>
+              <button className="bg-orange-500 text-white px-4 py-2 hover:bg-orange-700 rounded-full outline-none transition-all duration-500 ease" onClick={()=> navigate(`/events`)}>
                         Upcoming Events
                     </button>
                 <Pager pageContext={pageContext} />
@@ -56,6 +56,7 @@ query($skip: Int!, $limit: Int!)
       nodes {
         summary
         title
+        id
         slug
         date
         location

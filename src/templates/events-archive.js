@@ -50,7 +50,7 @@ const Events = ({data, pageContext}) => {
       }, 1000)
     }
     useEffect(()=> {
-      let someref = interval.current
+      const someref = interval.current
       startTimer()
       return ()=> {
         clearInterval(someref)
