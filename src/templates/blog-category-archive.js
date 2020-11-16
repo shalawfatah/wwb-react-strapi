@@ -27,7 +27,7 @@ const Blog = ({data, pageContext}) => {
             <li className="hover:font-extrabold cursor-pointer list-none my-2 mx-5 p-2 blog-archive-cat rounded menu-education text-center"><AniLink fade to='/blog/education' activeStyle={{ color: 'black', fontWeight: '800', borderBottom: '2px solid black'}} >Education</AniLink></li>
             </ul>
             </div>
-            <div className="flex flex-wrap py-5">
+            <div className="flex flex-wrap py-5 justify-center">
             {blogs.map((blog)=> {
                 return (
                   <div className="flex items-stretch my-12" key={blog.id}>
