@@ -1,12 +1,13 @@
 
 import Layout from '../components/layout'
-import AniLink from "gatsby-plugin-transition-link/AniLink"
 import {FiChevronLeft} from 'react-icons/fi'
 import ReactMarkdown from 'react-markdown'
 import SEO from '../components/SEO'
 import Img from 'gatsby-image'
 import React from 'react'
+import {navigate} from 'gatsby-link'
 import { format } from 'date-fns'
+
 
 
 const eventsTemplate = ({data}) => {
@@ -17,9 +18,9 @@ const eventsTemplate = ({data}) => {
         <Layout>
             <SEO title={title} description={summary} />
             <section className="text-gray-700 body-font py-5">
-                <AniLink fade to="/events/" >
+                <button onClick={()=> navigate(-1)}>
                 <FiChevronLeft className="bg-orange-600 text-white text-4xl rounded-full hover:bg-orange-500 cursor-pointer transition duration-500 ease-in-out" />
-                </AniLink>
+                </button>
                 <div className="container px-5 py-0 mx-auto flex flex-col">
                     <div className="lg:w-full mx-auto">
                     <div className="rounded-lg h-80 overflow-hidden">
