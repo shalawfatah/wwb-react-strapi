@@ -26,7 +26,7 @@ const Events = ({data, pageContext}) => {
     const [timerMinutes, setTimerMinutes] = useState('00');
     const [timerSeconds, setTimerSeconds] = useState('00');
     
-    let interval = useRef();
+    let interval = useRef()
     
     const startTimer = () => {
       const countdownDate = new Date(found.date).getTime();
@@ -55,7 +55,7 @@ const Events = ({data, pageContext}) => {
       return ()=> {
         clearInterval(someref)
       }
-    })
+    }, [])
 
     return (
         <Layout>
