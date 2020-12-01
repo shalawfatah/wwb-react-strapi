@@ -33,7 +33,7 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: process.env.API_URL,
+        apiURL: `https://wwb-backend.wl.r.appspot.com/`,
         queryLimit: 10000, // Default to 100
         contentTypes: [
                         `blogs`, 
@@ -54,14 +54,14 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-mailchimp',
       options: {
-          endpoint: `https://app.us2.list-manage.com/subscribe/post?u=7eca46a8e74aa50e3ee1e7681&amp;id=474127183f`, 
+          endpoint: process.env.MAILCHIMP_ENDPOINT, 
           timeout: 3500, // number; the amount of time, in milliseconds, that you want to allow mailchimp to respond to your request before timing out. defaults to 3500
       },
   },
   {
     resolve: 'gatsby-plugin-snipcartv3',
     options: {
-      apiKey: `pOTlmOGRlNTAtYTZmMS00YmQ0LTk2ZjktNGMwNTJiNzk3NTg0NjM3Mzk2MzQ2MjMxNTMyODAz`,
+      apiKey: process.env.SNIPCART_KEY,
       autopop: true
     }
   },
@@ -70,7 +70,7 @@ module.exports = {
       options: {
         name: `Wordwide Bee`,
         short_name: `WWB`,
-        start_url: `https://www.worldwidebee.org/`,
+        start_url: process.env.API_URL,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `standalone`,
