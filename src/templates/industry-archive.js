@@ -28,7 +28,7 @@ const NewsArchive = ({data, pageContext}) => {
             <li className="hover:font-extrabold cursor-pointer list-none my-2 mx-5 p-2 blog-archive-cat text-gray-200 rounded menu-opportunity text-center"><AniLink fade to='/news/opportunity' activeStyle={{color: 'white', fontWeight: '800', borderBottom: '2px solid white'}} >Opportunity</AniLink></li>
             </ul>
             </div>
-            <FirstNews title={articles[0].title} quote={articles[0].quote} image={articles[0].report_photo.childImageSharp.fluid.src} slug={`${articles[0].slug}`} />
+            {articles[0] && <FirstNews title={articles[0].title} quote={articles[0].quote} image={articles[0].report_photo.childImageSharp.fluid.src} slug={`${articles[0].slug}`} />}
             <div className="flex flex-wrap justify-center">
             <div className="lg:w-2/3 md:w-2/3 sm:w-2/3 ">
             <TextHeader text="Latest News" />
