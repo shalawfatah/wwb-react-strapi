@@ -58,6 +58,7 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
+  
   result.data.industries.nodes.forEach(industry => {
     createPage({
       path: `${industry.slug}`,
