@@ -12,7 +12,7 @@ import { format } from 'date-fns'
 
 const eventsTemplate = ({data}) => {
     const {summary, title, date, duration, location, photo, website, content, price, slug, available_quantity} = data.strapiEvents
-    const currently = `https://thirsty-poitras-635a61.netlify.app/events/${slug}`
+    const currently = `https://www.worldwidebee.org/`
 
     return (
         <Layout>
