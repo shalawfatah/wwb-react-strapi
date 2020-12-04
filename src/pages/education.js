@@ -32,7 +32,9 @@ export default Education
 
 export const query = graphql`
   {
-    allStrapiEducationCategories {
+    allStrapiEducationCategories(
+      sort: {fields: id, order: ASC}
+    ) {
       nodes {
         slug
         id

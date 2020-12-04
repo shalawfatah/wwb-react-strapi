@@ -58,6 +58,7 @@ query getSingleNewsCategory($slug: String!)
       }
       allStrapiIndustries(
         filter: {news_category: {slug: {eq: $slug}}}
+        sort: {fields: published_at, order: DESC}
         ) {
         nodes {
           report_photo {

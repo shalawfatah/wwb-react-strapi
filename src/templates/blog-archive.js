@@ -52,6 +52,7 @@ query($skip: Int!, $limit: Int!)
     allStrapiBlogs(
         skip: $skip
         limit: $limit
+        sort: {fields: published_at, order: DESC}
       ) {
       nodes {
         photo {

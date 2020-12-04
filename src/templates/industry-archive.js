@@ -57,6 +57,7 @@ query($skip: Int!, $limit: Int!)
     allStrapiIndustries(
       skip: $skip
       limit: $limit
+      sort: {fields: published_at, order: DESC}
     ) {
         nodes {
         quote

@@ -53,6 +53,7 @@ query getSingleBlogCategory($slug: String!)
       }
       allStrapiBlogs(
         filter: {blog_category: {slug: {eq: $slug}}}
+        sort: {fields: published_at, order: DESC}
         ) {
         nodes {
           photo {
