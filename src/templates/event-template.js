@@ -33,7 +33,7 @@ const eventsTemplate = ({data}) => {
                             <button className={`snipcart-add-item flex text-grey-700 bg-white py-2 px-4 focus:outline-none text-lg cursor-pointer button ${new Date(date) < new Date() ? 'disable-btn' : ''}`}
                             data-item-id={title}
                             data-item-price={price}
-                            data-item-url={slug}
+                            data-item-url={`https://www.worldwidebee.org/events/some-test-event`}
                             data-item-description={summary}
                             data-item-name={title}
                             data-item-max-quantity={available_quantity}
