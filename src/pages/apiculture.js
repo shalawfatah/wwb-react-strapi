@@ -35,7 +35,7 @@ export default Apiculture
 export const query = graphql`
   {
     allStrapiApitherapies(
-      sort: {fields: id, order: DESC}
+      sort: {fields: id, order: ASC}
     ) {
       nodes {
         title
