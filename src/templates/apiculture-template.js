@@ -8,7 +8,9 @@ import ReactMarkdown from 'react-markdown'
 import SEO from '../components/SEO'
 import Img from 'gatsby-image'
 
-const apicultureTemplate = ({data}) => {
+
+const apicultureTemplate = ({data, pageContext}) => {
+    const {next, prev} = pageContext
     const {title, photo, content, subtitle, youtube} = data.strapiApitherapies
     return (
         <Layout>
@@ -32,6 +34,14 @@ const apicultureTemplate = ({data}) => {
                         <div className="leading-relaxed text-lg mb-4"><ReactMarkdown source={content} /></div>
                         </div>
                     </div>
+                </div>
+                <div className="flex justify-between">
+                    { prev &&
+                                    <button className="text-white bg-orange-500 rounded-full py-2 pl-6 pr-6 font-bold text-lg hover:bg-orange-300 transition-all duration-500 ease-in-out" onClick={()=> navigate(`/${prev}`)}>Previous</button>
+                    }
+                    { next &&
+                                    <button className="text-white bg-orange-500 rounded-full py-2 pl-6 pr-6 font-bold text-lg hover:bg-orange-300 transition-all duration-500 ease-in-out" onClick={()=> navigate(`/${next}`)}>Next</button>
+                    }
                 </div>
                 </section>
                 </Layout>

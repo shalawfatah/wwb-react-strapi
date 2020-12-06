@@ -141,12 +141,15 @@ exports.createPages = async ({ graphql, actions }) => {
     pathPrefix: '/past-events',
     component: path.resolve(`src/templates/past-events-archive.js`)
   })
-  result.data.apis.nodes.forEach(api => {
+  const posts = result.data.apis.nodes
+    posts.forEach((api, index) => {
     createPage({
       path: `${api.slug}`,
       component: path.resolve(`src/templates/apiculture-template.js`),
       context: {
         slug: api.slug,
+        prev: index === 0 ? null : posts[index - 1].slug,
+        next: index === (posts.length - 1) ? null : posts[index + 1].slug,
       },
     })
   })
