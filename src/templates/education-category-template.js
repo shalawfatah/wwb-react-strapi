@@ -22,7 +22,7 @@ const EduCatTemp = ({data}) => {
                     <div>
                     <div className="lg:w-full mx-auto">
                     <div className="rounded-lg h-64 overflow-hidden">
-                        <Img alt="content" className="object-cover object-center h-full w-full" fluid={picture.childImageSharp.fluid} />
+                        <Img alt="content" className="object-cover object-center h-full w-full" fluid={picture.childImageSharp.src} />
                     </div>
                     </div>
                     <h1 className={`sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 rounded transformed-headline mb-3 ${special_color}`}>{name}</h1>
@@ -66,7 +66,7 @@ query getSingleEducationCategory($slug: String!)
       picture {
         childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid
+            src
           }
         }
       }
