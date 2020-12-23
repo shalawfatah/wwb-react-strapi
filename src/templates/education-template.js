@@ -59,11 +59,7 @@ export const query = graphql`
           author_title
           slug
           author_summary
-          author_photo {
-            childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid
-              }
+
             }
           }
         }

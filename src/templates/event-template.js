@@ -12,7 +12,7 @@ import { format } from 'date-fns'
 
 const eventsTemplate = ({data}) => {
     const {summary, title, date, duration, location, photo, website, content, price, slug, available_quantity} = data.strapiEvents
-    const myUrl = location.pathname
+    const myUrl = location.pathname;
     return (
         <Layout>
             <SEO title={title} description={summary} />
